@@ -1,0 +1,135 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "Clang",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"C:/msys64/mingw64/lib/clang/15.0.7/include",
+						"C:/msys64/mingw64/include"
+					],
+					"linkDirectories" : 
+					[
+						"C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0",
+						"C:/msys64/mingw64/x86_64-w64-mingw32/lib",
+						"C:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib",
+						"C:/msys64/mingw64/lib",
+						"C:/msys64/mingw64/x86_64-w64-mingw32/sys-root/mingw/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"mingw32",
+						"gcc",
+						"moldname",
+						"mingwex",
+						"pthread",
+						"advapi32",
+						"shell32",
+						"user32",
+						"kernel32",
+						"mingw32",
+						"gcc",
+						"moldname",
+						"mingwex",
+						"kernel32"
+					]
+				},
+				"path" : "C:/msys64/mingw64/bin/clang.exe",
+				"version" : "15.0.7"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "Clang",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"C:/msys64/mingw64/include/c++/12.2.0",
+						"C:/msys64/mingw64/include/c++/12.2.0/x86_64-w64-mingw32",
+						"C:/msys64/mingw64/include/c++/12.2.0/backward",
+						"C:/msys64/mingw64/lib/clang/15.0.7/include",
+						"C:/msys64/mingw64/include"
+					],
+					"linkDirectories" : 
+					[
+						"C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0",
+						"C:/msys64/mingw64/x86_64-w64-mingw32/lib",
+						"C:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib",
+						"C:/msys64/mingw64/lib",
+						"C:/msys64/mingw64/x86_64-w64-mingw32/sys-root/mingw/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"stdc++",
+						"mingw32",
+						"gcc_s",
+						"gcc",
+						"moldname",
+						"mingwex",
+						"pthread",
+						"advapi32",
+						"shell32",
+						"user32",
+						"kernel32",
+						"mingw32",
+						"gcc_s",
+						"gcc",
+						"moldname",
+						"mingwex",
+						"kernel32"
+					]
+				},
+				"path" : "C:/msys64/mingw64/bin/clang++.exe",
+				"version" : "15.0.7"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"implicit" : {},
+				"path" : "C:/msys64/mingw64/bin/windres.exe"
+			},
+			"language" : "RC",
+			"sourceFileExtensions" : 
+			[
+				"rc",
+				"RC"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}
