@@ -1,5 +1,9 @@
 #version 330
 
+uniform vec2 translation;
+uniform vec2 scale;
+
+
 // This vertex shader should be used to render a triangle whose normalized device coordinates are:
 // (-0.5, -0.5, 0.0), ( 0.5, -0.5, 0.0), ( 0.0,  0.5, 0.0)
 // And it also should send the vertex color as a varying to the fragment shader where the colors are (in order):
@@ -17,4 +21,16 @@ out Varyings {
 //TODO: (Req 1) Finish this shader
 
 void main(){
+    vec3 positions[3] = vec3[3] (
+        vec3(-0.5 * scale[0]+translation[0], -0.5* scale[1]+translation[1], 0.0) ,
+        vec3( 0.5 * scale[0]+translation[0], -0.5* scale[1]+translation[1], 0.0),
+        vec3( 0.0 * scale[0]+translation[0],  0.5* scale[1]+translation[1], 0.0)
+    );
+    vs_out.color = vec3[3] (
+        vec3( 1.0,  0.0, 0.0),
+        vec3( 0.0,  1.0, 0.0),
+        vec3( 0.0,  0.0, 1.0)
+    );
+
+
 }
