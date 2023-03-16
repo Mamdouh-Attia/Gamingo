@@ -35,7 +35,9 @@ namespace our {
 
         GLuint getUniformLocation(const std::string &name) {
             //TODO: (Req 1) Return the location of the uniform with the given name
+            //converting name from string to char* for function parameters
             const char* name_c = name.c_str();
+            //getting uniform location
             GLuint uniform_location = glGetUniformLocation(program,name_c);
             return uniform_location;
         }
@@ -86,10 +88,9 @@ namespace our {
         //TODO: (Req 1) Delete the copy constructor and assignment operator.
         ShaderProgram(const ShaderProgram &s)=delete;
         ShaderProgram operator=(ShaderProgram const &s)=delete;
-
-        //Question: Why do we delete the copy constructor and assignment operator?
+        //TODO Question: Why do we delete the copy constructor and assignment operator?
         //=>to avoid shallow copy and shallow assignment
-        //  and not to have 2 pointers pointing to the same object of shader
+        //  and not to have 2 pointers pointing to the same object of shaderprogram
     };
 
 }
