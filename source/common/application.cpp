@@ -305,9 +305,9 @@ int our::Application::run(int run_for_frames) {
             } else break;
         }
         // We set the clear color to be black
-        int id = 9203543;
+        // int id = 9203543;
 
-        glClearColor(((id / 1) % 16) / 16.0, ((id / 16) % 16) / 16.0, ((id / 256) % 16) / 16.0, 1.0);
+        // glClearColor(((id / 1) % 16) / 16.0, ((id / 16) % 16) / 16.0, ((id / 256) % 16) / 16.0, 1.0);
         glClear(GL_COLOR_BUFFER_BIT);
         // Swap the frame buffers
         glfwSwapBuffers(window);

@@ -61,7 +61,7 @@ bool our::ShaderProgram::link() const
     }
     else
     {
-        std::cout << linking_error_string << std::endl;
+        std::cout <<"err:  "<< linking_error_string << std::endl;
         return false;
     }}
 
