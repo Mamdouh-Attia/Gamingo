@@ -1,7 +1,7 @@
 #version 330
 
-uniform vec2 translation;
-uniform vec2 scale;
+uniform vec2 translation=vec2(0.0,0.0);
+uniform vec2 scale=vec2(1.0,1.0);
 
 
 // This vertex shader should be used to render a triangle whose normalized device coordinates are:
@@ -22,16 +22,17 @@ out Varyings {
 
 void main(){
     // vec3 positions[3] = vec3[3] (
-    //     vec3(-0.5 * scale[0]+translation[0], -0.5* scale[1]+translation[1], 0.0) ,
-    //     vec3( 0.5 * scale[0]+translation[0], -0.5* scale[1]+translation[1], 0.0),
-    //     vec3( 0.0 * scale[0]+translation[0],  0.5* scale[1]+translation[1], 0.0)
+    //     vec3(-0.5 * scale.x+translation.x, -0.5* scale.y+translation.y, 0.0) ,
+    //     vec3( 0.5 * scale.x+translation.x, -0.5* scale.y+translation.y, 0.0),
+    //     vec3( 0.0 * scale.x+translation.x,  0.5* scale.y+translation.y, 0.0)
     // );
         vec3 positions[3] = vec3[3] (
         vec3(-0.5, -0.5, 0.0),
         vec3( 0.5, -0.5, 0.0),
         vec3( 0.0,  0.5, 0.0)
     );
-    gl_Position = vec4(positions[gl_VertexID], 1.0);
+    vec3 new_position=vec3(positions[gl_VertexID]*vec3(scale,1.0)+vec3(translation,0.0));
+    gl_Position = vec4(new_position, 1.0);
 
     vec3 colors[3] = vec3[3] (
         vec3( 1.0,  0.0, 0.0),
