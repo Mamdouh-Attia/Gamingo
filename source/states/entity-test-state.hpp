@@ -53,9 +53,11 @@ class EntityTestState: public our::State {
             if(meshRenderer == nullptr) continue;
             //TODO: (Req 8) Complete the loop body to draw the current entity
             // Then we setup the material, send the transform matrix to the shader then draw the mesh
-            meshRenderer->material->bind();
-            meshRenderer->material->setUniform("VP", VP);
-            meshRenderer->material->setUniform("M", entity->getLocalToWorldMatrix());
+            meshRenderer->material->setup();
+            // meshRenderer->material->setUniform("VP", VP);
+            // meshRenderer->material->setUniform("M", entity->getLocalToWorldMatrix());
+            meshRenderer->material->shader->set("VP" , VP);
+            meshRenderer->material->shader->set("M" , entity->getLocalToWorldMatrix());
             meshRenderer->mesh->draw();
         }
     }

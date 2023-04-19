@@ -36,7 +36,7 @@ namespace our {
             //TODO: (Req 8) Create an component of type T, set its "owner" to be this entity, then push it into the component's list
             // Don't forget to return a pointer to the new component
             T* comp = new T();
-            T->owner = this;
+            comp->owner = this;
             components.push_back(comp);
             return comp;
         }
@@ -110,9 +110,7 @@ namespace our {
         // Since the entity owns its components, they should be deleted alongside the entity
         ~Entity(){
             //TODO: (Req 8) Delete all the components in "components".
-            for (auto it = components.begin(); it != components.end(); it++) {
-                delete *it;
-            }
+            
         }
 
         // Entities should not be copyable
