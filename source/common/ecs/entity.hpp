@@ -100,7 +100,7 @@ namespace our {
             for (auto it = components.begin(); it != components.end(); it++) {
                 T* comp = dynamic_cast<T*>(*it);
                 if (comp == component) {
-                    delete comp;
+                    delete *it;
                     components.erase(it);
                     break;
                 }
@@ -110,7 +110,10 @@ namespace our {
         // Since the entity owns its components, they should be deleted alongside the entity
         ~Entity(){
             //TODO: (Req 8) Delete all the components in "components".
-            
+            for (auto it = components.begin(); it != components.end(); it++) {
+                delete *it;
+            }
+            components.clear();
         }
 
         // Entities should not be copyable
