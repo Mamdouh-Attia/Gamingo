@@ -308,6 +308,7 @@ int our::Application::run(int run_for_frames) {
         // int id = 9203543;
 
         // glClearColor(((id / 1) % 16) / 16.0, ((id / 16) % 16) / 16.0, ((id / 256) % 16) / 16.0, 1.0);
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         // Swap the frame buffers
         glfwSwapBuffers(window);

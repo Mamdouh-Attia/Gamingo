@@ -144,12 +144,26 @@ namespace our {
         std::sort(transparentCommands.begin(), transparentCommands.end(), [cameraForward](const RenderCommand& first, const RenderCommand& second){
             //TODO: (Req 9) Finish this function
             // HINT: the following return should return true "first" should be drawn before "second".
+            float firstDistance = glm::dot(first.center, cameraForward);
+            float secondDistance = glm::dot(second.center, cameraForward);
+            // glm::vec4 origin1 = glm::vec4(first.center, 1.0f);
+            // glm::vec4 position1 = first.localToWorld * origin1;
+            // glm::vec3 finalPosition1 = glm::vec3(position1);
 
+            // glm::vec4 origin2 = glm::vec4(second.center, 1.0f);
+            // glm::vec4 position2 = first.localToWorld * origin2;
+            // glm::vec3 finalPosition2 = glm::vec3(position2);
+
+            // glm::vec3 firstVector = finalPosition1 - cameraForward;
+            // glm::vec3 secondVector = finalPosition2 - cameraForward;
+            // return glm::length(firstVector) < glm::length(secondVector);
+ 
+            
             // we calculate dot product of the center point along camera forward direction
-            float firstDistance = first.center.x * cameraForward.x + first.center.y * cameraForward.y + first.center.z * cameraForward.z;
-            float secondDistance = second.center.x * cameraForward.x + second.center.y * cameraForward.y + second.center.z * cameraForward.z;
+            // float firstDistance = first.center.x * cameraForward.x + first.center.y * cameraForward.y + first.center.z * cameraForward.z;
+            // float secondDistance = second.center.x * cameraForward.x + second.center.y * cameraForward.y + second.center.z * cameraForward.z;
             // then we compare the 2 distance and put the farther first
-            return firstDistance > secondDistance;
+            return firstDistance < secondDistance;
         });
 
         //TODO: (Req 9) Get the camera ViewProjection matrix and store it in VP
