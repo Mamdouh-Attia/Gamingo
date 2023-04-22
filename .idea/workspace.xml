@@ -13,8 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c01365d8-79ce-4102-93b8-a8e9f2837d55" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CMP3060 Project - D07 VERSION.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GAME_APPLICATION.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GAME_APPLICATION.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +87,7 @@
       <updated>1678994595244</updated>
       <workItem from="1678994702321" duration="3967000" />
       <workItem from="1679060311812" duration="2554000" />
-      <workItem from="1682161516210" duration="15413000" />
+      <workItem from="1682161516210" duration="18184000" />
     </task>
     <servers />
   </component>

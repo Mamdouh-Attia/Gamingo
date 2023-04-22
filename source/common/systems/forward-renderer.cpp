@@ -183,8 +183,9 @@ namespace our {
         //TODO: (Req 9) Draw all the opaque commands
         // Don't forget to set the "transform" uniform to be equal the model-view-projection matrix for each render command
         for(RenderCommand opaqueCommand: this->opaqueCommands) {
-            GLint transformLoc = opaqueCommand.material->shader->getUniformLocation("transform");
-            glUniformMatrix4fv(transformLoc, 1, false, (float*)&VP);
+            //GLint transformLoc = opaqueCommand.material->shader->getUniformLocation("transform");
+            //glUniformMatrix4fv(transformLoc, 1, false, (float*)&VP);
+            opaqueCommand.material->shader->set("transform", VP);
             opaqueCommand.mesh->draw();
         }
         // If there is a sky material, draw the sky
@@ -211,8 +212,9 @@ namespace our {
         //TODO: (Req 9) Draw all the transparent commands
         // Don't forget to set the "transform" uniform to be equal the model-view-projection matrix for each render command
         for(RenderCommand transparentCommand: this->transparentCommands) {
-            GLint transformLoc = transparentCommand.material->shader->getUniformLocation("transform");
-            glUniformMatrix4fv(transformLoc, 1, false, (float*)&VP);
+            //GLint transformLoc = transparentCommand.material->shader->getUniformLocation("transform");
+            //glUniformMatrix4fv(transformLoc, 1, false, (float*)&VP);
+            transparentCommand.material->shader->set("transform", VP);
             transparentCommand.mesh->draw();
         }
 
