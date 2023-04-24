@@ -2,9 +2,11 @@
 
 // This shader is designed to work with "triangle.vert" and it receives an
 // interpolated varying which represents the vertex color.
+// channels colors
 uniform vec4 red=vec4(1.0,0.0,0.0,0.0);
 uniform vec4 green=vec4(0.0,1.0,0.0,0.0);
 uniform vec4 blue=vec4(0.0,0.0,1.0,0.0);
+//the varying is a vec3 which represents the color of the vertex.
 in Varyings {
     vec3 color;
 } fs_in;
@@ -23,11 +25,12 @@ out vec4 frag_color;
 //TODO: (Req 1) Finish this shader and apply the channel mixing using the "dot" function.
 
 void main(){
+    //convert the color to a vec4 to be able to use the dot function
     vec4 fs_in_with_intensity=vec4(fs_in.color,1.0);
+    //apply the channel mixing
     frag_color[0] =  dot(fs_in_with_intensity,red  ) ;//red.a;
     frag_color[1] =  dot(fs_in_with_intensity,green) ;//green.a;
     frag_color[2] =  dot(fs_in_with_intensity,blue ) ;//blue.a;
+    //set the alpha channel to 1
     frag_color[3] =  1.0;
-    // frag_color = vec4(fs_in.color,0.1);
-    // frag_color = vec4(1,1,0,1);
 }

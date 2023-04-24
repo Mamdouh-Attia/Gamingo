@@ -13,6 +13,7 @@ uniform mat4 transform;
 
 void main(){
     //TODO: (Req 7) Changٍe the next line to apply the transformation matrix
+    //we multiply the position by the transform matrix to get the new position of the vertex
     gl_Position = transform * vec4(position, 1.0) ;
     vs_out.color = color;
     vs_out.tex_coord = tex_coord;
