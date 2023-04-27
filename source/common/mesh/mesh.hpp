@@ -5,17 +5,26 @@
 
 namespace our {
 
+    // These constants define the attribute locations in the shader program for vertex data.
     #define ATTRIB_LOC_POSITION 0
     #define ATTRIB_LOC_COLOR    1
     #define ATTRIB_LOC_TEXCOORD 2
     #define ATTRIB_LOC_NORMAL   3
 
+    // The Mesh class represents a 3D object composed of vertices and indices.
+    // It is responsible for managing OpenGL buffers and rendering the object.
     class Mesh {
         // Here, we store the object names of the 3 main components of a mesh:
         // A vertex array object, A vertex buffer and an element buffer
+        
+        // The vertex buffer object (VBO) stores the vertex data on the GPU.
+        // The element buffer object (EBO) stores the indices data on the GPU.
         unsigned int VBO, EBO;
+
+        // The vertex array object (VAO) encapsulates the state needed for rendering the object.
         unsigned int VAO;
-        // We need to remember the number of elements that will be draw by glDrawElements 
+
+        // We need to remember the number of elements that will be draw by glDrawElements
         GLsizei elementCount;
     public:
 
@@ -31,15 +40,19 @@ namespace our {
             //TODO: (Req 2) Write this function
             // remember to store the number of elements in "elementCount" since you will need it for drawing
             // For the attribute locations, use the constants defined above: ATTRIB_LOC_POSITION, ATTRIB_LOC_COLOR, etc
+            
+            
+            // Create the vertex array object (VAO) and bind it.
             glGenVertexArrays(1, &VAO);
             glBindVertexArray(VAO);
 
-            // Creating a buffer to save the vertices
+
+            // Create the vertex buffer object (VBO), bind it, and send the vertex data to the GPU.
             glGenBuffers(1, &VBO);
             glBindBuffer(GL_ARRAY_BUFFER, VBO);
             glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), vertices.data(), GL_STATIC_DRAW);
 
-            // Managing all attributes
+            // Enable and define the vertex attributes for position, color, texture coordinates, and normals.
             glEnableVertexAttribArray(ATTRIB_LOC_POSITION);
             glVertexAttribPointer(ATTRIB_LOC_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, position));
 
@@ -53,25 +66,31 @@ namespace our {
             glVertexAttribPointer(ATTRIB_LOC_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, normal));
             //////////////////////////////////////////////
 
-            // Saving buffer data
+            // Store the number of elements in "elementCount" for drawing.
             this->elementCount = elements.size();
+
+            // Create the element buffer object (EBO), bind it, and send the indices data to the GPU.
             glGenBuffers(1, &EBO);
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
             glBufferData(GL_ELEMENT_ARRAY_BUFFER, elements.size() * sizeof(unsigned int), elements.data(), GL_STATIC_DRAW);
-            //////////////////////////////////////////////
         }
 
-        // this function should render the mesh
+        // This function renders the mesh by binding the vertex array object (VAO)
+        // and issuing a glDrawElements call to draw the triangles.
         void draw() 
         {
             //TODO: (Req 2) Write this function
+            // Bind the vertex array object (VAO) and draw the elements using the stored element count.
             glBindVertexArray(VAO);
             glDrawElements(GL_TRIANGLES, this->elementCount, GL_UNSIGNED_INT, 0);
         }
 
-        // this function should delete the vertex & element buffers and the vertex array object
+        // This destructor function deletes the vertex & element buffers and the vertex array object,
+        // freeing up GPU resources when the mesh is no longer needed.
         ~Mesh(){
             //TODO: (Req 2) Write this function
+
+            // Delete the vertex buffer object (VBO), element buffer object (EBO), and vertex array object (VAO).
             glDeleteBuffers(1, &VBO);
             glDeleteBuffers(1, &EBO);
             glDeleteVertexArrays(1, &VAO);

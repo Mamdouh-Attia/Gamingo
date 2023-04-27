@@ -1,5 +1,4 @@
 #version 330
-
 uniform vec2 translation=vec2(0.0,0.0);
 uniform vec2 scale=vec2(1.0,1.0);
 
@@ -21,32 +20,23 @@ out Varyings {
 //TODO: (Req 1) Finish this shader
 
 void main(){
-    // vec3 positions[3] = vec3[3] (
-    //     vec3(-0.5 * scale.x+translation.x, -0.5* scale.y+translation.y, 0.0) ,
-    //     vec3( 0.5 * scale.x+translation.x, -0.5* scale.y+translation.y, 0.0),
-    //     vec3( 0.0 * scale.x+translation.x,  0.5* scale.y+translation.y, 0.0)
-    // );
+//position of the triangle vertices
         vec3 positions[3] = vec3[3] (
         vec3(-0.5, -0.5, 0.0),
         vec3( 0.5, -0.5, 0.0),
         vec3( 0.0,  0.5, 0.0)
     );
+     //apply the transformation to the vertex position
     vec3 new_position=vec3(positions[gl_VertexID]*vec3(scale,1.0)+vec3(translation,0.0));
+    //now to vec4
     gl_Position = vec4(new_position, 1.0);
-
+//color of the triangle vertices
     vec3 colors[3] = vec3[3] (
         vec3( 1.0,  0.0, 0.0),
         vec3( 0.0,  1.0, 0.0),
         vec3( 0.0,  0.0, 1.0)
     );
-
+//send the color to the fragment shader
     vs_out.color = colors[gl_VertexID];
-    // vs_out.color = vec3(
-    //     1.0,1.0,1.0
-    //     // vec3( 1.0,  0.0, 0.0),
-    //     // vec3( 0.0,  1.0, 0.0),
-    //     // vec3( 0.0,  0.0, 1.0)
-    // );
-
 
 }
