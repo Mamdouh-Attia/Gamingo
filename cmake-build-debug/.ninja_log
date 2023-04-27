@@ -54,3 +54,16 @@
 4639	53930	7039018725955507	../bin/GAME_APPLICATION.exe	8a6da02fe9685a69
 30	20316	7043078580864804	CMakeFiles/GAME_APPLICATION.dir/source/common/systems/forward-renderer.cpp.obj	15b328334b1f27f6
 20316	38776	7043078765338184	../bin/GAME_APPLICATION.exe	8a6da02fe9685a69
+27	3036	7043081254275915	CMakeFiles/GAME_APPLICATION.dir/source/common/shader/shader.cpp.obj	80490658c5a21386
+78	5029	7043081274115906	CMakeFiles/GAME_APPLICATION.dir/source/common/texture/texture-utils.cpp.obj	5a057d3d2534398d
+3037	31962	7043081542502625	CMakeFiles/GAME_APPLICATION.dir/source/common/components/mesh-renderer.cpp.obj	62c0b5b4d2499138
+5030	32130	7043081542543670	CMakeFiles/GAME_APPLICATION.dir/source/common/systems/forward-renderer.cpp.obj	15b328334b1f27f6
+88	32135	7043081542583483	CMakeFiles/GAME_APPLICATION.dir/source/common/material/pipeline-state.cpp.obj	803f016fa0eb8afa
+46	32139	7043081542522622	CMakeFiles/GAME_APPLICATION.dir/source/common/texture/sampler.cpp.obj	f890c81ece7a5b7a
+129	32144	7043081542572802	CMakeFiles/GAME_APPLICATION.dir/source/common/ecs/entity.cpp.obj	c302f3a626d67d90
+53	32149	7043081542702617	CMakeFiles/GAME_APPLICATION.dir/source/common/material/material.cpp.obj	d037cd30e23ee742
+103	32153	7043081542532617	CMakeFiles/GAME_APPLICATION.dir/source/common/ecs/transform.cpp.obj	278b70b3228f3d6d
+18	32200	7043081546072609	CMakeFiles/GAME_APPLICATION.dir/source/common/asset-loader.cpp.obj	f5bf56e68aa0dce4
+11	32213	7043081546102620	CMakeFiles/GAME_APPLICATION.dir/source/main.cpp.obj	c898d69cd1f557d5
+36	33542	7043081557725971	CMakeFiles/GAME_APPLICATION.dir/source/common/mesh/mesh-utils.cpp.obj	c52c6c9d4af6507a
+33543	53272	7043081756685959	../bin/GAME_APPLICATION.exe	8a6da02fe9685a69
