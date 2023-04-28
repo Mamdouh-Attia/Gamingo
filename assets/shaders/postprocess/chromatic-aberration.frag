@@ -17,8 +17,20 @@ out vec4 frag_color;
 
 void main(){
     //TODO: Modify this shader to apply chromatic abberation
-    // To apply this effect, we only read the green channel from the correct pixel (as defined by tex_coord)
+    // To apply this effect, we only read the green channel from the current pixel (as defined by tex_coord)
     // To get the red channel, we move by amount STRENGTH to the left then sample another pixel from which we take the red channel
     // To get the blue channel, we move by amount STRENGTH to the right then sample another pixel from which we take the blue channel
-    frag_color = texture(tex, tex_coord) * vec4(0.0f, 1.0f, 0.0f, 1.0f) + texture(tex, vec2(tex_coord.x - STRENGTH, tex_coord.y)) * vec4(1.0f, 0.0f, 0.0f, 1.0f) + texture(tex, vec2(tex_coord.x + STRENGTH, tex_coord.y)) * vec4(0.0f, 0.0f, 1.0f, 1.0f);
+
+    // read green channel from current pixel
+    vec4 greenChannel = texture(tex, tex_coord);
+    // read red channel from the pixel to the left
+    vec4 redChannel = texture(tex, tex_coord - vec2(STRENGTH, 0));
+    // read blue channel from the pixel to the right
+    vec4 blueChannel = texture(tex, tex_coord + vec2(STRENGTH, 0));
+
+    // output the color
+    frag_color.r = redChannel.r;
+    frag_color.g = greenChannel.g;
+    frag_color.b = blueChannel.b;
+    frag_color.a = 1.0;
 }
