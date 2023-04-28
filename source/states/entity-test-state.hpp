@@ -47,6 +47,7 @@ class EntityTestState: public our::State {
         //TODO: (Req 8) Change the following line to compute the correct view projection matrix 
         glm::mat4 viewMatrix = camera->getViewMatrix();
         glm::mat4 projectionMatrix = camera->getProjectionMatrix(size);
+        // VP = projection * view matrix
         glm::mat4 VP = projectionMatrix * viewMatrix;
         for(auto& entity : world.getEntities()){
             // For each entity, we look for a mesh renderer (if none was found, we skip this entity)
@@ -61,6 +62,7 @@ class EntityTestState: public our::State {
             // meshRenderer->material->shader->set("M" , entity->getLocalToWorldMatrix());
             // meshRenderer->material->shader->set("VP", VP); 
             // meshRenderer->material->shader->set("M", meshRenderer->getOwner()->getLocalToWorldMatrix());
+            // add uniform "transform" to be used in the shader
             meshRenderer->material->shader->set("transform",VP *   meshRenderer->getOwner()->getLocalToWorldMatrix());
             meshRenderer->mesh->draw();
         }

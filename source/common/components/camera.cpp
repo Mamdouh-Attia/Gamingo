@@ -50,6 +50,10 @@ namespace our {
         // It takes left, right, bottom, top. Bottom is -orthoHeight/2 and Top is orthoHeight/2.
         // Left and Right are the same but after being multiplied by the aspect ratio
         // For the perspective camera, you can use glm::perspective
+        
+
+        // if the camera was orthographic, then we return glm::ortho using the hight and the aspect ratio
+        // else we use near and far for prespective view
         float aspectRatio = viewportSize.x / (float)viewportSize.y;
         if (cameraType == CameraType::ORTHOGRAPHIC) {
             return glm::ortho(-orthoHeight * aspectRatio / 2.0f, orthoHeight * aspectRatio / 2.0f, -orthoHeight / 2.0f, orthoHeight / 2.0f);

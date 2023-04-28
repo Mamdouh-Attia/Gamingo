@@ -9,6 +9,7 @@ namespace our {
         if(!data.is_array()) return;
         for(const auto& entityData : data){
             //TODO: (Req 8) Create an entity, make its parent "parent" and call its deserialize with "entityData".
+           // create the entity using `add` to make sure that it made successfully
             Entity* entity = add();
             entity->parent = parent;
             entity->deserialize(entityData);
@@ -16,6 +17,7 @@ namespace our {
             if(entityData.contains("children")){
                 //TODO: (Req 8) Recursively call this world's "deserialize" using the children data
                 // and the current entity as the parent
+                // recursive call of deserialize to the children if it contains it
                 this->deserialize(entityData["children"], entity);
                 
             }

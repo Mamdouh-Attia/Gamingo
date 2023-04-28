@@ -36,7 +36,9 @@ namespace our {
             //TODO: (Req 8) Create an component of type T, set its "owner" to be this entity, then push it into the component's list
             // Don't forget to return a pointer to the new component
             T* comp = new T();
+            // add this entity as the owner of the component
             comp->owner = this;
+            // push the component to the list of components
             components.push_back(comp);
             return comp;
         }
@@ -49,6 +51,7 @@ namespace our {
             // Return the component you found, or return null of nothing was found.
             for (auto it = components.begin(); it != components.end(); it++) {
                 T* comp = dynamic_cast<T*>(*it);
+                // check if the component of type T
                 if (comp != nullptr) {
                     return comp;
                 }
@@ -74,8 +77,10 @@ namespace our {
             // If found, delete the found component and remove it from the components list
             for (auto it = components.begin(); it != components.end(); it++) {
                 T* comp = dynamic_cast<T*>(*it);
+                // check if the component of type T*
                 if (comp != nullptr) {
                     delete comp;
+                    // erase it from the components list
                     components.erase(it);
                     break;
                 }
@@ -99,8 +104,11 @@ namespace our {
             // If found, delete the found component and remove it from the components list
             for (auto it = components.begin(); it != components.end(); it++) {
                 T* comp = dynamic_cast<T*>(*it);
+                // check if the component of type T*
                 if (comp == component) {
+                    // delete if from the heap
                     delete *it;
+                    // erase if from the component list
                     components.erase(it);
                     break;
                 }
@@ -111,6 +119,7 @@ namespace our {
         ~Entity(){
             //TODO: (Req 8) Delete all the components in "components".
             for (auto it = components.begin(); it != components.end(); it++) {
+                // delete the component from the heap
                 delete *it;
             }
             components.clear();

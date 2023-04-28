@@ -15,6 +15,8 @@ namespace our {
         Component* component = nullptr;
         //TODO: (Req 8) Add an option to deserialize a "MeshRendererComponent" to the following if-else statement
         
+
+        // if the type was meshRender, then we added the component type
         if(type == CameraComponent::getID()){
             component = entity->addComponent<CameraComponent>();
         } else if (type == FreeCameraControllerComponent::getID()) {

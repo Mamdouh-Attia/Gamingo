@@ -12,6 +12,10 @@ namespace our {
         // you can use write: data["key"].get<T>().
         // Look at "source/common/asset-loader.hpp" to know how to use the static class AssetLoader.
         // can't use AssestLoader without template argument
+
+        // first we use data["mesh"] to get the value of the mesh key and then we use get<std::string>() to get the string value of the mesh key
+        // then we use AssetLoader<Mesh>::get() to get the mesh from the AssetLoader by the name of the mesh
+        // and we do the same thing for the material
         mesh = AssetLoader<Mesh>::get(data["mesh"].get<std::string>());
         material = AssetLoader<Material>::get(data["material"].get<std::string>());
     }
