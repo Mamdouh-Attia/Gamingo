@@ -30,13 +30,15 @@
                 "grass": "assets/textures/grass_ground_d.jpg",
                 "wood": "assets/textures/wood.jpg",
                 "glass": "assets/textures/glass-panels.png",
-                "monkey": "assets/textures/monkey.png"
+                "monkey": "assets/textures/monkey.png",
+                "batteryTex":"assets/textures/battery.png"
             },
             "meshes":{
                 "cube": "assets/models/cube.obj",
                 "monkey": "assets/models/monkey.obj",
                 "plane": "assets/models/plane.obj",
-                "sphere": "assets/models/sphere.obj"
+                "sphere": "assets/models/sphere.obj",
+                "battery":"assets/models/Battery.obj"
             },
             "samplers":{
                 "default":{},
@@ -110,6 +112,21 @@
                     "texture": "monkey",
                     "sampler": "default"
                 },
+                "batteryMaterial":{
+                    "type": "textured",
+                    "shader": "textured",
+                    "pipelineState": {
+                        "faceCulling":{
+                            "enabled": false
+                        },
+                        "depthTesting":{
+                            "enabled": true
+                        }
+                    },
+                    "tint": [1, 1, 1, 1],
+                    "texture": "batteryTex",
+                    "sampler": "default"
+                },
                 "moon":{
                     "type": "textured",
                     "shader": "textured",
@@ -140,7 +157,7 @@
                 ],
                 "children": [
                     {
-                        "position": [1, -1, -1],
+                        "position": [1, -1, -2],
                         "rotation": [45, 45, 0],
                         "scale": [0.1, 0.1, 1.0],
                         "components": [
@@ -154,6 +171,8 @@
                 ]
             },
             {
+                "name":"monkey",
+                "position":[-10.0,0,0],
                 "rotation": [-45, 0, 0],
                 "components": [
                     {
@@ -163,11 +182,23 @@
                     },
                     {
                         "type": "Movement",
-                        "linearVelocity": [0, 0.1, 0],
-                        "angularVelocity": [0, 45, 0]
+                        "linearVelocity": [0.5, 0, 0],
+                        "angularVelocity": [0, 90, 0]
                     }
                 ]
             },
+            // {
+
+            //     "rotation": [0, 0, 0],
+            //     "scale":[0.4,0.4,0.4],
+            //     "components": [
+            //         {
+            //             "type": "Mesh Renderer",
+            //             "mesh": "battery",
+            //             "material": "batteryMaterial"
+            //         }
+            //     ]
+            // },
             {
                 "position": [0, -1, 0],
                 "rotation": [-90, 0, 0],
