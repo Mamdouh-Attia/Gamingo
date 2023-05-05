@@ -34,7 +34,8 @@
                 "batteryTex":"assets/textures/battery.png",
                 "roadTex":"assets/textures/roadTex.jpg",
                 "carSkin":"assets/textures/car0.BMP",
-                "fuelTex":"assets/textures/fuelTex.png"
+                "fuelTex":"assets/textures/fuelTex.png",
+                "barrierTex":"assets/textures/barrierTex.JPG"
             },
             "meshes":{
                 "cube": "assets/models/cube.obj",
@@ -45,7 +46,8 @@
                 "road":"assets/models/road.obj",
                 "car":"assets/models/car.obj",
                 // "gascan":"assets/models/gascan.obj",
-                "gascan":"assets/models/gascan.obj"
+                "gascan":"assets/models/gascan.obj",
+                "barrier":"assets/models/barrier.obj"
             },
             "samplers":{
                 "default":{},
@@ -134,6 +136,21 @@
                     "texture": "batteryTex",
                     "sampler": "default"
                 },
+                "barrierMaterial":{
+                    "type": "textured",
+                    "shader": "textured",
+                    "pipelineState": {
+                        "faceCulling":{
+                            "enabled": false
+                        },
+                        "depthTesting":{
+                            "enabled": true
+                        }
+                    },
+                    "tint": [1, 1, 1, 1],
+                    "texture": "barrierTex",
+                    "sampler": "default"
+                },
                 "gascanMaterial":{
                     "type": "textured",
                     "shader": "textured",
@@ -206,6 +223,11 @@
                     },
                     {
                         "type": "Free Camera Controller"
+                    },
+                    {
+                        "type": "Movement",
+                        "linearVelocity": [0, 0, -3],
+                        "angularVelocity": [0, 0, 0]
                     }
                 ],
                 "children": [
@@ -219,6 +241,11 @@
                                 "mesh": "car",
                                 "material": "carMaterial"
                             }
+                    //     {
+                    //     "type": "Movement",
+                    //     "linearVelocity": [0, 0, -0.5],
+                    //     "angularVelocity": [0, 0, 0]
+                    // }
                         ]
                     }
 
@@ -261,6 +288,19 @@
                         "type": "Mesh Renderer",
                         "mesh": "battery",
                         "material": "batteryMaterial"
+                    }
+                ]
+            },
+            {
+                "name":"barrier:1",
+                "position": [-3, -2, 0],
+                "rotation": [0, 90, 0],
+                "scale":[0.3,0.3,0.25],
+                "components": [
+                    {
+                        "type": "Mesh Renderer",
+                        "mesh": "barrier",
+                        "material": "barrierMaterial"
                     }
                 ]
             },
