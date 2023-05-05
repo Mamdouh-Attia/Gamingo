@@ -43,15 +43,15 @@ namespace our
             // Get the entity that we found via getOwner of camera (we could use controller->getOwner())
             Entity* entity = camera->getOwner();
 
-            // If the left mouse button is pressed, we lock and hide the mouse. This common in First Person Games.
-            if(app->getMouse().isPressed(GLFW_MOUSE_BUTTON_1) && !mouse_locked){
-                app->getMouse().lockMouse(app->getWindow());
-                mouse_locked = true;
-            // If the left mouse button is released, we unlock and unhide the mouse.
-            } else if(!app->getMouse().isPressed(GLFW_MOUSE_BUTTON_1) && mouse_locked) {
-                app->getMouse().unlockMouse(app->getWindow());
-                mouse_locked = false;
-            }
+            // // If the left mouse button is pressed, we lock and hide the mouse. This common in First Person Games.
+            // if(app->getMouse().isPressed(GLFW_MOUSE_BUTTON_1) && !mouse_locked){
+            //     app->getMouse().lockMouse(app->getWindow());
+            //     mouse_locked = true;
+            // // If the left mouse button is released, we unlock and unhide the mouse.
+            // } else if(!app->getMouse().isPressed(GLFW_MOUSE_BUTTON_1) && mouse_locked) {
+            //     app->getMouse().unlockMouse(app->getWindow());
+            //     mouse_locked = false;
+            // }
 
             // We get a reference to the entity's position and rotation
             glm::vec3& position = entity->localTransform.position;
@@ -59,11 +59,11 @@ namespace our
 
             // If the left mouse button is pressed, we get the change in the mouse location
             // and use it to update the camera rotation
-            if(app->getMouse().isPressed(GLFW_MOUSE_BUTTON_1)){
-                glm::vec2 delta = app->getMouse().getMouseDelta();
-                rotation.x -= delta.y * controller->rotationSensitivity; // The y-axis controls the pitch
-                rotation.y -= delta.x * controller->rotationSensitivity; // The x-axis controls the yaw
-            }
+            // if(app->getMouse().isPressed(GLFW_MOUSE_BUTTON_1)){
+            //     glm::vec2 delta = app->getMouse().getMouseDelta();
+            //     rotation.x -= delta.y * controller->rotationSensitivity; // The y-axis controls the pitch
+            //     rotation.y -= delta.x * controller->rotationSensitivity; // The x-axis controls the yaw
+            // }
 
             // We prevent the pitch from exceeding a certain angle from the XZ plane to prevent gimbal locks
             if(rotation.x < -glm::half_pi<float>() * 0.99f) rotation.x = -glm::half_pi<float>() * 0.99f;
@@ -74,7 +74,7 @@ namespace our
 
             // We update the camera fov based on the mouse wheel scrolling amount
             float fov = camera->fovY + app->getMouse().getScrollOffset().y * controller->fovSensitivity;
-            fov = glm::clamp(fov, glm::pi<float>() * 0.01f, glm::pi<float>() * 0.99f); // We keep the fov in the range 0.01*PI to 0.99*PI
+            fov = glm::clamp(fov, glm::pi<float>() * 0.4f, glm::pi<float>() * 0.8f); // We keep the fov in the range 0.01*PI to 0.99*PI
             camera->fovY = fov;
 
             // We get the camera model matrix (relative to its parent) to compute the front, up and right directions
@@ -90,13 +90,14 @@ namespace our
 
             // We change the camera position based on the keys WASD/QE
             // S & W moves the player back and forth
-            if(app->getKeyboard().isPressed(GLFW_KEY_W)) position += front * (deltaTime * current_sensitivity.z);
-            if(app->getKeyboard().isPressed(GLFW_KEY_S)) position -= front * (deltaTime * current_sensitivity.z);
-            // Q & E moves the player up and down
-            if(app->getKeyboard().isPressed(GLFW_KEY_Q)) position += up * (deltaTime * current_sensitivity.y);
-            if(app->getKeyboard().isPressed(GLFW_KEY_E)) position -= up * (deltaTime * current_sensitivity.y);
+            //TODO here we can control speed
+            // if(app->getKeyboard().isPressed(GLFW_KEY_W)) position += front * (deltaTime * current_sensitivity.z);
+            // if(app->getKeyboard().isPressed(GLFW_KEY_S)) position -= front * (deltaTime * current_sensitivity.z);
             // A & D moves the player left or right 
-            if(app->getKeyboard().isPressed(GLFW_KEY_D)) position += right * (deltaTime * current_sensitivity.x);
+            
+            if(app->getKeyboard().isPressed(GLFW_KEY_D)) {
+                // std::cout<< world->getEntities().size()<<"/ ";
+                position += right * (deltaTime * current_sensitivity.x);}
             if(app->getKeyboard().isPressed(GLFW_KEY_A)) position -= right * (deltaTime * current_sensitivity.x);
         }
 

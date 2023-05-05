@@ -232,6 +232,7 @@
                 ],
                 "children": [
                     {
+                        "name" : "car",
                         "position": [0, -2, -4],
                         "rotation": [20, 0, 0],
                         "scale": [1, 1, 0.8],
@@ -293,7 +294,7 @@
             },
             {
                 "name":"barrier:1",
-                "position": [-3, -2, 0],
+                "position": [-3, -2, -15],
                 "rotation": [0, 90, 0],
                 "scale":[0.3,0.3,0.25],
                 "components": [
@@ -316,7 +317,8 @@
                 ]
             },
             {
-                "position": [0, -6, 5  ],
+                "name":"road",
+                "position": [4, -6, 5  ],
                 "rotation": [0, 90, 0],
                 "scale": [10, 1, 7],
                 "components": [
