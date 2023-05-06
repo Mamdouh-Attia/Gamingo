@@ -94,11 +94,23 @@ namespace our
             // if(app->getKeyboard().isPressed(GLFW_KEY_W)) position += front * (deltaTime * current_sensitivity.z);
             // if(app->getKeyboard().isPressed(GLFW_KEY_S)) position -= front * (deltaTime * current_sensitivity.z);
             // A & D moves the player left or right 
-            
-            if(app->getKeyboard().isPressed(GLFW_KEY_D)) {
-                // std::cout<< world->getEntities().size()<<"/ ";
-                position += right * (deltaTime * current_sensitivity.x);}
-            if(app->getKeyboard().isPressed(GLFW_KEY_A)) position -= right * (deltaTime * current_sensitivity.x);
+            bool key_d_pressed = app->getKeyboard().isPressed(GLFW_KEY_D);
+            bool key_a_pressed = app->getKeyboard().isPressed(GLFW_KEY_A);
+            if (key_a_pressed || key_d_pressed) {
+                if(app->getKeyboard().isPressed(GLFW_KEY_D)) {
+                    // get the new position
+                    glm::vec3 new_position = position + right * ((deltaTime * 2.0f) * current_sensitivity.x);
+                    if (new_position.x < 12.3)
+                        position = new_position;
+                }
+
+                if(app->getKeyboard().isPressed(GLFW_KEY_A)) {
+                    // get the new position
+                    glm::vec3 new_position = position - right * ((deltaTime * 2.0f) * current_sensitivity.x);
+                    if (new_position.x > -12.3)
+                        position = new_position;
+                }
+            }
         }
 
         // When the state exits, it should call this function to ensure the mouse is unlocked

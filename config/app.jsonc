@@ -1,350 +1,348 @@
 {
-    "start-scene": "menu",
-    "window":
-    {
-        "title":"Default Game Window",
-        "size":{
-            "width":1280,
-            "height":720
-        },
-        "fullscreen": false
+  "start-scene": "menu",
+  "window": {
+    "title": "Default Game Window",
+    "size": {
+      "width": 1280,
+      "height": 720
     },
-    "scene": {
-        "renderer":{
-            "sky": "assets/textures/sky.jpg",
-            "postprocess": "assets/shaders/postprocess/vignette.frag"
+    "fullscreen": false
+  },
+  "scene": {
+    "renderer": {
+      "sky": "assets/textures/sky.jpg",
+      "postprocess": "assets/shaders/postprocess/vignette.frag"
+    },
+    "assets": {
+      "shaders": {
+        "tinted": {
+          "vs": "assets/shaders/tinted.vert",
+          "fs": "assets/shaders/tinted.frag"
         },
-        "assets":{
-            "shaders":{
-                "tinted":{
-                    "vs":"assets/shaders/tinted.vert",
-                    "fs":"assets/shaders/tinted.frag"
-                },
-                "textured":{
-                    "vs":"assets/shaders/textured.vert",
-                    "fs":"assets/shaders/textured.frag"
-                }
+        "textured": {
+          "vs": "assets/shaders/textured.vert",
+          "fs": "assets/shaders/textured.frag"
+        }
+      },
+      "textures": {
+        "moon": "assets/textures/moon.jpg",
+        "grass": "assets/textures/grass_ground_d.jpg",
+        "wood": "assets/textures/wood.jpg",
+        "glass": "assets/textures/glass-panels.png",
+        "monkey": "assets/textures/monkey.png",
+        "batteryTex": "assets/textures/battery.png",
+        "roadTex": "assets/textures/roadTex.jpg",
+        "carSkin": "assets/textures/car0.BMP",
+        "fuelTex": "assets/textures/fuelTex.png",
+        "barrierTex": "assets/textures/barrierTex.JPG"
+      },
+      "meshes": {
+        "cube": "assets/models/cube.obj",
+        "monkey": "assets/models/monkey.obj",
+        "plane": "assets/models/plane.obj",
+        "sphere": "assets/models/sphere.obj",
+        "battery": "assets/models/Battery.obj",
+        "road": "assets/models/road.obj",
+        "car": "assets/models/car.obj",
+        // "gascan":"assets/models/gascan.obj",
+        "gascan": "assets/models/gascan.obj",
+        "barrier": "assets/models/barrier.obj"
+      },
+      "samplers": {
+        "default": {},
+        "pixelated": {
+          "MAG_FILTER": "GL_NEAREST"
+        }
+      },
+      "materials": {
+        "metal": {
+          "type": "tinted",
+          "shader": "tinted",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
             },
-            "textures":{
-                "moon": "assets/textures/moon.jpg",
-                "grass": "assets/textures/grass_ground_d.jpg",
-                "wood": "assets/textures/wood.jpg",
-                "glass": "assets/textures/glass-panels.png",
-                "monkey": "assets/textures/monkey.png",
-                "batteryTex":"assets/textures/battery.png",
-                "roadTex":"assets/textures/roadTex.jpg",
-                "carSkin":"assets/textures/car0.BMP",
-                "fuelTex":"assets/textures/fuelTex.png",
-                "barrierTex":"assets/textures/barrierTex.JPG"
-            },
-            "meshes":{
-                "cube": "assets/models/cube.obj",
-                "monkey": "assets/models/monkey.obj",
-                "plane": "assets/models/plane.obj",
-                "sphere": "assets/models/sphere.obj",
-                "battery":"assets/models/Battery.obj",
-                "road":"assets/models/road.obj",
-                "car":"assets/models/car.obj",
-                // "gascan":"assets/models/gascan.obj",
-                "gascan":"assets/models/gascan.obj",
-                "barrier":"assets/models/barrier.obj"
-            },
-            "samplers":{
-                "default":{},
-                "pixelated":{
-                    "MAG_FILTER": "GL_NEAREST"
-                }
-            },
-            "materials":{
-                "metal":{
-                    "type": "tinted",
-                    "shader": "tinted",
-                    "pipelineState": {
-                        "faceCulling":{
-                            "enabled": false
-                        },
-                        "depthTesting":{
-                            "enabled": true
-                        }
-                    },
-                    "tint": [0.45, 0.4, 0.5, 1]
-                },
-                "glass":{
-                    "type": "textured",
-                    "shader": "textured",
-                    "pipelineState": {
-                        "faceCulling":{
-                            "enabled": false
-                        },
-                        "depthTesting":{
-                            "enabled": true
-                        },
-                        "blending":{
-                            "enabled": true,
-                            "sourceFactor": "GL_SRC_ALPHA",
-                            "destinationFactor": "GL_ONE_MINUS_SRC_ALPHA"
-                        },
-                        "depthMask": false
-                    },
-                    "transparent": true,
-                    "tint": [1, 1, 1, 1],
-                    "texture": "glass",
-                    "sampler": "pixelated"
-                },
-                "grass":{
-                    "type": "textured",
-                    "shader": "textured",
-                    "pipelineState": {
-                        "faceCulling":{
-                            "enabled": false
-                        },
-                        "depthTesting":{
-                            "enabled": true
-                        }
-                    },
-                    "tint": [1, 1, 1, 1],
-                    "texture": "grass",
-                    "sampler": "default"
-                },
-                "monkey":{
-                    "type": "textured",
-                    "shader": "textured",
-                    "pipelineState": {
-                        "faceCulling":{
-                            "enabled": false
-                        },
-                        "depthTesting":{
-                            "enabled": true
-                        }
-                    },
-                    "tint": [1, 1, 1, 1],
-                    "texture": "monkey",
-                    "sampler": "default"
-                },
-                "batteryMaterial":{
-                    "type": "textured",
-                    "shader": "textured",
-                    "pipelineState": {
-                        "faceCulling":{
-                            "enabled": false
-                        },
-                        "depthTesting":{
-                            "enabled": true
-                        }
-                    },
-                    "tint": [1, 1, 1, 1],
-                    "texture": "batteryTex",
-                    "sampler": "default"
-                },
-                "barrierMaterial":{
-                    "type": "textured",
-                    "shader": "textured",
-                    "pipelineState": {
-                        "faceCulling":{
-                            "enabled": false
-                        },
-                        "depthTesting":{
-                            "enabled": true
-                        }
-                    },
-                    "tint": [1, 1, 1, 1],
-                    "texture": "barrierTex",
-                    "sampler": "default"
-                },
-                "gascanMaterial":{
-                    "type": "textured",
-                    "shader": "textured",
-                    "pipelineState": {
-                        "faceCulling":{
-                            "enabled": false
-                        },
-                        "depthTesting":{
-                            "enabled": true
-                        }
-                    },
-                    "tint": [0.745, 0.145, 0.3137, 1],
-                    "texture": "fuelTex",
-                    "sampler": "default"
-                },
-
-                "carMaterial":{
-                    "type": "textured",
-                    "shader": "textured",
-                    "pipelineState": {
-                        "faceCulling":{
-                            "enabled": false
-                        },
-                        "depthTesting":{
-                            "enabled": true
-                        }
-                    },
-                    "tint": [1, 1, 1, 1],
-                    "texture": "carSkin",
-                    "sampler": "default"
-                },
-                "roadMaterial":{
-                    "type": "textured",
-                    "shader": "textured",
-                    "pipelineState": {
-                        "faceCulling":{
-                            "enabled": false
-                        },
-                        "depthTesting":{
-                            "enabled": true
-                        }
-                    },
-                    "tint": [1, 1, 1, 1],
-                    "texture": "roadTex",
-                    "sampler": "default"
-                },
-                "moon":{
-                    "type": "textured",
-                    "shader": "textured",
-                    "pipelineState": {
-                        "faceCulling":{
-                            "enabled": false
-                        },
-                        "depthTesting":{
-                            "enabled": true
-                        }
-                    },
-                    "tint": [1, 1, 1, 1],
-                    "texture": "moon",
-                    "sampler": "default"
-                }
+            "depthTesting": {
+              "enabled": true
             }
+          },
+          "tint": [0.45, 0.4, 0.5, 1]
         },
-        "world":[
-            {
-                "position": [0, 0, 10],
-                "components": [
-                    {
-                        "type": "Camera"
-                    },
-                    {
-                        "type": "Free Camera Controller"
-                    },
-                    {
-                        "type": "Movement",
-                        "linearVelocity": [0, 0, -3],
-                        "angularVelocity": [0, 0, 0]
-                    }
-                ],
-                "children": [
-                    {
-                        "name" : "car",
-                        "position": [0, -2, -4],
-                        "rotation": [20, 0, 0],
-                        "scale": [1, 1, 0.8],
-                        "components": [
-                            {
-                                "type": "Mesh Renderer",
-                                "mesh": "car",
-                                "material": "carMaterial"
-                            }
-                    //     {
-                    //     "type": "Movement",
-                    //     "linearVelocity": [0, 0, -0.5],
-                    //     "angularVelocity": [0, 0, 0]
-                    // }
-                        ]
-                    }
-
-                ]
+        "glass": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
             },
-            // {
-            //     "name":"monkey",
-            //     "position":[-10.0,0,0],
-            //     "rotation": [-45, 0, 0],
-            //     "components": [
-            //         {
-            //             "type": "Mesh Renderer",
-            //             "mesh": "monkey",
-            //             "material": "monkey"
-            //         },
-            //         {
-            //             "type": "Movement",
-            //             "linearVelocity": [0.5, 0, 0],
-            //             "angularVelocity": [0, 90, 0]
-            //         }
-            //     ]
-            // },
-            // {
-
-            //     "rotation": [0, 0, 0],
-            //     "scale":[0.4,0.4,0.4],
-            //     "components": [
-            //         {
-            //             "type": "Mesh Renderer",
-            //             "mesh": "battery",
-            //             "material": "batteryMaterial"
-            //         }
-            //     ]
-            // },
-            {
-                "rotation": [0, 0, 0],
-                "scale":[0.4,0.4,0.4],
-                "components": [
-                    {
-                        "type": "Mesh Renderer",
-                        "mesh": "battery",
-                        "material": "batteryMaterial"
-                    }
-                ]
+            "depthTesting": {
+              "enabled": true
             },
-            {
-                "name":"barrier:1",
-                "position": [-3, -2, -15],
-                "rotation": [0, 90, 0],
-                "scale":[0.3,0.3,0.25],
-                "components": [
-                    {
-                        "type": "Mesh Renderer",
-                        "mesh": "barrier",
-                        "material": "barrierMaterial"
-                    }
-                ]
+            "blending": {
+              "enabled": true,
+              "sourceFactor": "GL_SRC_ALPHA",
+              "destinationFactor": "GL_ONE_MINUS_SRC_ALPHA"
             },
-            {
-                "rotation": [0, 0, 0],
-                "scale":[0.4,0.4,0.4],
-                "components": [
-                    {
-                        "type": "Mesh Renderer",
-                        "mesh": "gascan",
-                        "material": "gascanMaterial"
-                    }
-                ]
+            "depthMask": false
+          },
+          "transparent": true,
+          "tint": [1, 1, 1, 1],
+          "texture": "glass",
+          "sampler": "pixelated"
+        },
+        "grass": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
             },
-            {
-                "name":"road",
-                "position": [4, -6, 5  ],
-                "rotation": [0, 90, 0],
-                "scale": [10, 1, 7],
-                "components": [
-                    {
-                        "type": "Mesh Renderer",
-                        "mesh": "road",
-                        "material": "roadMaterial"
-                    }
-                ]
-            },
-            {
-                "position": [0, 10, 0],
-                "rotation": [45, 45, 0],
-                "scale": [5, 5, 5],
-                "components": [
-                    {
-                        "type": "Mesh Renderer",
-                        "mesh": "sphere",
-                        "material": "moon"
-                    },
-                    {
-                        "type": "Movement",
-                        "angularVelocity": [0, 90, 0]
-                    }
-                ]
+            "depthTesting": {
+              "enabled": true
             }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "grass",
+          "sampler": "default"
+        },
+        "monkey": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "monkey",
+          "sampler": "default"
+        },
+        "batteryMaterial": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "batteryTex",
+          "sampler": "default"
+        },
+        "barrierMaterial": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "barrierTex",
+          "sampler": "default"
+        },
+        "gascanMaterial": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [0.745, 0.145, 0.3137, 1],
+          "texture": "fuelTex",
+          "sampler": "default"
+        },
+
+        "carMaterial": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "carSkin",
+          "sampler": "default"
+        },
+        "roadMaterial": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "roadTex",
+          "sampler": "default"
+        },
+        "moon": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "moon",
+          "sampler": "default"
+        }
+      }
+    },
+    "world": [
+      {
+        "position": [0, 0, 10],
+        "components": [
+          {
+            "type": "Camera"
+          },
+          {
+            "type": "Free Camera Controller"
+          },
+          {
+            "type": "Movement",
+            "linearVelocity": [0, 0, -15],
+            "angularVelocity": [0, 0, 0]
+          }
+        ],
+        "children": [
+          {
+            "name": "car",
+            "position": [0, -2, -4],
+            "rotation": [20, 0, 0],
+            "scale": [1, 1, 0.8],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "car",
+                "material": "carMaterial"
+              }
+              //     {
+              //     "type": "Movement",
+              //     "linearVelocity": [0, 0, -0.5],
+              //     "angularVelocity": [0, 0, 0]
+              // }
+            ]
+          }
         ]
-    }
+      },
+      // {
+      //     "name":"monkey",
+      //     "position":[-10.0,0,0],
+      //     "rotation": [-45, 0, 0],
+      //     "components": [
+      //         {
+      //             "type": "Mesh Renderer",
+      //             "mesh": "monkey",
+      //             "material": "monkey"
+      //         },
+      //         {
+      //             "type": "Movement",
+      //             "linearVelocity": [0.5, 0, 0],
+      //             "angularVelocity": [0, 90, 0]
+      //         }
+      //     ]
+      // },
+      // {
+
+      //     "rotation": [0, 0, 0],
+      //     "scale":[0.4,0.4,0.4],
+      //     "components": [
+      //         {
+      //             "type": "Mesh Renderer",
+      //             "mesh": "battery",
+      //             "material": "batteryMaterial"
+      //         }
+      //     ]
+      // },
+      {
+        "rotation": [0, 0, 0],
+        "scale": [0.4, 0.4, 0.4],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "battery",
+            "material": "batteryMaterial"
+          }
+        ]
+      },
+      {
+        "name": "barrier:1",
+        "position": [-3, -2, -15],
+        "rotation": [0, 90, 0],
+        "scale": [0.3, 0.3, 0.25],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "barrier",
+            "material": "barrierMaterial"
+          }
+        ]
+      },
+      {
+        "rotation": [0, 0, 0],
+        "scale": [0.4, 0.4, 0.4],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "gascan",
+            "material": "gascanMaterial"
+          }
+        ]
+      },
+      {
+        "name": "road",
+        "position": [4, -6, 5],
+        "rotation": [0, 90, 0],
+        "scale": [10, 1, 7],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "road",
+            "material": "roadMaterial"
+          }
+        ]
+      },
+      {
+        "position": [0, 10, 0],
+        "rotation": [45, 45, 0],
+        "scale": [5, 5, 5],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "sphere",
+            "material": "moon"
+          },
+          {
+            "type": "Movement",
+            "angularVelocity": [0, 90, 0]
+          }
+        ]
+      }
+    ]
+  }
 }
