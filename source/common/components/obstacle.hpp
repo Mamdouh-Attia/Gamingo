@@ -6,7 +6,7 @@
 
 namespace our {
 
-    // This class handles data storage of fuel
+    // This class handles data storage of obstacle
     class ObstacleComponent : public Component {
     public:
         int subtractedValue = 10;

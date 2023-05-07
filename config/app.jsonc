@@ -240,6 +240,9 @@
                 "type": "Mesh Renderer",
                 "mesh": "car",
                 "material": "carMaterial"
+              },
+              {
+                "type": "Collision"
               }
               //     {
               //     "type": "Movement",
@@ -291,7 +294,7 @@
 //         ]
 //       },
       {
-        "name": "barrier:1",
+        "name": "obstacle:1",
         "position": [-3, -2, -30],
         "rotation": [0, 90, 0],
         "scale": [0.3, 0.3, 0.25],
@@ -300,6 +303,13 @@
             "type": "Mesh Renderer",
             "mesh": "barrier",
             "material": "barrierMaterial"
+          },
+          {
+            "type": "Obstacle",
+            "subtractedValue": 10
+          },
+          {
+            "type": "Collision"
           }
         ]
       },
@@ -317,6 +327,9 @@
             "type": "Mesh Renderer",
             "mesh": "gascan",
             "material": "gascanMaterial"
+          },
+          {
+            "type": "Collision"
           }
         ]
       },

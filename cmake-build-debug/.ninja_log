@@ -42,3 +42,6 @@
 55509	57458	7038649728692105	vendor/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj	cb2ec4c1f337c2f2
 57458	60785	7038649761961476	vendor/glfw/src/libglfw3.a	cc1e5e77eb7c6d1f
 15228	25972	7051942430919587	../bin/GAME_APPLICATION.exe	abd207f9f58df315
+11	5916	7051950241566989	CMakeFiles/GAME_APPLICATION.dir/source/common/components/obstacle.cpp.obj	7b1fc56fd07b11a2
+6	5918	7051950241586780	CMakeFiles/GAME_APPLICATION.dir/source/common/components/fuel.cpp.obj	c7a4c2129f20075f
+5918	16363	7051950345921301	../bin/GAME_APPLICATION.exe	38c34ba3ddcdde7
