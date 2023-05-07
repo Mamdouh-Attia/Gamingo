@@ -242,7 +242,7 @@
                 "material": "carMaterial"
               },
               {
-                "type": "Collision"
+                "type": "Car"
               }
               //     {
               //     "type": "Movement",
