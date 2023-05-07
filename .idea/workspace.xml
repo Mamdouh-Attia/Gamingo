@@ -15,16 +15,11 @@
     <list default="true" id="c01365d8-79ce-4102-93b8-a8e9f2837d55" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-71248d99b064a92cc98f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-07T20-26-29-0579.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GAME_APPLICATION-Debug-c215ca7c1f836b6a20d4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4ae8bfc3373092e43475.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-07T20-34-07-0371.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GAME_APPLICATION-Debug-9cc4ada7c8c63ea7f2b6.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libGAME_APPLICATION.dll.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libGAME_APPLICATION.dll.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.jsonc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/fuel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/fuel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/obstacle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/obstacle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/obstacle.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/obstacle.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +96,7 @@
       <workItem from="1682600814010" duration="2485000" />
       <workItem from="1682870959768" duration="3471000" />
       <workItem from="1682970247499" duration="886000" />
-      <workItem from="1683482151384" duration="6472000" />
+      <workItem from="1683482151384" duration="6790000" />
     </task>
     <servers />
   </component>
