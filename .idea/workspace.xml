@@ -14,8 +14,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c01365d8-79ce-4102-93b8-a8e9f2837d55" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/shaders/postprocess/chromatic-aberration.frag" beforeDir="false" afterPath="$PROJECT_DIR$/assets/shaders/postprocess/chromatic-aberration.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/shaders/postprocess/vignette.frag" beforeDir="false" afterPath="$PROJECT_DIR$/assets/shaders/postprocess/vignette.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.jsonc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/components/ca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/components/free-camera-controller.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/free-camera-controller.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,11 +67,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="glfw" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GFX-LAB" TARGET_NAME="glfw" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -90,7 +88,10 @@
       <workItem from="1678994702321" duration="3967000" />
       <workItem from="1679060311812" duration="2554000" />
       <workItem from="1682161516210" duration="27453000" />
-      <workItem from="1682600814010" duration="2116000" />
+      <workItem from="1682600814010" duration="2485000" />
+      <workItem from="1682870959768" duration="3471000" />
+      <workItem from="1682970247499" duration="886000" />
+      <workItem from="1683482151384" duration="2955000" />
     </task>
     <servers />
   </component>

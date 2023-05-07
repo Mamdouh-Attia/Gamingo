@@ -169,7 +169,7 @@ namespace our {
             // we calculate dot product of the center point along camera forward direction
             float firstDistance = first.center.x * cameraForward.x + first.center.y * cameraForward.y + first.center.z * cameraForward.z;
             float secondDistance = second.center.x * cameraForward.x + second.center.y * cameraForward.y + second.center.z * cameraForward.z;
-            // then we compare the 2 distance and put the farther first
+            // then we compare the 2 distance and put the further first (the logical operator here is >, but probably the cameraForward is inverted)
             return firstDistance < secondDistance;
         });
 

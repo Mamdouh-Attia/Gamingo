@@ -238,7 +238,7 @@
             "components": [
               {
                 "type": "Mesh Renderer",
-                "mesh": "car",
+                "mesh": "car", // TODO: ??
                 "material": "carMaterial"
               }
               //     {
