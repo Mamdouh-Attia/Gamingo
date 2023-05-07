@@ -225,7 +225,7 @@
           },
           {
             "type": "Movement",
-            "linearVelocity": [0, 0, -15],
+            "linearVelocity": [0, 0, -5],
             "angularVelocity": [0, 0, 0]
           }
         ],
@@ -238,7 +238,7 @@
             "components": [
               {
                 "type": "Mesh Renderer",
-                "mesh": "car", // TODO: ??
+                "mesh": "car",
                 "material": "carMaterial"
               }
               //     {
@@ -279,20 +279,20 @@
       //         }
       //     ]
       // },
-      {
-        "rotation": [0, 0, 0],
-        "scale": [0.4, 0.4, 0.4],
-        "components": [
-          {
-            "type": "Mesh Renderer",
-            "mesh": "battery",
-            "material": "batteryMaterial"
-          }
-        ]
-      },
+//       {
+//         "rotation": [0, 0, 0],
+//         "scale": [0.4, 0.4, 0.4],
+//         "components": [
+//           {
+//             "type": "Mesh Renderer",
+//             "mesh": "battery",
+//             "material": "batteryMaterial"
+//           }
+//         ]
+//       },
       {
         "name": "barrier:1",
-        "position": [-3, -2, -15],
+        "position": [-3, -2, -30],
         "rotation": [0, 90, 0],
         "scale": [0.3, 0.3, 0.25],
         "components": [
@@ -304,9 +304,15 @@
         ]
       },
       {
+        "name": "fuel:1",
         "rotation": [0, 0, 0],
+        "position": [1, -2, -40],
         "scale": [0.4, 0.4, 0.4],
         "components": [
+          {
+            "type": "Fuel",
+            "addedValue": 10
+          },
           {
             "type": "Mesh Renderer",
             "mesh": "gascan",
