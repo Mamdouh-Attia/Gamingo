@@ -112,7 +112,7 @@ set(STATES_SOURCES
         source/states/material-test-state.hpp
         source/states/entity-test-state.hpp
         source/states/renderer-test-state.hpp
-        source/common/components/fuel.cpp source/common/components/fuel.hpp)
+        source/common/components/fuel.cpp source/common/components/fuel.hpp source/common/components/obstacle.cpp source/common/components/obstacle.hpp)
 
 # For each example, we add an executable target
 # Each target compiles one example source file and the common & vendor source files
