@@ -225,7 +225,7 @@
           },
           {
             "type": "Movement",
-            "linearVelocity": [0, 0, -5],
+            "linearVelocity": [0, 0, -10],
             "angularVelocity": [0, 0, 0]
           }
         ],

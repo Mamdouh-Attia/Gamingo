@@ -18,8 +18,6 @@ class Playstate: public our::State {
     our::MovementSystem movementSystem;
     our::CollisionSystem collisionSystem;
 
-    bool gameOver = false;
-
     void onInitialize() override {
         // First of all, we get the scene configuration from the app config
         auto& config = getApp()->getConfig()["scene"];
@@ -44,16 +42,19 @@ class Playstate: public our::State {
         // Here, we just run a bunch of systems to control the world logic
         movementSystem.update(&world, (float)deltaTime);
         cameraController.update(&world, (float)deltaTime);
-        collisionSystem.update(&world,&gameOver);
+        collisionSystem.update(&world, (float)deltaTime);
+
+        // Delete all marked entities after update
+        world.deleteMarkedEntities();
+
         // And finally we use the renderer system to draw the scene
         renderer.render(&world);
 
         // Get a reference to the keyboard object
         auto& keyboard = getApp()->getKeyboard();
 
-        if(keyboard.justPressed(GLFW_KEY_ESCAPE)||gameOver){
+        if(keyboard.justPressed(GLFW_KEY_ESCAPE)){
             // If the escape  key is pressed in this frame, go to the play state
-            gameOver = false;
             getApp()->changeState("menu");
         }
     }

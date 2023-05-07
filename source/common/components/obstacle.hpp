@@ -10,7 +10,7 @@ namespace our {
     class ObstacleComponent : public Component {
     public:
         int subtractedValue = 10;
-        glm::vec3 size = glm::vec3(15.0f, 10.0f, 6.0f);
+        glm::vec3 size = glm::vec3(15.0f, 10.0f, 0.0f);
 
 
         // The ID of this component type is "Obstacle"

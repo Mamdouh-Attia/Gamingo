@@ -5,6 +5,10 @@
 #include "mesh-renderer.hpp"
 #include "free-camera-controller.hpp"
 #include "movement.hpp"
+#include "car.hpp"
+#include "collision.hpp"
+#include "fuel.hpp"
+#include "obstacle.hpp"
 
 namespace our {
 
@@ -25,6 +29,18 @@ namespace our {
             component = entity->addComponent<MovementComponent>();
         } else if(type == MeshRendererComponent::getID()) {
             component = entity->addComponent<MeshRendererComponent>();
+        }
+        else if(type == CarComponent::getID()) {
+            component = entity->addComponent<CarComponent>();
+        }
+        else if(type == CollisionComponent::getID()) {
+            component = entity->addComponent<CollisionComponent>();
+        }
+        else if(type == FuelComponent::getID()) {
+            component = entity->addComponent<FuelComponent>();
+        }
+        else if(type == ObstacleComponent::getID()) {
+            component = entity->addComponent<ObstacleComponent>();
         }
         if(component) component->deserialize(data);
     }

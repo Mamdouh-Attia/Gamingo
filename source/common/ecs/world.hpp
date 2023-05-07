@@ -58,7 +58,7 @@ namespace our {
                 entities.erase(entity);
                 delete entity;
             }
-            // after reomving all we don't need this
+            // after removing all we don't need this
             markedForRemoval.clear();
         }
 
