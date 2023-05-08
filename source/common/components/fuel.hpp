@@ -10,7 +10,7 @@ namespace our {
     class FuelComponent : public Component {
     public:
         int addedValue = 10;
-        glm::vec3 size = glm::vec3(0.0f, 0.0f, 0.0f);
+        int width;
 
         // The ID of this component type is "Fuel"
         static std::string getID() { return "Fuel"; }

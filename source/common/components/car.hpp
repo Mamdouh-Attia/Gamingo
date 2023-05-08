@@ -7,7 +7,7 @@
 namespace our {
     class CarComponent : public Component {
     public:
-        glm::vec3 size = glm::vec3(0.0f, 0.0f, 0.0f);
+        int width = 0;
         int health = 100;
 
         // The ID of this component type is "Car"

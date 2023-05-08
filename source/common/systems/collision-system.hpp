@@ -18,15 +18,14 @@ namespace our
     class CollisionSystem
     {
     public:
-        bool collides(const glm::vec4 &position, const glm::vec3 &size, const glm::vec4 &otherPosition, const glm::vec3 &otherSize)
+        bool collides(const glm::vec4 &position, int width, const glm::vec4 &otherPosition, int otherWidth)
         {
-            // std::cout << "Car Position ( " << position.x << ", " << position.z << " ) AND Obstacle Position ( " << (otherPosition.x + 7) << ", " << otherPosition.z << " )." << std::endl;
-            // Check if the two boxes are colliding
-            // For some reason, position of obstacle and fuel are shifted left (x axis)
-            return position.x < (otherPosition.x + 7) + otherSize.x &&
-                   position.x + size.x > (otherPosition.x + 7) &&
-                   position.z < otherPosition.z + otherSize.z &&
-                   position.z + size.z > otherPosition.z;
+            //std::cout << "Car Position ( " << position.x << ", " << position.z << " ) AND Obstacle Position ( " << otherPosition.x << ", " << otherPosition.z << " )." << std::endl;
+            // Check if the two objects are colliding
+            // Check if first object passed second object z position
+            return position.x < otherPosition.x + otherWidth &&
+                   position.x + width > otherPosition.x &&
+                   position.z <= otherPosition.z;
         }
 
         // This should be called every frame to update all entities containing a CollisionComponent.
@@ -45,7 +44,7 @@ namespace our
             CarComponent *carComponent = car->getComponent<CarComponent>();
             // get car position and size
             glm::vec4 carPosition = car->getLocalToWorldMatrix() * glm::vec4( car->localTransform.position,1.0);
-            glm::vec3 carSize = carComponent->size;
+            int carWidth = carComponent->width;
             // For each entity in the world
             // collide car with collision
             for (auto entity : world->getEntities())
@@ -60,11 +59,13 @@ namespace our
                     // check if car collides with fuel
                     if (fuel) {
                         // get obstacle object position and size
-                        glm::vec4 fuelPosition =
-                                entity->getLocalToWorldMatrix() * glm::vec4(entity->localTransform.position, 1.0);
-                        glm::vec3 fuelSize = fuel->size;
+                        glm::vec4 fuelPosition = glm::vec4(entity->localTransform.position, 1.0);
+                        // fuel object has a thing that makes its image shifted 6 right in x axis and 6 into z axis
+                        fuelPosition.x += 6;
+                        fuelPosition.z -= 6;
+                        int fuelWidth = fuel->width;
                         // check if car collides with collision
-                        if (collides(carPosition, carSize, fuelPosition, fuelSize)) {
+                        if (collides(carPosition, carWidth, fuelPosition, fuelWidth)) {
                             // if car collides with fuel, add 10 to car's health
                             carComponent->health += fuel->addedValue;
                             // if car's health is more than 100, set car's health to 100
@@ -79,10 +80,10 @@ namespace our
                     else if (obstacle) {
                         // get obstacle object position and size
                         glm::vec4 obstaclePosition =
-                                entity->getLocalToWorldMatrix() * glm::vec4(entity->localTransform.position, 1.0);
-                        glm::vec3 obstacleSize = obstacle->size;
+                                /* entity->getLocalToWorldMatrix() * */ glm::vec4(entity->localTransform.position, 1.0);
+                        int obstacleWidth = obstacle->width;
                         // check if car collides with collision
-                        if (collides(carPosition, carSize, obstaclePosition, obstacleSize)) {
+                        if (collides(carPosition, carWidth, obstaclePosition, obstacleWidth)) {
                             // if car collides with obstacle, subtract 10 from car's health
                             carComponent->health -= obstacle->subtractedValue;
                             // if car's health is less than 0, set car's health to 0

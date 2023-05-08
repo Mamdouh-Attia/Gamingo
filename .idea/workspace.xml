@@ -66,12 +66,12 @@
   }
 }</component>
   <component name="RunManager" selected="CMake Application.GAME_APPLICATION">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="GAME_APPLICATION" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GFX-LAB" TARGET_NAME="GAME_APPLICATION" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GFX-LAB" RUN_TARGET_NAME="GAME_APPLICATION">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GAME_APPLICATION" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GFX-LAB" TARGET_NAME="GAME_APPLICATION" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GFX-LAB" RUN_TARGET_NAME="GAME_APPLICATION">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -100,7 +100,8 @@
       <workItem from="1682600814010" duration="2485000" />
       <workItem from="1682870959768" duration="3471000" />
       <workItem from="1682970247499" duration="886000" />
-      <workItem from="1683482151384" duration="19154000" />
+      <workItem from="1683482151384" duration="20103000" />
+      <workItem from="1683583398783" duration="4118000" />
     </task>
     <servers />
   </component>

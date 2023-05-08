@@ -11,7 +11,7 @@ namespace our {
     class ObstacleComponent : public Component {
     public:
         int subtractedValue = 10;
-        glm::vec3 size = glm::vec3(0.0f, 0.0f, 0.0f);
+        int width = 0;
 
         // The ID of this component type is "Obstacle"
         static std::string getID() { return "Obstacle"; }
