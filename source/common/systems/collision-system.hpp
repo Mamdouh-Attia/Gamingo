@@ -18,15 +18,15 @@ namespace our
     class CollisionSystem
     {
     public:
-        bool collides(const glm::vec3 &position, const glm::vec3 &size, const glm::vec3 &other_position, const glm::vec3 &other_size)
+        bool collides(const glm::vec4 &position, const glm::vec3 &size, const glm::vec4 &otherPosition, const glm::vec3 &otherSize)
         {
+            // std::cout << "Car Position ( " << position.x << ", " << position.z << " ) AND Obstacle Position ( " << (otherPosition.x + 7) << ", " << otherPosition.z << " )." << std::endl;
             // Check if the two boxes are colliding
-            return position.x < other_position.x + other_size.x &&
-                   position.x + size.x > other_position.x &&
-                   position.y < other_position.y + other_size.y &&
-                   position.y + size.y > other_position.y &&
-                   position.z < other_position.z + other_size.z &&
-                   position.z + size.z > other_position.z;
+            // For some reason, position of obstacle and fuel are shifted left (x axis)
+            return position.x < (otherPosition.x + 7) + otherSize.x &&
+                   position.x + size.x > (otherPosition.x + 7) &&
+                   position.z < otherPosition.z + otherSize.z &&
+                   position.z + size.z > otherPosition.z;
         }
 
         // This should be called every frame to update all entities containing a CollisionComponent.
@@ -44,7 +44,7 @@ namespace our
             }
             CarComponent *carComponent = car->getComponent<CarComponent>();
             // get car position and size
-            glm::vec3 carPosition = car->getLocalToWorldMatrix() * glm::vec4( car->localTransform.position,1.0);
+            glm::vec4 carPosition = car->getLocalToWorldMatrix() * glm::vec4( car->localTransform.position,1.0);
             glm::vec3 carSize = carComponent->size;
             // For each entity in the world
             // collide car with collision
@@ -60,7 +60,7 @@ namespace our
                     // check if car collides with fuel
                     if (fuel) {
                         // get obstacle object position and size
-                        glm::vec3 fuelPosition =
+                        glm::vec4 fuelPosition =
                                 entity->getLocalToWorldMatrix() * glm::vec4(entity->localTransform.position, 1.0);
                         glm::vec3 fuelSize = fuel->size;
                         // check if car collides with collision
@@ -71,13 +71,14 @@ namespace our
                             if (carComponent->health > 100) {
                                 carComponent->health = 100;
                             }
+                            std::cout << "Fuel: Health = " << carComponent->health << std::endl;
                             // mark the fuel for removal
                             world->markForRemoval(entity);
                         }
                     }
                     else if (obstacle) {
                         // get obstacle object position and size
-                        glm::vec3 obstaclePosition =
+                        glm::vec4 obstaclePosition =
                                 entity->getLocalToWorldMatrix() * glm::vec4(entity->localTransform.position, 1.0);
                         glm::vec3 obstacleSize = obstacle->size;
                         // check if car collides with collision
@@ -90,6 +91,7 @@ namespace our
                                 // TODO: GAMEOVER
                                 // gameOver = true;
                             }
+                            std::cout << "Obstacle: Health = " << carComponent->health << std::endl;
                             // mark obstacle for removal
                             world->markForRemoval(entity);
                         }

@@ -14,21 +14,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c01365d8-79ce-4102-93b8-a8e9f2837d55" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-6e24e05e7c8db984670b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-07T20-41-45-0195.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GAME_APPLICATION-Debug-e797fd33d026878054e0.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libGAME_APPLICATION.dll.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libGAME_APPLICATION.dll.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.jsonc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/components/car.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/car.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/common/components/car.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/car.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/collision.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/collision.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/component-deserializer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/component-deserializer.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/components/fuel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/fuel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/components/fuel.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/fuel.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/components/obstacle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/obstacle.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/common/components/obstacle.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/obstacle.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/ecs/world.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/ecs/world.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/states/play-state.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/states/play-state.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +100,7 @@
       <workItem from="1682600814010" duration="2485000" />
       <workItem from="1682870959768" duration="3471000" />
       <workItem from="1682970247499" duration="886000" />
-      <workItem from="1683482151384" duration="12412000" />
+      <workItem from="1683482151384" duration="19154000" />
     </task>
     <servers />
   </component>

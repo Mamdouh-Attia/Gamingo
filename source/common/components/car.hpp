@@ -7,8 +7,9 @@
 namespace our {
     class CarComponent : public Component {
     public:
-    glm::vec3 size = glm::vec3(6.0f, 9.0f, 11.0f);
-    int health = 100;
+        glm::vec3 size = glm::vec3(0.0f, 0.0f, 0.0f);
+        int health = 100;
+
         // The ID of this component type is "Car"
         static std::string getID() { return "Car"; }
         // Reads added value from the given json object

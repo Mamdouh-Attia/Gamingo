@@ -242,60 +242,16 @@
                 "material": "carMaterial"
               },
               {
-                "type": "Car"
+                "type": "Car",
+                "size": [3.5, 0, 1]
               }
-              //     {
-              //     "type": "Movement",
-              //     "linearVelocity": [0, 0, -0.5],
-              //     "angularVelocity": [0, 0, 0]
-              // }
             ]
           }
         ]
       },
-      // {
-      //     "name":"monkey",
-      //     "position":[-10.0,0,0],
-      //     "rotation": [-45, 0, 0],
-      //     "components": [
-      //         {
-      //             "type": "Mesh Renderer",
-      //             "mesh": "monkey",
-      //             "material": "monkey"
-      //         },
-      //         {
-      //             "type": "Movement",
-      //             "linearVelocity": [0.5, 0, 0],
-      //             "angularVelocity": [0, 90, 0]
-      //         }
-      //     ]
-      // },
-      // {
-
-      //     "rotation": [0, 0, 0],
-      //     "scale":[0.4,0.4,0.4],
-      //     "components": [
-      //         {
-      //             "type": "Mesh Renderer",
-      //             "mesh": "battery",
-      //             "material": "batteryMaterial"
-      //         }
-      //     ]
-      // },
-//       {
-//         "rotation": [0, 0, 0],
-//         "scale": [0.4, 0.4, 0.4],
-//         "components": [
-//           {
-//             "type": "Mesh Renderer",
-//             "mesh": "battery",
-//             "material": "batteryMaterial"
-//           }
-//         ]
-//       },
       {
         "name": "obstacle:1",
-        "position": [-3, -2, -30],
+        "position": [-3, -2, -20],
         "rotation": [0, 90, 0],
         "scale": [0.3, 0.3, 0.25],
         "components": [
@@ -306,13 +262,56 @@
           },
           {
             "type": "Obstacle",
-            "subtractedValue": 10
+            "subtractedValue": 10,
+            "size": [4, 0, 0]
           },
           {
             "type": "Collision"
           }
         ]
       },
+      {
+          "name": "obstacle:2",
+          "position": [-10, -2, -40],
+          "rotation": [0, 90, 0],
+          "scale": [0.3, 0.3, 0.25],
+          "components": [
+            {
+              "type": "Mesh Renderer",
+              "mesh": "barrier",
+              "material": "barrierMaterial"
+            },
+            {
+              "type": "Obstacle",
+              "subtractedValue": 10,
+              "size": [6, 0, 0]
+            },
+            {
+              "type": "Collision"
+            }
+          ]
+        },
+        {
+          "name": "obstacle:3",
+          "position": [10, -2, -40],
+          "rotation": [0, 90, 0],
+          "scale": [0.3, 0.3, 0.25],
+          "components": [
+            {
+              "type": "Mesh Renderer",
+              "mesh": "barrier",
+              "material": "barrierMaterial"
+            },
+            {
+              "type": "Obstacle",
+              "subtractedValue": 10,
+              "size": [6, 0, 0]
+            },
+            {
+              "type": "Collision"
+            }
+          ]
+        },
       {
         "name": "fuel:1",
         "rotation": [0, 0, 0],
@@ -321,7 +320,50 @@
         "components": [
           {
             "type": "Fuel",
-            "addedValue": 10
+            "addedValue": 10,
+            "size": [1.5, 0, 6]
+          },
+          {
+            "type": "Mesh Renderer",
+            "mesh": "gascan",
+            "material": "gascanMaterial"
+          },
+          {
+            "type": "Collision"
+          }
+        ]
+      },
+      {
+          "name": "fuel:2",
+          "rotation": [0, 0, 0],
+          "position": [0, -2, -60],
+          "scale": [0.4, 0.4, 0.4],
+          "components": [
+            {
+              "type": "Fuel",
+              "addedValue": 10,
+              "size": [1.5, 0, 15]
+            },
+            {
+              "type": "Mesh Renderer",
+              "mesh": "gascan",
+              "material": "gascanMaterial"
+            },
+            {
+              "type": "Collision"
+            }
+        ]
+        },
+        {
+        "name": "fuel:3",
+        "rotation": [0, 0, 0],
+        "position": [-5, -2, -80],
+        "scale": [0.4, 0.4, 0.4],
+        "components": [
+          {
+            "type": "Fuel",
+            "addedValue": 10,
+            "size": [1.5, 0, 23]
           },
           {
             "type": "Mesh Renderer",
@@ -335,7 +377,7 @@
       },
       {
         "name": "road",
-        "position": [4, -6, 5],
+        "position": [4, -4, 5],
         "rotation": [0, 90, 0],
         "scale": [10, 1, 7],
         "components": [

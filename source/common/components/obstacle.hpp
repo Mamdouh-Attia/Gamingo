@@ -4,14 +4,14 @@
 
 #include <glm/glm.hpp>
 
+
 namespace our {
 
     // This class handles data storage of obstacle
     class ObstacleComponent : public Component {
     public:
         int subtractedValue = 10;
-        glm::vec3 size = glm::vec3(15.0f, 10.0f, 0.0f);
-
+        glm::vec3 size = glm::vec3(0.0f, 0.0f, 0.0f);
 
         // The ID of this component type is "Obstacle"
         static std::string getID() { return "Obstacle"; }
