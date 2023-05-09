@@ -233,7 +233,7 @@
           {
             "name": "car",
             "position": [0, -2, -4],
-            "rotation": [20, 0, 0],
+            "rotation": [10, 0, 0],
             "scale": [1, 1, 0.8],
             "components": [
               {
@@ -271,68 +271,68 @@
         ]
       },
       {
-          "name": "obstacle:2",
-          "position": [-8, -2, -70],
-          "rotation": [0, 90, 0],
-          "scale": [0.3, 0.3, 0.25],
-          "components": [
-            {
-              "type": "Mesh Renderer",
-              "mesh": "barrier",
-              "material": "barrierMaterial"
-            },
-            {
-              "type": "Obstacle",
-              "subtractedValue": 10,
-              "width": 5
-            },
-            {
-              "type": "Collision"
-            }
-          ]
-        },
-        {
-          "name": "obstacle:3",
-          "position": [0, -2, -90],
-          "rotation": [0, 90, 0],
-          "scale": [0.3, 0.3, 0.25],
-          "components": [
-            {
-              "type": "Mesh Renderer",
-              "mesh": "barrier",
-              "material": "barrierMaterial"
-            },
-            {
-              "type": "Obstacle",
-              "subtractedValue": 10,
-              "width": 5
-            },
-            {
-              "type": "Collision"
-            }
-          ]
-        },
-        {
-          "name": "obstacle:4",
-          "position": [9, -2, -100],
-          "rotation": [0, 90, 0],
-          "scale": [0.3, 0.3, 0.25],
-          "components": [
-            {
-              "type": "Mesh Renderer",
-              "mesh": "barrier",
-              "material": "barrierMaterial"
-            },
-            {
-              "type": "Obstacle",
-              "subtractedValue": 10,
-              "width": 5
-            },
-            {
-              "type": "Collision"
-            }
-          ]
-        },
+        "name": "obstacle:2",
+        "position": [-8, -2, -70],
+        "rotation": [0, 90, 0],
+        "scale": [0.3, 0.3, 0.25],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "barrier",
+            "material": "barrierMaterial"
+          },
+          {
+            "type": "Obstacle",
+            "subtractedValue": 10,
+            "width": 5
+          },
+          {
+            "type": "Collision"
+          }
+        ]
+      },
+      {
+        "name": "obstacle:3",
+        "position": [0, -2, -90],
+        "rotation": [0, 90, 0],
+        "scale": [0.3, 0.3, 0.25],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "barrier",
+            "material": "barrierMaterial"
+          },
+          {
+            "type": "Obstacle",
+            "subtractedValue": 10,
+            "width": 5
+          },
+          {
+            "type": "Collision"
+          }
+        ]
+      },
+      {
+        "name": "obstacle:4",
+        "position": [9, -2, -100],
+        "rotation": [0, 90, 0],
+        "scale": [0.3, 0.3, 0.25],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "barrier",
+            "material": "barrierMaterial"
+          },
+          {
+            "type": "Obstacle",
+            "subtractedValue": 10,
+            "width": 5
+          },
+          {
+            "type": "Collision"
+          }
+        ]
+      },
       {
         "name": "fuel:1",
         "rotation": [0, 0, 0],
@@ -355,47 +355,47 @@
         ]
       },
       {
-          "name": "fuel:2",
-          "rotation": [0, 0, 0],
-          "position": [-5, -2, -60],
-          "scale": [0.4, 0.4, 0.4],
-          "components": [
-            {
-              "type": "Fuel",
-              "addedValue": 10,
-              "width": 2.5
-            },
-            {
-              "type": "Mesh Renderer",
-              "mesh": "gascan",
-              "material": "gascanMaterial"
-            },
-            {
-              "type": "Collision"
-            }
-          ]
-        },
-       {
-         "name": "fuel:3",
-         "rotation": [0, 0, 0],
-         "position": [0, -2, -105],
-         "scale": [0.4, 0.4, 0.4],
-         "components": [
-           {
-             "type": "Fuel",
-             "addedValue": 10,
-             "width": 2.5
-           },
-           {
-             "type": "Mesh Renderer",
-             "mesh": "gascan",
-             "material": "gascanMaterial"
-           },
-           {
-             "type": "Collision"
-           }
-         ]
-       },
+        "name": "fuel:2",
+        "rotation": [0, 0, 0],
+        "position": [-5, -2, -60],
+        "scale": [0.4, 0.4, 0.4],
+        "components": [
+          {
+            "type": "Fuel",
+            "addedValue": 10,
+            "width": 2.5
+          },
+          {
+            "type": "Mesh Renderer",
+            "mesh": "gascan",
+            "material": "gascanMaterial"
+          },
+          {
+            "type": "Collision"
+          }
+        ]
+      },
+      {
+        "name": "fuel:3",
+        "rotation": [0, 0, 0],
+        "position": [0, -2, -105],
+        "scale": [0.4, 0.4, 0.4],
+        "components": [
+          {
+            "type": "Fuel",
+            "addedValue": 10,
+            "width": 2.5
+          },
+          {
+            "type": "Mesh Renderer",
+            "mesh": "gascan",
+            "material": "gascanMaterial"
+          },
+          {
+            "type": "Collision"
+          }
+        ]
+      },
       {
         "name": "road",
         "position": [4, -4, 5],
