@@ -77,6 +77,16 @@ set(COMMON_SOURCES
         source/common/components/free-camera-controller.cpp
         source/common/components/movement.hpp
         source/common/components/movement.cpp
+        source/common/components/fuel.hpp
+        source/common/components/fuel.cpp
+        source/common/components/obstacle.hpp
+        source/common/components/obstacle.cpp
+        source/common/components/collision.hpp
+        source/common/components/collision.cpp
+        source/common/components/car.hpp
+        source/common/components/car.cpp
+        source/common/components/goal.hpp
+        source/common/components/goal.cpp
         source/common/components/component-deserializer.hpp
 
         source/common/systems/forward-renderer.hpp

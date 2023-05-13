@@ -9,6 +9,7 @@
 #include "collision.hpp"
 #include "fuel.hpp"
 #include "obstacle.hpp"
+#include "goal.hpp"
 
 namespace our {
 
@@ -42,6 +43,13 @@ namespace our {
         else if(type == ObstacleComponent::getID()) {
             component = entity->addComponent<ObstacleComponent>();
         }
+        else if (type == GoalComponent::getID()) {
+            component = entity->addComponent<GoalComponent>();
+        }
+                else if(type == GoalComponent::getID()) {
+            component = entity->addComponent<GoalComponent>();
+        }
+
         if(component) component->deserialize(data);
     }
 

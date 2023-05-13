@@ -8,6 +8,9 @@
     },
     "fullscreen": false
   },
+  "levels":[
+    {
+      "name": "lvl1",
   "scene": {
     "renderer": {
       "sky": "assets/textures/sky.jpg",
@@ -34,7 +37,8 @@
         "roadTex": "assets/textures/roadTex.jpg",
         "carSkin": "assets/textures/car0.BMP",
         "fuelTex": "assets/textures/fuelTex.png",
-        "barrierTex": "assets/textures/barrierTex.JPG"
+        "barrierTex": "assets/textures/barrierTex.JPG",
+        "houseTex": "assets/textures/houseTex.jpeg"
       },
       "meshes": {
         "cube": "assets/models/cube.obj",
@@ -46,7 +50,8 @@
         "car": "assets/models/car.obj",
         // "gascan":"assets/models/gascan.obj",
         "gascan": "assets/models/gascan.obj",
-        "barrier": "assets/models/barrier.obj"
+        "barrier": "assets/models/barrier.obj",
+        "house": "assets/models/house.obj"
       },
       "samplers": {
         "default": {},
@@ -210,6 +215,21 @@
           "tint": [1, 1, 1, 1],
           "texture": "moon",
           "sampler": "default"
+        },
+        "houseMaterial":{
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "houseTex",
+          "sampler": "default"
         }
       }
     },
@@ -251,7 +271,7 @@
       },
       {
         "name": "obstacle:1",
-        "position": [2, -2, -30],
+        "position": [2, -3, -30],
         "rotation": [0, 90, 0],
         "scale": [0.3, 0.3, 0.25],
         "components": [
@@ -272,7 +292,7 @@
       },
       {
         "name": "obstacle:2",
-        "position": [-8, -2, -70],
+        "position": [-8, -3, -70],
         "rotation": [0, 90, 0],
         "scale": [0.3, 0.3, 0.25],
         "components": [
@@ -293,7 +313,7 @@
       },
       {
         "name": "obstacle:3",
-        "position": [0, -2, -90],
+        "position": [0, -3, -90],
         "rotation": [0, 90, 0],
         "scale": [0.3, 0.3, 0.25],
         "components": [
@@ -314,7 +334,7 @@
       },
       {
         "name": "obstacle:4",
-        "position": [9, -2, -100],
+        "position": [9, -3, -100],
         "rotation": [0, 90, 0],
         "scale": [0.3, 0.3, 0.25],
         "components": [
@@ -410,6 +430,27 @@
         ]
       },
       {
+        "name":"goal house",
+        "position":[0,-3,-150],
+        "rotation":[0,270,0],
+        "scale":[2,2,4],
+        "components":[
+          {
+            "type":"Mesh Renderer",
+            "mesh":"house",
+            "material":"houseMaterial"
+          },
+          {
+            "type":"Collision"
+          },
+          {
+            "type":"Goal",
+            "width":100
+          }
+        ]
+      }
+      ,
+      {
         "position": [0, 10, 0],
         "rotation": [45, 45, 0],
         "scale": [5, 5, 5],
@@ -427,4 +468,6 @@
       }
     ]
   }
+}
+]
 }

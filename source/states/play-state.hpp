@@ -17,11 +17,11 @@ class Playstate: public our::State {
     our::FreeCameraControllerSystem cameraController;
     our::MovementSystem movementSystem;
     our::CollisionSystem collisionSystem;
-
+    //defining a variable to store the level number
+    int level = 0;
     void onInitialize() override {
         // First of all, we get the scene configuration from the app config
-        auto& config = getApp()->getConfig()["scene"];
-        
+        auto& config = getApp()->getConfig()["levels"][level]["scene"];
 
         // If we have assets in the scene config, we deserialize them
         if(config.contains("assets")){
@@ -57,6 +57,8 @@ class Playstate: public our::State {
             // If the escape  key is pressed in this frame, go to the play state
             getApp()->changeState("menu");
         }
+        //if reached the end of the level "goal" and it was marked for removal, return to menu
+
     }
 
     void onDestroy() override {
