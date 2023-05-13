@@ -1,7 +1,7 @@
 {
   "start-scene": "menu",
   "window": {
-    "title": "Default Game Window",
+    "title": "Drive me home",
     "size": {
       "width": 1280,
       "height": 720
@@ -283,26 +283,26 @@
                 ]
               },
               //create a health bar from 0 to 100 that appears top left of view screen
-              // {
-              //   "name": "healthBar",
-              //   "position": [0, 2, -3],
-              //   "rotation": [0, 0, 0],
-              //   "scale": [0.8, 0.05, 0.05],
-              //   "components": [
-              //     {
-              //       "type": "Mesh Renderer",
-              //       "mesh": "cube",
-              //       "material": "healthBarMaterial"
-              //     },
-              //     {
-              //       "type": "HealthBar",
-              //       "width": 10,
-              //       "depth": 0
-              //     }
-              //   ]
-              // }
-              //render a box that wraps the health bar with metal material
-              // ,
+              {
+                "name": "healthBar",
+                "position": [0, 2, -3],
+                "rotation": [0, 0, 0],
+                "scale": [0.8, 0.05, 0.05],
+                "components": [
+                  {
+                    "type": "Mesh Renderer",
+                    "mesh": "cube",
+                    "material": "healthBarMaterial"
+                  },
+                  {
+                    "type": "HealthBar",
+                    "width": 10,
+                    "depth": 0
+                  }
+                ]
+              }
+              // render a box that wraps the health bar with metal material
+              ,
               {
                 "name": "healthBarBox",
                 "position": [0, 2, -4],
