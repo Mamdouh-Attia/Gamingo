@@ -8,7 +8,7 @@
 #include <systems/collision-system.hpp>
 #include <systems/movement.hpp>
 #include <asset-loader.hpp>
-
+#include "imgui.h"
 // This state shows how to use the ECS framework and deserialization.
 class Playstate : public our::State
 {
@@ -40,7 +40,28 @@ class Playstate : public our::State
         auto size = getApp()->getFrameBufferSize();
         renderer.initialize(size, config["renderer"]);
     }
+    //function to load the next level
+    void loadNextLevel()
+    {
+        // First of all, we get the scene configuration from the app config
+        auto &config = getApp()->getConfig()["levels"][level]["scene"];
 
+        // If we have assets in the scene config, we deserialize them
+        if (config.contains("assets"))
+        {
+            our::deserializeAllAssets(config["assets"]);
+        }
+        // If we have a world in the scene config, we use it to populate our world
+        if (config.contains("world"))
+        {
+            world.deserialize(config["world"]);
+        }
+        // We initialize the camera controller system since it needs a pointer to the app
+        cameraController.enter(getApp());
+        // Then we initialize the renderer
+        auto size = getApp()->getFrameBufferSize();
+        renderer.initialize(size, config["renderer"]);
+    }
     void onDraw(double deltaTime) override
     {
         // Here, we just run a bunch of systems to control the world logic
@@ -67,8 +88,13 @@ class Playstate : public our::State
         {
             getApp()->changeState("menu");
             our::won = false;
+            //increment the level number
+            level = (level+1) % 2;
+            //load the next level
+            loadNextLevel();
         }
     }
+
 
     void onDestroy() override
     {
@@ -80,5 +106,18 @@ class Playstate : public our::State
         world.clear();
         // and we delete all the loaded assets to free memory on the RAM and the VRAM
         our::clearAllAssets();
+    }
+
+    virtual void onImmediateGui() override
+    {
+        // We use the immediate GUI to show the FPS
+        // ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
+        // world->getComponent<our::HealthComponent>()->onImmediateGui();
+        ImGui::Begin("Level" ,0, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoMove);
+        // ImGui::SetWindowFontScale(2);
+        ImGui::Text("Level: %d", level + 1);
+        //remove borders
+        // ImGui::
+        ImGui::End();
     }
 };

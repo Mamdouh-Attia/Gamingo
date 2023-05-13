@@ -4,7 +4,7 @@
 namespace our {
     // Reads added value from the given json object
     void GoalComponent::deserialize(const nlohmann::json& data){
-        // if(!data.is_object()) return;
-        // width = data.value("width", width);
+        if(!data.is_object()) return;
+        width = data.value("width", width);
     }
 }

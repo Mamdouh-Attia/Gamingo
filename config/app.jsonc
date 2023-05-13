@@ -279,40 +279,695 @@
                     "type": "Car",
                     "width": 3,
                     "depth": 5
-                  }
-                ]
-              },
-              //create a health bar from 0 to 100 that appears top left of view screen
-              {
-                "name": "healthBar",
-                "position": [0, 2, -3],
-                "rotation": [0, 0, 0],
-                "scale": [0.8, 0.05, 0.05],
-                "components": [
-                  {
-                    "type": "Mesh Renderer",
-                    "mesh": "cube",
-                    "material": "healthBarMaterial"
                   },
                   {
-                    "type": "HealthBar",
-                    "width": 10,
-                    "depth": 0
+                    "type": "Collision"
+                  },
+                  {
+                    "type": "health",
+                    "health": 100
                   }
                 ]
               }
-              // render a box that wraps the health bar with metal material
-              ,
+            ]
+          },
+
+          {
+            "name": "obstacle:1",
+            "position": [2, -3, -30],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
               {
-                "name": "healthBarBox",
-                "position": [0, 2, -4],
-                "rotation": [0, 0, 0],
-                "scale": [1, 0.05, 0.08],
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 15,
+                "width": 5,
+                "depth": 2
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "obstacle:2",
+            "position": [-8, -3, -70],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 15,
+                "width": 5,
+                "depth": 2
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "obstacle:3",
+            "position": [0, -3, -90],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 15,
+                "width": 5,
+                "depth": 2
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "obstacle:4",
+            "position": [9, -3, -100],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 15,
+                "width": 5,
+                "depth": 2
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "fuel:1",
+            "rotation": [0, 0, 0],
+            "position": [1, -2, -40],
+            "scale": [0.4, 0.4, 0.4],
+            "components": [
+              {
+                "type": "Fuel",
+                "addedValue": 10,
+                "width": 2.5,
+                "depth": 0
+              },
+              {
+                "type": "Mesh Renderer",
+                "mesh": "gascan",
+                "material": "gascanMaterial"
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "fuel:2",
+            "rotation": [0, 0, 0],
+            "position": [-5, -2, -60],
+            "scale": [0.4, 0.4, 0.4],
+            "components": [
+              {
+                "type": "Fuel",
+                "addedValue": 10,
+                "width": 2.5,
+                "depth": 0
+              },
+              {
+                "type": "Mesh Renderer",
+                "mesh": "gascan",
+                "material": "gascanMaterial"
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "fuel:3",
+            "rotation": [0, 0, 0],
+            "position": [0, -2, -105],
+            "scale": [0.4, 0.4, 0.4],
+            "components": [
+              {
+                "type": "Fuel",
+                "addedValue": 10,
+                "width": 2.5,
+                "depth": 0
+              },
+              {
+                "type": "Mesh Renderer",
+                "mesh": "gascan",
+                "material": "gascanMaterial"
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "road",
+            "position": [4, -4, 5],
+            "rotation": [0, 90, 0],
+            "scale": [10, 1, 7],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "road",
+                "material": "roadMaterial"
+              }
+            ]
+          },
+          //add another road after previous road as if they were one road
+          {
+            "name": "road",
+            "position": [4, -4, -300],
+            "rotation": [0, 90, 0],
+            "scale": [10, 1, 7],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "road",
+                "material": "roadMaterial"
+              }
+            ]
+          },
+          {
+            "name": "goal house",
+            "position": [0, -3, -300],
+            "rotation": [0, 270, 0],
+            "scale": [2, 2, 4],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "house",
+                "material": "houseMaterial"
+              },
+              {
+                "type": "Collision"
+              },
+              {
+                "type": "Goal",
+                "width": 100
+              }
+            ]
+          },
+          {
+            "position": [0, 10, 0],
+            "rotation": [45, 45, 0],
+            "scale": [5, 5, 5],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "sphere",
+                "material": "moon"
+              },
+              {
+                "type": "Movement",
+                "angularVelocity": [0, 90, 0]
+              }
+            ]
+          },
+          //place more 20 random obstacles here and fuels till z = -500
+          {
+            "name": "obstacle:5",
+            "position": [2, -3, -130],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 15,
+                "width": 5,
+                "depth": 2
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "obstacle:6",
+            "position": [-8, -3, -150],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 15,
+                "width": 5,
+                "depth": 2
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "obstacle:7",
+            "position": [0, -3, -170],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 15,
+                "width": 5,
+                "depth": 2
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "obstacle:8",
+            "position": [9, -3, -190],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 15,
+                "width": 5,
+                "depth": 2
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+            //add fuels
+          },
+          {
+            "name": "fuel:4",
+            "rotation": [0, 0, 0],
+            "position": [1, -2, -140],
+            "scale": [0.4, 0.4, 0.4],
+            "components": [
+              {
+                "type": "Fuel",
+                "addedValue": 10,
+                "width": 2.5,
+                "depth": 0.5
+              },
+              {
+                "type": "Mesh Renderer",
+                "mesh": "gascan",
+                "material": "gascanMaterial"
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "fuel:5",
+            "rotation": [0, 0, 0],
+            "position": [-5, -2, -160],
+            "scale": [0.4, 0.4, 0.4],
+            "components": [
+              {
+                "type": "Fuel",
+                "addedValue": 10,
+                "width": 2.5,
+                "depth": 0
+              },
+              {
+                "type": "Mesh Renderer",
+                "mesh": "gascan",
+                "material": "gascanMaterial"
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "fuel:6",
+            "rotation": [0, 0, 0],
+            "position": [0, -2, -205],
+            "scale": [0.4, 0.4, 0.4],
+            "components": [
+              {
+                "type": "Fuel",
+                "addedValue": 10,
+                "width": 2.5,
+                "depth": 0
+              },
+              {
+                "type": "Mesh Renderer",
+                "mesh": "gascan",
+                "material": "gascanMaterial"
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          //add more fuels and obstacles till z = -500
+          {
+            "name": "fuel:7",
+            "rotation": [0, 0, 0],
+            "position": [3, -2, -230],
+            "scale": [0.4, 0.4, 0.4],
+            "components": [
+              {
+                "type": "Fuel",
+                "addedValue": 10,
+                "width": 2.5,
+                "depth": 0
+              },
+              {
+                "type": "Mesh Renderer",
+                "mesh": "gascan",
+                "material": "gascanMaterial"
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "lvl2",
+      "scene": {
+        "renderer": {
+          "sky": "assets/textures/night-sky.jpg",
+          "postprocess": "assets/shaders/postprocess/night.frag"
+        },
+        "assets": {
+          "shaders": {
+            "tinted": {
+              "vs": "assets/shaders/tinted.vert",
+              "fs": "assets/shaders/tinted.frag"
+            },
+            "textured": {
+              "vs": "assets/shaders/textured.vert",
+              "fs": "assets/shaders/textured.frag"
+            }
+          },
+          "textures": {
+            "moon": "assets/textures/moon.jpg",
+            "grass": "assets/textures/grass_ground_d.jpg",
+            "wood": "assets/textures/wood.jpg",
+            "glass": "assets/textures/glass-panels.png",
+            "monkey": "assets/textures/monkey.png",
+            "batteryTex": "assets/textures/battery.png",
+            "roadTex": "assets/textures/roadTex.jpg",
+            "carSkin": "assets/textures/car0.BMP",
+            "fuelTex": "assets/textures/fuelTex.png",
+            "barrierTex": "assets/textures/barrierTex.JPG",
+            "houseTex": "assets/textures/houseTex.jpeg"
+          },
+          "meshes": {
+            "cube": "assets/models/cube.obj",
+            "monkey": "assets/models/monkey.obj",
+            "plane": "assets/models/plane.obj",
+            "sphere": "assets/models/sphere.obj",
+            "battery": "assets/models/Battery.obj",
+            "road": "assets/models/road.obj",
+            "car": "assets/models/car.obj",
+            // "gascan":"assets/models/gascan.obj",
+            "gascan": "assets/models/gascan.obj",
+            "barrier": "assets/models/barrier.obj",
+            "house": "assets/models/house.obj"
+          },
+          "samplers": {
+            "default": {},
+            "pixelated": {
+              "MAG_FILTER": "GL_NEAREST"
+            }
+          },
+          "materials": {
+            "metal": {
+              "type": "tinted",
+              "shader": "tinted",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [0.45, 0.4, 0.5, 1]
+            },
+            "healthBarMaterial": {
+              "type": "tinted",
+              "shader": "tinted",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              // "tint": [0.45, 0.4, 0.5, 1]
+              "tint": [0.745, 0.145, 0.3137, 1]
+            },
+            "glass": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                },
+                "blending": {
+                  "enabled": true,
+                  "sourceFactor": "GL_SRC_ALPHA",
+                  "destinationFactor": "GL_ONE_MINUS_SRC_ALPHA"
+                },
+                "depthMask": false
+              },
+              "transparent": true,
+              "tint": [1, 1, 1, 1],
+              "texture": "glass",
+              "sampler": "pixelated"
+            },
+            "grass": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [1, 1, 1, 1],
+              "texture": "grass",
+              "sampler": "default"
+            },
+            "monkey": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [1, 1, 1, 1],
+              "texture": "monkey",
+              "sampler": "default"
+            },
+            "batteryMaterial": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [1, 1, 1, 1],
+              "texture": "batteryTex",
+              "sampler": "default"
+            },
+            "barrierMaterial": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [1, 1, 1, 1],
+              "texture": "barrierTex",
+              "sampler": "default"
+            },
+            "gascanMaterial": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [0.745, 0.145, 0.3137, 1],
+              "texture": "fuelTex",
+              "sampler": "default"
+            },
+
+            "carMaterial": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [1, 1, 1, 1],
+              "texture": "carSkin",
+              "sampler": "default"
+            },
+            "roadMaterial": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [1, 1, 1, 1],
+              "texture": "roadTex",
+              "sampler": "default"
+            },
+            "moon": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [1, 1, 1, 1],
+              "texture": "moon",
+              "sampler": "default"
+            },
+            "houseMaterial": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [1, 1, 1, 1],
+              "texture": "houseTex",
+              "sampler": "default"
+            }
+          }
+        },
+        "world": [
+          {
+            "position": [0, 0, 10],
+            "components": [
+              {
+                "type": "Camera"
+              },
+              {
+                "type": "Free Camera Controller"
+              },
+              {
+                "type": "Movement",
+                "linearVelocity": [0, 0, -10],
+                "angularVelocity": [0, 0, 0]
+              }
+            ],
+            "children": [
+              {
+                "name": "car",
+                "position": [0, -2, -4],
+                "rotation": [10, 0, 0],
+                "scale": [1, 1, 0.8],
                 "components": [
                   {
                     "type": "Mesh Renderer",
-                    "mesh": "cube",
-                    "material": "metal"
+                    "mesh": "car",
+                    "material": "carMaterial"
+                  },
+                  {
+                    "type": "Car",
+                    "width": 3,
+                    "depth": 5
+                  },
+                  {
+                    "type": "Collision"
+                  },
+                  {
+                    "type": "health",
+                    "health": 100
                   }
                 ]
               }
