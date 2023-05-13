@@ -7,5 +7,6 @@ namespace our {
         if(!data.is_object()) return;
         addedValue = data.value("addedValue", addedValue);
         width = data.value("width", width);
+        depth = data.value("depth", depth);
     }
 }

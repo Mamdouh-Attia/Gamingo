@@ -10,25 +10,28 @@
 #include <asset-loader.hpp>
 
 // This state shows how to use the ECS framework and deserialization.
-class Playstate: public our::State {
-
+class Playstate : public our::State
+{
     our::World world;
     our::ForwardRenderer renderer;
     our::FreeCameraControllerSystem cameraController;
     our::MovementSystem movementSystem;
     our::CollisionSystem collisionSystem;
-    //defining a variable to store the level number
+    // defining a variable to store the level number
     int level = 0;
-    void onInitialize() override {
+    void onInitialize() override
+    {
         // First of all, we get the scene configuration from the app config
-        auto& config = getApp()->getConfig()["levels"][level]["scene"];
+        auto &config = getApp()->getConfig()["levels"][level]["scene"];
 
         // If we have assets in the scene config, we deserialize them
-        if(config.contains("assets")){
+        if (config.contains("assets"))
+        {
             our::deserializeAllAssets(config["assets"]);
         }
         // If we have a world in the scene config, we use it to populate our world
-        if(config.contains("world")){
+        if (config.contains("world"))
+        {
             world.deserialize(config["world"]);
         }
         // We initialize the camera controller system since it needs a pointer to the app
@@ -38,7 +41,8 @@ class Playstate: public our::State {
         renderer.initialize(size, config["renderer"]);
     }
 
-    void onDraw(double deltaTime) override {
+    void onDraw(double deltaTime) override
+    {
         // Here, we just run a bunch of systems to control the world logic
         movementSystem.update(&world, (float)deltaTime);
         cameraController.update(&world, (float)deltaTime);
@@ -51,17 +55,23 @@ class Playstate: public our::State {
         renderer.render(&world);
 
         // Get a reference to the keyboard object
-        auto& keyboard = getApp()->getKeyboard();
+        auto &keyboard = getApp()->getKeyboard();
 
-        if(keyboard.justPressed(GLFW_KEY_ESCAPE)){
+        if (keyboard.justPressed(GLFW_KEY_ESCAPE))
+        {
             // If the escape  key is pressed in this frame, go to the play state
             getApp()->changeState("menu");
         }
-        //if reached the end of the level "goal" and it was marked for removal, return to menu
-
+        // if reached the end of the level "goal" and it was marked for removal, return to menu
+        if (our::won)
+        {
+            getApp()->changeState("menu");
+            our::won = false;
+        }
     }
 
-    void onDestroy() override {
+    void onDestroy() override
+    {
         // Don't forget to destroy the renderer
         renderer.destroy();
         // On exit, we call exit for the camera controller system to make sure that the mouse is unlocked

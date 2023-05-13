@@ -11,6 +11,7 @@ namespace our {
     public:
         int addedValue = 10;
         int width;
+        int depth;
 
         // The ID of this component type is "Fuel"
         static std::string getID() { return "Fuel"; }

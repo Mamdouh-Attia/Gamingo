@@ -14,18 +14,29 @@
 
 namespace our
 {
-
+    bool won = false;
     // This class handles collision in every entity that has collision component
     class CollisionSystem
     {
     public:
+        //write a function 3dCollides that takes in two 3d positions , depth , width and height and returns true if they collide
+        bool three_D_collides(const glm::vec4 &position, int width, int depth, const glm::vec4 &otherPosition, int otherWidth, int otherDepth)
+        {
+            //write the 6 conditions
+            return position.x < otherPosition.x + otherWidth &&
+                   position.x + width > otherPosition.x &&
+                   position.z < otherPosition.z + otherDepth &&
+                   position.z + depth > otherPosition.z;
+        }
+
+
         bool collides(const glm::vec4 &position, int width, const glm::vec4 &otherPosition, int otherWidth)
         {
             // std::cout << "Car Position ( " << position.x << ", " << position.z << " ) AND Obstacle Position ( " << otherPosition.x << ", " << otherPosition.z << " )." << std::endl;
             //  Check if the two objects are colliding
             //  Check if first object passed second object z position
             return position.x < otherPosition.x + otherWidth &&
-                   position.x + width > otherPosition.x &&
+                   position.y + width > otherPosition.y &&
                    position.z <= otherPosition.z;
         }
 
@@ -46,6 +57,7 @@ namespace our
             // get car position and size
             glm::vec4 carPosition = car->getLocalToWorldMatrix() * glm::vec4(car->localTransform.position, 1.0);
             int carWidth = carComponent->width;
+            int carDepth = carComponent->depth;
             // For each entity in the world
             // collide car with collision
             for (auto entity : world->getEntities())
@@ -68,8 +80,10 @@ namespace our
                         fuelPosition.x += 6;
                         fuelPosition.z -= 6;
                         int fuelWidth = fuel->width;
+                        int fuelDepth = fuel->depth;
                         // check if car collides with collision
-                        if (collides(carPosition, carWidth, fuelPosition, fuelWidth))
+                        // if (collides(carPosition, carWidth, fuelPosition, fuelWidth))
+                        if (three_D_collides(carPosition, carWidth,  carDepth, fuelPosition, fuelWidth,fuelDepth))
                         {
                             // if car collides with fuel, add 10 to car's health
                             carComponent->health += fuel->addedValue;
@@ -89,8 +103,9 @@ namespace our
                         glm::vec4 obstaclePosition =
                             /* entity->getLocalToWorldMatrix() * */ glm::vec4(entity->localTransform.position, 1.0);
                         int obstacleWidth = obstacle->width;
+                        int obstacleDepth = obstacle->depth;
                         // check if car collides with collision
-                        if (collides(carPosition, carWidth, obstaclePosition, obstacleWidth))
+                        if (three_D_collides(carPosition, carWidth, carDepth, obstaclePosition, obstacleWidth,obstacleDepth))
                         {
                             // if car collides with obstacle, subtract 10 from car's health
                             carComponent->health -= obstacle->subtractedValue;
@@ -121,6 +136,7 @@ namespace our
                             // mark obstacle for removal
                             world->markForRemoval(entity);
                             // if reached the end of the level "goal" and it was marked for removal, return to menu
+                            won = true;
                         }
                     }
                 }

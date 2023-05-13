@@ -12,6 +12,7 @@ namespace our {
     public:
         int subtractedValue = 10;
         int width = 0;
+        int depth = 0;
 
         // The ID of this component type is "Obstacle"
         static std::string getID() { return "Obstacle"; }

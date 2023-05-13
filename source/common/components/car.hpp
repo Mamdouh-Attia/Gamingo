@@ -8,6 +8,7 @@ namespace our {
     class CarComponent : public Component {
     public:
         int width = 0;
+        int depth = 0;
         int health = 100;
 
         // The ID of this component type is "Car"
