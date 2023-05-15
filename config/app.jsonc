@@ -311,6 +311,18 @@
               },
               {
                 "type": "Collision"
+              },
+              {
+                "type": "Light",
+                "typeLight": "point",
+                "enabled": true,
+                "diffuse": [1, 1, 1],
+                "specular": [1, 1, 1],
+                "attenuation": {
+                  "constant": 1,
+                  "linear": 0.09,
+                  "quadratic": 0.032
+                }
               }
             ]
           },
@@ -399,6 +411,18 @@
               },
               {
                 "type": "Collision"
+              },
+              {
+                "type": "Light",
+                "typeLight": "point",
+                "enabled": true,
+                "diffuse": [1, 1, 1],
+                "specular": [1, 1, 1],
+                "attenuation": {
+                  "constant": 1,
+                  "linear": 0.09,
+                  "quadratic": 0.032
+                }
               }
             ]
           },
