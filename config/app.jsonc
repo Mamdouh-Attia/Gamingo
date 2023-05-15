@@ -6,7 +6,7 @@
       "width": 1280,
       "height": 720
     },
-    "fullscreen": false
+    "fullscreen": true
   },
   "levels": [
     {
@@ -305,7 +305,7 @@
               },
               {
                 "type": "Obstacle",
-                "subtractedValue": 15,
+                "subtractedValue": 50,
                 "width": 5,
                 "depth": 2
               },
@@ -339,7 +339,7 @@
               },
               {
                 "type": "Obstacle",
-                "subtractedValue": 15,
+                "subtractedValue": 50,
                 "width": 5,
                 "depth": 2
               },
@@ -361,7 +361,7 @@
               },
               {
                 "type": "Obstacle",
-                "subtractedValue": 15,
+                "subtractedValue": 50,
                 "width": 5,
                 "depth": 2
               },
@@ -383,7 +383,7 @@
               },
               {
                 "type": "Obstacle",
-                "subtractedValue": 15,
+                "subtractedValue": 50,
                 "width": 5,
                 "depth": 2
               },
@@ -547,7 +547,7 @@
               },
               {
                 "type": "Obstacle",
-                "subtractedValue": 15,
+                "subtractedValue": 50,
                 "width": 5,
                 "depth": 2
               },
@@ -558,7 +558,7 @@
           },
           {
             "name": "obstacle:6",
-            "position": [-8, -3, -150],
+            "position": [-8, -3, -500],
             "rotation": [0, 90, 0],
             "scale": [0.3, 0.3, 0.25],
             "components": [
@@ -569,7 +569,7 @@
               },
               {
                 "type": "Obstacle",
-                "subtractedValue": 15,
+                "subtractedValue": 50,
                 "width": 5,
                 "depth": 2
               },
@@ -591,7 +591,7 @@
               },
               {
                 "type": "Obstacle",
-                "subtractedValue": 15,
+                "subtractedValue": 50,
                 "width": 5,
                 "depth": 2
               },
@@ -613,7 +613,7 @@
               },
               {
                 "type": "Obstacle",
-                "subtractedValue": 15,
+                "subtractedValue": 50,
                 "width": 5,
                 "depth": 2
               },
@@ -1011,7 +1011,7 @@
               },
               {
                 "type": "Obstacle",
-                "subtractedValue": 15,
+                "subtractedValue": 50,
                 "width": 5,
                 "depth": 2
               },

@@ -93,6 +93,12 @@ class Playstate : public our::State
             //load the next level
             loadNextLevel();
         }
+        // if the car reached 0 health, return to menu
+        if (our::gameOver)
+        {
+            getApp()->changeState("game-over");
+            our::gameOver = false;
+        }
     }
 
 

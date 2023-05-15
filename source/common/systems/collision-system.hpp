@@ -15,6 +15,7 @@
 namespace our
 {
     bool won = false;
+    bool gameOver = false;
     // This class handles collision in every entity that has collision component
     class CollisionSystem
     {
@@ -110,11 +111,12 @@ namespace our
                             // if car collides with obstacle, subtract 10 from car's health
                             carComponent->health -= obstacle->subtractedValue;
                             // if car's health is less than 0, set car's health to 0
-                            if (carComponent->health < 0)
+                            if (carComponent->health <= 0)
                             {
                                 carComponent->health = 0;
-                                // TODO: GAMEOVER
-                                // gameOver = true;
+                                //load gameOver menu
+                                gameOver = true;
+
                             }
                             std::cout << "Obstacle: Health = " << carComponent->health << std::endl;
                             // mark obstacle for removal
