@@ -86,7 +86,7 @@ class Playstate : public our::State
         // if reached the end of the level "goal" and it was marked for removal, return to menu
         if (our::won)
         {
-            getApp()->changeState("menu");
+            getApp()->changeState("level-win");
             our::won = false;
             //increment the level number
             level = (level+1) % 2;

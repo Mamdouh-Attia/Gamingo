@@ -11,8 +11,8 @@
 #include <array>
 
 
-// This state shows how to use some of the abstractions we created to make a game-over.
-class GameOverstate: public our::State {
+// This state shows how to use some of the abstractions we created to make a level up screen.
+class LevelWinstate: public our::State {
 
     // A meterial holding the menu shader and the menu texture to draw
     our::TexturedMaterial* menuMaterial;
@@ -34,7 +34,7 @@ class GameOverstate: public our::State {
         menuMaterial->shader->attach("assets/shaders/textured.frag", GL_FRAGMENT_SHADER);
         menuMaterial->shader->link();
         // Then we load the menu texture
-        menuMaterial->texture = our::texture_utils::loadImage("assets/textures/game-over.jpg");
+        menuMaterial->texture = our::texture_utils::loadImage("assets/textures/levelUp.jpg");
         // Initially, the menu material will be black, then it will fade in
         menuMaterial->tint = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
 
@@ -85,10 +85,10 @@ class GameOverstate: public our::State {
 
         if(keyboard.justPressed(GLFW_KEY_SPACE)){
             // If the space key is pressed in this frame, go to the play state
-            getApp()->changeState("menu");
+            getApp()->changeState("play");
         } else if(keyboard.justPressed(GLFW_KEY_ESCAPE)) {
             // If the escape key is pressed in this frame, exit the game
-            getApp()->close();
+            getApp()->changeState("menu");
         }
 
         // Get the framebuffer size to set the viewport and the create the projection matrix.
