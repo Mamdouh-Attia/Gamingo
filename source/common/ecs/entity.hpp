@@ -27,7 +27,7 @@ namespace our {
 
         glm::mat4 getLocalToWorldMatrix() const; // Computes and returns the transformation from the entities local space to the world space
         void deserialize(const nlohmann::json&); // Deserializes the entity data and components from a json object
-        
+        glm::vec3 getWorldTranslation() const;
         // This template method create a component of type T,
         // adds it to the components map and returns a pointer to it 
         template<typename T>

@@ -82,7 +82,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g -fdiagnostics-color=always"
 				},
 				{
 					"backtrace" : 2,
@@ -118,15 +118,15 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/glfw/include"
+					"path" : "D:/omar/Gamingo/vendor/glfw/include"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/glfw/src"
+					"path" : "D:/omar/Gamingo/vendor/glfw/src"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/cmake-build-debug/vendor/glfw/src"
+					"path" : "D:/omar/Gamingo/cmake-build-debug/vendor/glfw/src"
 				}
 			],
 			"language" : "C",

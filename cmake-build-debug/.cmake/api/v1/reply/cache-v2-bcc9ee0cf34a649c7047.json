@@ -27,7 +27,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/addr2line.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/addr2line.exe"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -43,7 +43,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/ar.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/ar.exe"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "f:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/cmake-build-debug"
+			"value" : "d:/omar/Gamingo/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "22"
+			"value" : "25"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -103,7 +103,19 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "2"
+		},
+		{
+			"name" : "CMAKE_COLOR_DIAGNOSTICS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable colored diagnostics throughout."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -115,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "F:/CLion 2022.1/bin/cmake/win/bin/cmake.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/cmake/win/x64/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -127,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "F:/CLion 2022.1/bin/cmake/win/bin/cpack.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/cmake/win/x64/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -139,7 +151,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "F:/CLion 2022.1/bin/cmake/win/bin/ctest.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/cmake/win/x64/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -155,7 +167,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/g++.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/g++.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -171,7 +183,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/gcc-ar.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -187,7 +199,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/gcc-ranlib.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -299,7 +311,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/gcc.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/gcc.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -315,7 +327,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/gcc-ar.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -331,7 +343,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/gcc-ranlib.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -443,7 +455,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/dlltool.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/dlltool.exe"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -566,6 +578,18 @@
 			"value" : ""
 		},
 		{
+			"name" : "CMAKE_FIND_PACKAGE_REDIRECTS_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake."
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/omar/Gamingo/cmake-build-debug/CMakeFiles/pkgRedirects"
+		},
+		{
 			"name" : "CMAKE_GENERATOR",
 			"properties" : 
 			[
@@ -638,18 +662,6 @@
 			"value" : "1"
 		},
 		{
-			"name" : "CMAKE_HAVE_PTHREAD_H",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Have include pthread.h"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "1"
-		},
-		{
 			"name" : "CMAKE_HOME_DIRECTORY",
 			"properties" : 
 			[
@@ -659,7 +671,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo"
+			"value" : "D:/omar/Gamingo"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -943,7 +955,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/ld.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/ld.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -955,7 +967,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/ninja/win/ninja.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/ninja/win/x64/ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1051,7 +1063,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/nm.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/nm.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -1079,7 +1091,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/objcopy.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/objcopy.exe"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -1095,7 +1107,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/objdump.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/objdump.exe"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -1219,7 +1231,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/ranlib.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -1235,7 +1247,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/windres.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/windres.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER_WORKS",
@@ -1343,7 +1355,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/readelf.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/readelf.exe"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1355,7 +1367,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "F:/CLion 2022.1/bin/cmake/win/share/cmake-3.22"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/cmake/win/x64/share/cmake-3.25"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1563,7 +1575,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "F:/CLion 2022.1/bin/mingw/bin/strip.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/strip.exe"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1615,7 +1627,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/cmake-build-debug"
+			"value" : "D:/omar/Gamingo/cmake-build-debug"
 		},
 		{
 			"name" : "GFX-LAB_IS_TOP_LEVEL",
@@ -1639,7 +1651,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo"
+			"value" : "D:/omar/Gamingo"
 		},
 		{
 			"name" : "GLFW_BINARY_DIR",
@@ -1651,7 +1663,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/cmake-build-debug/vendor/glfw"
+			"value" : "D:/omar/Gamingo/cmake-build-debug/vendor/glfw"
 		},
 		{
 			"name" : "GLFW_BUILD_DOCS",
@@ -1723,7 +1735,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/glfw"
+			"value" : "D:/omar/Gamingo/vendor/glfw"
 		},
 		{
 			"name" : "GLFW_USE_HYBRID_HPG",
@@ -1760,6 +1772,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "1"
+		},
+		{
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		},
 		{
 			"name" : "_GLFW_HAS_64ASLR",

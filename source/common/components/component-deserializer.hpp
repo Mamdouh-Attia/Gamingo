@@ -11,6 +11,7 @@
 #include "obstacle.hpp"
 #include "goal.hpp"
 #include "health.hpp"
+#include "light.hpp"
 
 namespace our
 {
@@ -64,9 +65,10 @@ namespace our
         {
             component = entity->addComponent<GoalComponent>();
         }
-        else if (type == HealthComponent::getID())
-        {
+        else if (type == HealthComponent::getID()) {
             component = entity->addComponent<HealthComponent>();
+        }else if(type == LightComponent::getID()){
+            component = entity->addComponent<LightComponent>();
         }
         if (component)
             component->deserialize(data);

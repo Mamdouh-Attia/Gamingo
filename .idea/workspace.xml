@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="GFX-LAB" targetName="glfw" />
@@ -13,17 +22,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c01365d8-79ce-4102-93b8-a8e9f2837d55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/source/common/components/light.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/common/components/light.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-63eca90c308178dcddfd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-ff100aab1ff1afda169b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2c72c962bd325937c0a4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-07T22-41-52-0012.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GAME_APPLICATION-Debug-fbfdc2bdbba5a3ac6e38.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-glfw-Debug-576862b43481fe28cf6b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-42eab146bdc8afedea54.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.jsonc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/car.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/car.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/car.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/car.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/fuel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/fuel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/fuel.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/fuel.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/obstacle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/obstacle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/obstacle.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/obstacle.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libGAME_APPLICATION.dll.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libGAME_APPLICATION.dll.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vendor/glfw/src/libglfw3.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vendor/glfw/src/libglfw3.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/components/component-deserializer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/component-deserializer.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/ecs/entity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/ecs/entity.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/ecs/entity.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/ecs/entity.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/material/material.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/material/material.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/material/material.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/material/material.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/systems/forward-renderer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/forward-renderer.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,27 +72,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cmake.loaded.for.project&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "cmake.loaded.for.project": "true",
+    "last_opened_file_path": "D:/omar/Gamingo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="CMake Application.GAME_APPLICATION">
-    <configuration name="GAME_APPLICATION" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GFX-LAB" TARGET_NAME="GAME_APPLICATION" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GFX-LAB" RUN_TARGET_NAME="GAME_APPLICATION">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="GAME_APPLICATION" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GFX-LAB" TARGET_NAME="GAME_APPLICATION" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GFX-LAB" RUN_TARGET_NAME="GAME_APPLICATION">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -102,11 +128,18 @@
       <workItem from="1682970247499" duration="886000" />
       <workItem from="1683482151384" duration="20103000" />
       <workItem from="1683583398783" duration="4118000" />
+      <workItem from="1684136160907" duration="3924000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

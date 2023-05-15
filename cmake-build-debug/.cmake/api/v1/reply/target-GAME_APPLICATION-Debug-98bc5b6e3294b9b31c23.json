@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/bin/GAME_APPLICATION.exe"
+			"path" : "D:/omar/Gamingo/bin/GAME_APPLICATION.exe"
 		},
 		{
-			"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/bin/GAME_APPLICATION.pdb"
+			"path" : "D:/omar/Gamingo/bin/GAME_APPLICATION.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -29,19 +29,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 120,
+				"line" : 135,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 121,
+				"line" : 136,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 89,
+				"line" : 104,
 				"parent" : 0
 			}
 		]
@@ -52,7 +52,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g -fdiagnostics-color=always"
 				},
 				{
 					"fragment" : "-std=c++17"
@@ -62,27 +62,27 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/source/common"
+					"path" : "D:/omar/Gamingo/source/common"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/glfw/include"
+					"path" : "D:/omar/Gamingo/vendor/glfw/include"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/glad/include"
+					"path" : "D:/omar/Gamingo/vendor/glad/include"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/glm"
+					"path" : "D:/omar/Gamingo/vendor/glm"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/imgui"
+					"path" : "D:/omar/Gamingo/vendor/imgui"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/utils"
+					"path" : "D:/omar/Gamingo/vendor/utils"
 				}
 			],
 			"language" : "CXX",
@@ -118,52 +118,55 @@
 				56,
 				58,
 				61,
-				65,
+				63,
 				66,
-				67,
 				68,
-				69,
-				70
+				72,
+				73,
+				74,
+				75,
+				76,
+				77
 			]
 		},
 		{
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g -fdiagnostics-color=always"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/source/common"
+					"path" : "D:/omar/Gamingo/source/common"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/glfw/include"
+					"path" : "D:/omar/Gamingo/vendor/glfw/include"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/glad/include"
+					"path" : "D:/omar/Gamingo/vendor/glad/include"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/glm"
+					"path" : "D:/omar/Gamingo/vendor/glm"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/imgui"
+					"path" : "D:/omar/Gamingo/vendor/imgui"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/vendor/utils"
+					"path" : "D:/omar/Gamingo/vendor/utils"
 				}
 			],
 			"language" : "C",
 			"sourceIndexes" : 
 			[
-				64
+				71
 			]
 		}
 	],
@@ -234,13 +237,16 @@
 				56,
 				58,
 				61,
-				64,
-				65,
+				63,
 				66,
-				67,
 				68,
-				69,
-				70
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77
 			]
 		},
 		{
@@ -288,7 +294,11 @@
 				59,
 				60,
 				62,
-				63
+				64,
+				65,
+				67,
+				69,
+				70
 			]
 		}
 	],
@@ -612,8 +622,46 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "source/common/components/car.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/common/components/goal.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/common/components/goal.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/common/components/health.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/common/components/health.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "source/common/components/component-deserializer.hpp",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/common/components/light.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/common/components/light.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
