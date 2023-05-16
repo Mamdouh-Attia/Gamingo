@@ -36,7 +36,7 @@
             "batteryTex": "assets/textures/battery.png",
             "roadTex": "assets/textures/roadTex.jpg",
             "carSkin": "assets/textures/car0.BMP",
-            "fuelTex": "assets/textures/fuelTex.png",
+            "fuelTex": "assets/textures/fuelTex.jpg",
             "barrierTex": "assets/textures/barrierTex.JPG",
             "houseTex": "assets/textures/houseTex.jpeg"
           },
@@ -48,8 +48,7 @@
             "battery": "assets/models/Battery.obj",
             "road": "assets/models/road.obj",
             "car": "assets/models/car.obj",
-            // "gascan":"assets/models/gascan.obj",
-            "gascan": "assets/models/gascan.obj",
+            "fuel": "assets/models/fuel.obj",
             "barrier": "assets/models/barrier.obj",
             "house": "assets/models/house.obj"
           },
@@ -169,7 +168,7 @@
               "texture": "barrierTex",
               "sampler": "default"
             },
-            "gascanMaterial": {
+            "fuelMaterial": {
               "type": "textured",
               "shader": "textured",
               "pipelineState": {
@@ -180,7 +179,7 @@
                   "enabled": true
                 }
               },
-              "tint": [0.745, 0.145, 0.3137, 1],
+              "tint": [1, 1, 1, 1],
               "texture": "fuelTex",
               "sampler": "default"
             },
@@ -307,7 +306,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -329,7 +328,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -351,7 +350,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -373,7 +372,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -383,67 +382,82 @@
           {
             "name": "fuel:1",
             "rotation": [0, 0, 0],
-            "position": [1, -2, -40],
+            "position": [1, -3, -40],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           {
             "name": "fuel:2",
             "rotation": [0, 0, 0],
-            "position": [-5, -2, -60],
+            "position": [-5, -3, -60],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           {
             "name": "fuel:3",
             "rotation": [0, 0, 0],
-            "position": [0, -2, -105],
+            "position": [0, -3, -105],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           {
@@ -475,8 +489,8 @@
           },
           {
             "name": "goal house",
-            "position": [0, -3, -300],
-            "rotation": [0, 270, 0],
+            "position": [0, -2, -300],
+            "rotation": [0, 90, 0],
             "scale": [2, 2, 4],
             "components": [
               {
@@ -495,7 +509,7 @@
           },
           {
             "position": [0, 10, 0],
-            "rotation": [45, 45, 0],
+            "rotation": [45, 90, 0],
             "scale": [5, 5, 5],
             "components": [
               {
@@ -525,7 +539,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -547,7 +561,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -569,7 +583,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -591,7 +605,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -602,90 +616,110 @@
           {
             "name": "fuel:4",
             "rotation": [0, 0, 0],
-            "position": [1, -2, -140],
+            "position": [1, -3, -140],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
-                "depth": 0.5
+                "width": 7.5,
+                "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           {
             "name": "fuel:5",
             "rotation": [0, 0, 0],
-            "position": [-5, -2, -160],
+            "position": [-5, -3, -160],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           {
             "name": "fuel:6",
             "rotation": [0, 0, 0],
-            "position": [0, -2, -205],
+            "position": [0, -3, -205],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           //add more fuels and obstacles till z = -500
           {
             "name": "fuel:7",
             "rotation": [0, 0, 0],
-            "position": [3, -2, -230],
+            "position": [3, -3, -230],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           }
         ]
@@ -718,7 +752,7 @@
             "batteryTex": "assets/textures/battery.png",
             "roadTex": "assets/textures/roadTex.jpg",
             "carSkin": "assets/textures/car0.BMP",
-            "fuelTex": "assets/textures/fuelTex.png",
+            "fuelTex": "assets/textures/fuelTex.jpg",
             "barrierTex": "assets/textures/barrierTex.JPG",
             "houseTex": "assets/textures/houseTex.jpeg"
           },
@@ -730,8 +764,7 @@
             "battery": "assets/models/Battery.obj",
             "road": "assets/models/road.obj",
             "car": "assets/models/car.obj",
-            // "gascan":"assets/models/gascan.obj",
-            "gascan": "assets/models/gascan.obj",
+            "fuel": "assets/models/fuel.obj",
             "barrier": "assets/models/barrier.obj",
             "house": "assets/models/house.obj"
           },
@@ -851,7 +884,7 @@
               "texture": "barrierTex",
               "sampler": "default"
             },
-            "gascanMaterial": {
+            "fuelMaterial": {
               "type": "textured",
               "shader": "textured",
               "pipelineState": {
@@ -862,7 +895,7 @@
                   "enabled": true
                 }
               },
-              "tint": [0.745, 0.145, 0.3137, 1],
+              "tint": [1, 1, 1, 1],
               "texture": "fuelTex",
               "sampler": "default"
             },
@@ -989,7 +1022,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -1011,7 +1044,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -1033,7 +1066,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -1055,7 +1088,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -1065,67 +1098,82 @@
           {
             "name": "fuel:1",
             "rotation": [0, 0, 0],
-            "position": [1, -2, -40],
+            "position": [1, -3, -40],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
+              },
+              {
+                 "type": "Movement",
+                 "linearVelocity": [0, 0, 0],
+                 "angularVelocity": [0, 540, 0]
               }
             ]
           },
           {
             "name": "fuel:2",
             "rotation": [0, 0, 0],
-            "position": [-5, -2, -60],
+            "position": [-5, -3, -60],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           {
             "name": "fuel:3",
             "rotation": [0, 0, 0],
-            "position": [0, -2, -105],
+            "position": [0, -3, -105],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           {
@@ -1157,8 +1205,8 @@
           },
           {
             "name": "goal house",
-            "position": [0, -3, -300],
-            "rotation": [0, 270, 0],
+            "position": [0, -2, -300],
+            "rotation": [0, 90, 0],
             "scale": [2, 2, 4],
             "components": [
               {
@@ -1207,7 +1255,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -1229,7 +1277,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -1251,7 +1299,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -1273,7 +1321,7 @@
                 "type": "Obstacle",
                 "subtractedValue": 15,
                 "width": 5,
-                "depth": 2
+                "depth": 0
               },
               {
                 "type": "Collision"
@@ -1284,90 +1332,110 @@
           {
             "name": "fuel:4",
             "rotation": [0, 0, 0],
-            "position": [1, -2, -140],
+            "position": [1, -3, -140],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
-                "depth": 0.5
+                "width": 7.5,
+                "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           {
             "name": "fuel:5",
             "rotation": [0, 0, 0],
-            "position": [-5, -2, -160],
+            "position": [-5, -3, -160],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           {
             "name": "fuel:6",
             "rotation": [0, 0, 0],
-            "position": [0, -2, -205],
+            "position": [0, -3, -205],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           },
           //add more fuels and obstacles till z = -500
           {
             "name": "fuel:7",
             "rotation": [0, 0, 0],
-            "position": [3, -2, -230],
+            "position": [3, -3, -230],
             "scale": [0.4, 0.4, 0.4],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 2.5,
+                "width": 7.5,
                 "depth": 0
               },
               {
                 "type": "Mesh Renderer",
-                "mesh": "gascan",
-                "material": "gascanMaterial"
+                "mesh": "fuel",
+                "material": "fuelMaterial"
               },
               {
                 "type": "Collision"
-              }
+              },
+             {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+             }
             ]
           }
         ]

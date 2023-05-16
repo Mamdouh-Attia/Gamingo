@@ -112,7 +112,6 @@ class Playstate : public our::State
     {
         // We use the immediate GUI to show the FPS
         // ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
-        // world->getComponent<our::HealthComponent>()->onImmediateGui();
         ImGui::Begin("Level" ,0, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoMove);
         // ImGui::SetWindowFontScale(2);
         ImGui::Text("Level: %d", level + 1);

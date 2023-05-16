@@ -1,0 +1,118 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "vendor/glfw",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-vendor.glfw-Debug-d510699980370941aaad.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "vendor/glfw"
+				},
+				{
+					"build" : "vendor/glfw/src",
+					"jsonFile" : "directory-vendor.glfw.src-Debug-c04a3537cf9f3f6fb253.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "vendor/glfw/src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GFX-LAB",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GAME_APPLICATION::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GAME_APPLICATION-Debug-0dd8e2a9a1b5e00f8f02.json",
+					"name" : "GAME_APPLICATION",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "glfw::@31bd9730e6b8c71cc656",
+					"jsonFile" : "target-glfw-Debug-576862b43481fe28cf6b.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo/cmake-build-debug",
+		"source" : "F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -13,7 +13,7 @@ namespace our
     {
     public:
         int health = 100;
-        // The ID of this component type is "Goal"
+        // The ID of this component type is "Health"
         static std::string getID() { return "Health"; }
 
         // Reads subtracted value from the given json object

@@ -10,7 +10,7 @@ namespace our {
     // This class handles data storage of Goal
     class GoalComponent : public Component {
     public:
-        int width = 0;
+        float width = 0;
         // The ID of this component type is "Goal"
         static std::string getID() { return "Goal"; }
 
