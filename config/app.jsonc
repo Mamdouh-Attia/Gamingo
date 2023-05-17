@@ -35,7 +35,7 @@
             "monkey": "assets/textures/monkey.png",
             "batteryTex": "assets/textures/battery.png",
             "roadTex": "assets/textures/roadTex.jpg",
-            "carSkin": "assets/textures/car0.BMP",
+            "carSkin": "assets/textures/toktok.png",
             "fuelTex": "assets/textures/fuelTex.jpg",
             "barrierTex": "assets/textures/barrierTex.JPG",
             "houseTex": "assets/textures/houseTex.jpeg"
@@ -47,7 +47,7 @@
             "sphere": "assets/models/sphere.obj",
             "battery": "assets/models/Battery.obj",
             "road": "assets/models/road.obj",
-            "car": "assets/models/car.obj",
+            "car": "assets/models/toktok.obj",
             "fuel": "assets/models/fuel.obj",
             "barrier": "assets/models/barrier.obj",
             "house": "assets/models/house.obj"
@@ -489,7 +489,7 @@
           },
           {
             "name": "goal house",
-            "position": [0, -2, -300],
+            "position": [0, -2, -250],
             "rotation": [0, 90, 0],
             "scale": [2, 2, 4],
             "components": [
@@ -1275,7 +1275,7 @@
           },
           {
             "name": "goal house",
-            "position": [0, -2, -300],
+            "position": [0, -2, -250],
             "rotation": [0, 90, 0],
             "scale": [2, 2, 4],
             "components": [
@@ -1537,7 +1537,7 @@
             "monkey": "assets/textures/monkey.png",
             "batteryTex": "assets/textures/battery.png",
             "roadTex": "assets/textures/roadTex.jpg",
-            "carSkin": "assets/textures/car0.BMP",
+            "carSkin": "assets/textures/oldCar.jpg",
             "fuelTex": "assets/textures/fuelTex.jpg",
             "barrierTex": "assets/textures/barrierTex.JPG",
             "houseTex": "assets/textures/houseTex.jpeg"
@@ -1549,7 +1549,7 @@
             "sphere": "assets/models/sphere.obj",
             "battery": "assets/models/Battery.obj",
             "road": "assets/models/road.obj",
-            "car": "assets/models/car.obj",
+            "car": "assets/models/oldCar.obj",
             "fuel": "assets/models/fuel.obj",
             "barrier": "assets/models/barrier.obj",
             "house": "assets/models/house.obj"
@@ -1768,8 +1768,8 @@
               {
                 "name": "car",
                 "position": [0, -2, -4],
-                "rotation": [10, 0, 0],
-                "scale": [1, 1, 0.8],
+                "rotation": [0, 0, 0],
+                "scale": [0.7, 0.7, 0.7],
                 "components": [
                   {
                     "type": "Mesh Renderer",
@@ -2099,7 +2099,7 @@
               },
               {
                 "type": "Obstacle",
-                "subtractedValue": 35,
+                "subtractedValue": 65,
                 "width": 5,
                 "depth": 0
               },
