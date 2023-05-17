@@ -14,21 +14,19 @@
   <component name="ChangeListManager">
     <list default="true" id="c01365d8-79ce-4102-93b8-a8e9f2837d55" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/models/gascan.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/fuelTex.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2c72c962bd325937c0a4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-07T22-41-52-0012.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GAME_APPLICATION-Debug-fbfdc2bdbba5a3ac6e38.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-a2563f3f663f6873bd2f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-16T21-48-09-0863.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GAME_APPLICATION-Debug-0dd8e2a9a1b5e00f8f02.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/libGAME_APPLICATION.dll.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libGAME_APPLICATION.dll.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.jsonc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/car.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/car.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/fuel.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/fuel.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/goal.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/goal.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/health.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/health.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/obstacle.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/obstacle.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/components/component-deserializer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/component-deserializer.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/components/health.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/components/health.hpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/states/play-state.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/states/play-state.hpp" afterDir="false" />
     </list>
@@ -109,7 +107,7 @@
       <workItem from="1682970247499" duration="886000" />
       <workItem from="1683482151384" duration="20103000" />
       <workItem from="1683583398783" duration="4254000" />
-      <workItem from="1684273656479" duration="6646000" />
+      <workItem from="1684273656479" duration="13096000" />
     </task>
     <servers />
   </component>

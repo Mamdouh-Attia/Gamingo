@@ -88,8 +88,9 @@ class Playstate : public our::State
         {
             getApp()->changeState("menu");
             our::won = false;
+            our::health = 100;
             //increment the level number
-            level = (level+1) % 2;
+            level = (level+1) % 3;
             //load the next level
             loadNextLevel();
         }
@@ -110,13 +111,52 @@ class Playstate : public our::State
 
     virtual void onImmediateGui() override
     {
-        // We use the immediate GUI to show the FPS
-        // ImGui::Text("FPS: %.1f", ImGui::GetIO().Framerate);
-        ImGui::Begin("Level" ,0, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoMove);
-        // ImGui::SetWindowFontScale(2);
-        ImGui::Text("Level: %d", level + 1);
-        //remove borders
-        // ImGui::
+        // loading Level text
+        ImVec2 levelPos(10, 10);
+        ImVec2 levelSize = ImGui::CalcTextSize("LEVEL: 1", NULL, true);
+        // add some padding
+        levelSize.x += 15;
+        levelSize.y += 15;
+        // make it at the top left of window
+        ImGui::SetNextWindowPos(levelPos);
+        ImGui::SetNextWindowSize(levelSize);
+        ImGui::Begin("LEVEL", NULL,
+                     ImGuiWindowFlags_NoBackground |
+                     ImGuiWindowFlags_NoTitleBar |
+                     ImGuiWindowFlags_NoResize |
+                     ImGuiWindowFlags_NoMove |
+                     ImGuiWindowFlags_NoScrollbar |
+                     ImGuiWindowFlags_NoSavedSettings |
+                     ImGuiWindowFlags_NoInputs |
+                     ImGuiWindowFlags_AlwaysAutoResize);
+        // blue color
+        ImVec4 levelColor(0.0f, 0.0f, 1.0f, 1.0f);
+        ImGui::TextColored(levelColor, "LEVEL: %d", level + 1);
+        ImGui::End();
+
+        // loading Health text
+        ImVec2 healthPos(1150, 650);
+        ImVec2 healthSize = ImGui::CalcTextSize("HEALTH: 100", NULL, true);
+        // add some padding
+        healthSize.x += 25;
+        healthSize.y += 25;
+        // make it at the top left of window
+        ImGui::SetNextWindowPos(healthPos);
+        ImGui::SetNextWindowSize(healthSize);
+        ImGui::Begin("HEALTH", NULL,
+                     ImGuiWindowFlags_NoBackground |
+                     ImGuiWindowFlags_NoTitleBar |
+                     ImGuiWindowFlags_NoResize |
+                     ImGuiWindowFlags_NoMove |
+                     ImGuiWindowFlags_NoScrollbar |
+                     ImGuiWindowFlags_NoSavedSettings |
+                     ImGuiWindowFlags_NoInputs |
+                     ImGuiWindowFlags_AlwaysAutoResize);
+        // green color
+        ImVec4 healthColor(0.0f, 1.0f, 0.0f, 1.0f);
+        // red color if health less than 50
+        if (our::health < 50) healthColor = ImVec4(1.0, 0.0, 0.0, 1.0);
+        ImGui::TextColored(healthColor, "HEALTH: %d", our::health);
         ImGui::End();
     }
 };

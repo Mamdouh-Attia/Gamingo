@@ -15,6 +15,7 @@
 namespace our
 {
     bool won = false;
+    int health = 100;
     // This class handles collision in every entity that has collision component
     class CollisionSystem
     {
@@ -76,7 +77,7 @@ namespace our
                             {
                                 carComponent->health = 100;
                             }
-                            std::cout << "Fuel: Health = " << carComponent->health << std::endl;
+                            health = carComponent->health;
                             // mark the fuel for removal
                             world->markForRemoval(entity);
                         }
@@ -97,7 +98,7 @@ namespace our
                                 // TODO: GAMEOVER
                                 // gameOver = true;
                             }
-                            std::cout << "Obstacle: Health = " << carComponent->health << std::endl;
+                            health = carComponent->health;
                             // mark obstacle for removal
                             world->markForRemoval(entity);
                         }
