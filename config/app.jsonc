@@ -513,7 +513,7 @@
           },
           {
             "name": "goal house",
-            "position": [0, -2, -250],
+            "position": [0, -3, -250],
             "rotation": [0, 90, 0],
             "scale": [2, 2, 4],
             "components": [
@@ -1299,7 +1299,7 @@
           },
           {
             "name": "goal house",
-            "position": [0, -2, -250],
+            "position": [0, -3, -250],
             "rotation": [0, 90, 0],
             "scale": [2, 2, 4],
             "components": [
@@ -2031,7 +2031,7 @@
           },
           {
             "name": "goal house",
-            "position": [0, -2, -250],
+            "position": [0, -3, -250],
             "rotation": [0, 90, 0],
             "scale": [2, 2, 4],
             "components": [

@@ -59,6 +59,8 @@ our::Texture2D* our::texture_utils::loadImage(const std::string& filename, bool 
     if(generate_mipmap){
         glGenerateMipmap(GL_TEXTURE_2D);
     }
+    //we use glTexStorage2D() to allocate the texture storage
+    glTexStorage2D(GL_TEXTURE_2D, 0, GL_RGBA8, size.x, size.y);
     //Unbinding the texture
     texture->unbind();
     stbi_image_free(pixels); //Free image data after uploading to GPU
