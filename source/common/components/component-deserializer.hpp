@@ -10,7 +10,6 @@
 #include "fuel.hpp"
 #include "obstacle.hpp"
 #include "goal.hpp"
-#include "health.hpp"
 #include "light.hpp"
 
 namespace our

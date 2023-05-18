@@ -10,8 +10,8 @@ namespace our {
     class FuelComponent : public Component {
     public:
         int addedValue = 10;
-        int width;
-        int depth;
+        float width;
+        float depth;
 
         // The ID of this component type is "Fuel"
         static std::string getID() { return "Fuel"; }
