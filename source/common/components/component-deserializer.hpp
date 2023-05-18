@@ -64,9 +64,7 @@ namespace our
         {
             component = entity->addComponent<GoalComponent>();
         }
-        else if (type == HealthComponent::getID()) {
-            component = entity->addComponent<HealthComponent>();
-        }else if(type == LightComponent::getID()){
+        else if(type == LightComponent::getID()){
             component = entity->addComponent<LightComponent>();
         }
         if (component)
