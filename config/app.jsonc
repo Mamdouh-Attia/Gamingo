@@ -6,7 +6,7 @@
       "width": 1280,
       "height": 720
     },
-    "fullscreen": false
+    "fullscreen": true
   },
   "levels": [
     {
@@ -310,6 +310,18 @@
               },
               {
                 "type": "Collision"
+              },
+              {
+                "type": "Light",
+                "typeLight": "point",
+                "enabled": true,
+                "diffuse": [1, 1, 1],
+                "specular": [1, 1, 1],
+                "attenuation": {
+                  "constant": 1,
+                  "linear": 0.09,
+                  "quadratic": 0.032
+                }
               }
             ]
           },
@@ -398,6 +410,18 @@
               },
               {
                 "type": "Collision"
+              },
+              {
+                "type": "Light",
+                "typeLight": "point",
+                "enabled": true,
+                "diffuse": [1, 1, 1],
+                "specular": [1, 1, 1],
+                "attenuation": {
+                  "constant": 1,
+                  "linear": 0.09,
+                  "quadratic": 0.032
+                }
               },
              {
                 "type": "Movement",
@@ -548,7 +572,7 @@
           },
           {
             "name": "obstacle:6",
-            "position": [-8, -3, -150],
+            "position": [-8, -3, -500],
             "rotation": [0, 90, 0],
             "scale": [0.3, 0.3, 0.25],
             "components": [

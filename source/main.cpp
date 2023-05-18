@@ -16,6 +16,8 @@
 #include "states/material-test-state.hpp"
 #include "states/entity-test-state.hpp"
 #include "states/renderer-test-state.hpp"
+#include "states/game-over-state.hpp"
+#include "states/level-win-state.hpp"
 
 int main(int argc, char** argv) {
     
@@ -53,6 +55,8 @@ int main(int argc, char** argv) {
     app.registerState<MaterialTestState>("material-test");
     app.registerState<EntityTestState>("entity-test");
     app.registerState<RendererTestState>("renderer-test");
+    app.registerState<GameOverstate>("game-over");
+    app.registerState<LevelWinstate>("level-win");
     // Then choose the state to run based on the option "start-scene" in the config
     if(app_config.contains(std::string{"start-scene"})){
         app.changeState(app_config["start-scene"].get<std::string>());

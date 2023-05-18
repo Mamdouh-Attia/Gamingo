@@ -88,6 +88,9 @@ set(COMMON_SOURCES
         source/common/components/goal.hpp
         source/common/components/goal.cpp
         source/common/components/component-deserializer.hpp
+        source/common/components/light.hpp
+        source/common/components/light.cpp
+
 
         source/common/systems/forward-renderer.hpp
         source/common/systems/forward-renderer.cpp

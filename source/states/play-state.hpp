@@ -86,13 +86,19 @@ class Playstate : public our::State
         // if reached the end of the level "goal" and it was marked for removal, return to menu
         if (our::won)
         {
-            getApp()->changeState("menu");
+            getApp()->changeState("level-win");
             our::won = false;
             our::health = 100;
             //increment the level number
             level = (level+1) % 3;
             //load the next level
             loadNextLevel();
+        }
+        // if the car reached 0 health, return to menu
+        if (our::gameOver)
+        {
+            getApp()->changeState("game-over");
+            our::gameOver = false;
         }
     }
 

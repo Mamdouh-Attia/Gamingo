@@ -37,4 +37,14 @@ namespace our {
         }
     }
 
+    glm::vec3 Entity::getWorldTranslation() const {
+        Entity* currentParent  = parent;
+        glm::vec3 localToWorld = localTransform.position;
+        while(currentParent) {
+            localToWorld  = currentParent->localTransform.position + localToWorld;
+            currentParent = currentParent->parent;
+        }
+        return localToWorld;
+    }
+
 }
