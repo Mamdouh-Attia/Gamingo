@@ -9,6 +9,10 @@
 #include <queue>
 #include <tuple>
 #include <filesystem>
+//include stb image library"
+// #define STB_IMAGE_IMPLEMENTATION
+#include <stb/stb_image.h>
+
 
 #include <flags/flags.h>
 
@@ -161,8 +165,6 @@ int our::Application::run(int run_for_frames) {
         return -1;
     }
 
-    configureOpenGL(); // This function sets OpenGL window hints.
-
     auto win_config = getWindowConfiguration();             // Returns the WindowConfiguration current struct instance.
 
     // Create a window with the given "WindowConfiguration" attributes.
@@ -226,6 +228,16 @@ int our::Application::run(int run_for_frames) {
             }
         }
     }
+
+    //set icon for the window
+    GLFWimage images[1]; 
+    images[0].pixels = stbi_load("assets\\textures\\icon.png", &images[0].width, &images[0].height, 0, 4); //rgba channels 
+    glfwSetWindowIcon(window, 1, images); 
+    stbi_image_free(images[0].pixels);
+    configureOpenGL(); // This function sets OpenGL window hints.
+    //after build how to assign icon for exe file
+    //https://stackoverflow.com/questions/31526753/how-to-set-icon-for-compiled-exe-file-in-visual-studio-2015
+    
 
     // If a scene change was requested, apply it
     if(nextState) {
