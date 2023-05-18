@@ -39,6 +39,8 @@ class Playstate : public our::State
         // Then we initialize the renderer
         auto size = getApp()->getFrameBufferSize();
         renderer.initialize(size, config["renderer"]);
+        // set the health to 100
+        our::health = 100;
     }
     //function to load the next level
     void loadNextLevel()

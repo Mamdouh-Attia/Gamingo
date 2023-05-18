@@ -248,7 +248,7 @@
         },
         "world": [
           {
-            "position": [0, 0, 10],
+            "position": [0, 0, 30],
             "components": [
               {
                 "type": "Camera"
@@ -988,7 +988,7 @@
         },
         "world": [
           {
-            "position": [0, 0, 10],
+            "position": [0, 0, 50],
             "components": [
               {
                 "type": "Camera"
@@ -1774,7 +1774,7 @@
         },
         "world": [
           {
-            "position": [0, 0, 10],
+            "position": [0, 0, 50],
             "components": [
               {
                 "type": "Camera"

@@ -87,8 +87,8 @@ class GameOverstate: public our::State {
             // If the space key is pressed in this frame, go to the play state
             getApp()->changeState("menu");
         } else if(keyboard.justPressed(GLFW_KEY_ESCAPE)) {
-            // If the escape key is pressed in this frame, exit the game
-            getApp()->close();
+            // If the escape key is pressed in this frame return to the menu state
+            getApp()->changeState("menu");
         }
 
         // Get the framebuffer size to set the viewport and the create the projection matrix.
