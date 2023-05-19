@@ -27,7 +27,7 @@ namespace our
             soundSystem = externalSoundSystem;
         }
         // write a function 2dCollides that takes in two 2d positions, depth, and width and returns true if they collide
-        bool two_d_collides(const glm::vec4 &position, int width, int depth, const glm::vec4 &otherPosition, int otherWidth, int otherDepth)
+        bool two_d_collides(const glm::vec4 &position, float width, float depth, const glm::vec4 &otherPosition, float otherWidth, float otherDepth)
         {
             return position.x < otherPosition.x + otherWidth &&
                    position.x + width > otherPosition.x &&

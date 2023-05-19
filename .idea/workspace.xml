@@ -12,7 +12,32 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeba81cc-8454-47f5-acc6-b676caa7834e" name="Changes" comment="" />
+    <list default="true" id="eeba81cc-8454-47f5-acc6-b676caa7834e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/textures/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/menu.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/LevelUp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/LevelUp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/game-over.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/game-over.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.jsonc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/postprocess-test/test-0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/postprocess-test/test-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/postprocess-test/test-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/postprocess-test/test-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/sky-test/test-0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/errors/sky-test/test-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/application.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/texture/texture-utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/texture/texture-utils.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/states/game-over-state.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/states/game-over-state.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/states/menu-state.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/states/menu-state.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/states/play-state.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/states/play-state.hpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +123,7 @@
       <workItem from="1684437510076" duration="1288000" />
       <workItem from="1684441930770" duration="1586000" />
       <workItem from="1684444346030" duration="5232000" />
-      <workItem from="1684449770328" duration="9098000" />
+      <workItem from="1684449770328" duration="9858000" />
     </task>
     <servers />
   </component>

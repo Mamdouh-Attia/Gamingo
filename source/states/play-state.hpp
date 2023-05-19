@@ -56,6 +56,8 @@ class Playstate : public our::State
                 soundSystem.playSound("toktok", true);
                 break;
         }
+        // set the health to 100
+        our::health = 100;
     }
     //function to load the next level
     void loadNextLevel()
@@ -93,6 +95,8 @@ class Playstate : public our::State
                 soundSystem.playSound("toktok", true);
                 break;
         }
+        // set the health to 100
+        our::health = 100;
     }
     void onDraw(double deltaTime) override
     {
