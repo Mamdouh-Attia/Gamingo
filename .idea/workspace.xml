@@ -13,49 +13,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeba81cc-8454-47f5-acc6-b676caa7834e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/textures/LevelUp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/game-over.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-366005715d76ef5b7246.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-15T08-11-08-0518.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-cb994d9c06ea6323143f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/common/components/light.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/common/components/light.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/states/game-over-state.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/states/level-win-state.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-63eca90c308178dcddfd.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-bcc9ee0cf34a649c7047.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-ff100aab1ff1afda169b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-6e2935d1ff851c781efd.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2c19139fbe46bfaa811f.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-vendor.glfw-Debug-d510699980370941aaad.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-vendor.glfw.src-Debug-c04a3537cf9f3f6fb253.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GAME_APPLICATION-Debug-9657468afbabb2f8f6ca.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GAME_APPLICATION-Debug-98bc5b6e3294b9b31c23.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-glfw-Debug-576862b43481fe28cf6b.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-glfw-Debug-2e67d150ae5406609f1a.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-42eab146bdc8afedea54.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libGAME_APPLICATION.dll.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vendor/glfw/src/glfw3.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vendor/glfw/src/glfw3Config.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vendor/glfw/src/glfw3ConfigVersion.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vendor/glfw/src/glfw_config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vendor/glfw/src/libglfw3.a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.jsonc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/component-deserializer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/component-deserializer.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/ecs/entity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/ecs/entity.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/ecs/entity.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/ecs/entity.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/material/material.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/material/material.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/material/material.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/material/material.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/systems/forward-renderer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/forward-renderer.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/states/play-state.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/states/play-state.hpp" afterDir="false" />
     </list>
@@ -96,16 +60,17 @@
     &quot;cmake.loaded.for.project&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;F:/Eng/Third Year/Second Term/Computer Graphics/Project/Github/Gamingo&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="CMake Application.GAME_APPLICATION">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="GAME_APPLICATION" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GFX-LAB" TARGET_NAME="GAME_APPLICATION" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GFX-LAB" RUN_TARGET_NAME="GAME_APPLICATION">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GAME_APPLICATION" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GFX-LAB" TARGET_NAME="GAME_APPLICATION" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GFX-LAB" RUN_TARGET_NAME="GAME_APPLICATION">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -123,7 +88,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c01365d8-79ce-4102-93b8-a8e9f2837d55" name="Changes" comment="" />
+      <changelist id="eeba81cc-8454-47f5-acc6-b676caa7834e" name="Changes" comment="" />
       <created>1678994595244</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -138,6 +103,11 @@
       <workItem from="1683583398783" duration="4254000" />
       <workItem from="1684273656479" duration="13269000" />
       <workItem from="1684315908531" duration="10225000" />
+      <workItem from="1684436526257" duration="21000" />
+      <workItem from="1684437510076" duration="1288000" />
+      <workItem from="1684441930770" duration="1586000" />
+      <workItem from="1684444346030" duration="5232000" />
+      <workItem from="1684449770328" duration="8731000" />
     </task>
     <servers />
   </component>

@@ -16,11 +16,13 @@ class Playstate : public our::State
     our::ForwardRenderer renderer;
     our::FreeCameraControllerSystem cameraController;
     our::MovementSystem movementSystem;
-    our::CollisionSystem collisionSystem;
+    our::SoundSystem soundSystem;
+    our::CollisionSystem collisionSystem = our::CollisionSystem(soundSystem);
     // defining a variable to store the level number
     int level = 0;
     void onInitialize() override
     {
+        soundSystem = our::SoundSystem();
         // First of all, we get the scene configuration from the app config
         auto &config = getApp()->getConfig()["levels"][level]["scene"];
 
@@ -39,6 +41,21 @@ class Playstate : public our::State
         // Then we initialize the renderer
         auto size = getApp()->getFrameBufferSize();
         renderer.initialize(size, config["renderer"]);
+        // play engine effect
+        switch (level) {
+            case 0:
+                soundSystem.playSound("toktok", true);
+                break;
+            case 1:
+                soundSystem.playSound("oldCar", true);
+                break;
+            case 2:
+                soundSystem.playSound("car", true);
+                break;
+            default:
+                soundSystem.playSound("toktok", true);
+                break;
+        }
     }
     //function to load the next level
     void loadNextLevel()
@@ -61,6 +78,21 @@ class Playstate : public our::State
         // Then we initialize the renderer
         auto size = getApp()->getFrameBufferSize();
         renderer.initialize(size, config["renderer"]);
+        // play engine effect
+        switch (level) {
+            case 0:
+                soundSystem.playSound("toktok", true);
+                break;
+            case 1:
+                soundSystem.playSound("oldCar", true);
+                break;
+            case 2:
+                soundSystem.playSound("car", true);
+                break;
+            default:
+                soundSystem.playSound("toktok", true);
+                break;
+        }
     }
     void onDraw(double deltaTime) override
     {
@@ -68,6 +100,27 @@ class Playstate : public our::State
         movementSystem.update(&world, (float)deltaTime);
         cameraController.update(&world, (float)deltaTime);
         collisionSystem.update(&world, (float)deltaTime);
+
+        if (our::won) {
+            // restart engine to stop looped engine effect
+            soundSystem.clear();
+            soundSystem = our::SoundSystem();
+            // play effect sound
+            switch (level) {
+                case 0:
+                    soundSystem.playSound("goal1");
+                    break;
+                case 1:
+                    soundSystem.playSound("goal2");
+                    break;
+                case 2:
+                    soundSystem.playSound("goal3");
+                    break;
+                default:
+                    soundSystem.playSound("goal1");
+                    break;
+            }
+        }
 
         // Delete all marked entities after update
         world.deleteMarkedEntities();
@@ -111,6 +164,8 @@ class Playstate : public our::State
         cameraController.exit();
         // Clear the world
         world.clear();
+        // clear sound system
+        soundSystem.clear();
         // and we delete all the loaded assets to free memory on the RAM and the VRAM
         our::clearAllAssets();
     }

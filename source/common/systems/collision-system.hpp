@@ -6,6 +6,7 @@
 #include "../components/fuel.hpp"
 #include "../components/obstacle.hpp"
 #include "../components/goal.hpp"
+#include "../systems/sound.hpp"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/constants.hpp>
@@ -20,7 +21,11 @@ namespace our
     // This class handles collision in every entity that has collision component
     class CollisionSystem
     {
+        SoundSystem soundSystem;
     public:
+        CollisionSystem(SoundSystem externalSoundSystem) {
+            soundSystem = externalSoundSystem;
+        }
         // write a function 2dCollides that takes in two 2d positions, depth, and width and returns true if they collide
         bool two_d_collides(const glm::vec4 &position, int width, int depth, const glm::vec4 &otherPosition, int otherWidth, int otherDepth)
         {
@@ -46,8 +51,8 @@ namespace our
             CarComponent *carComponent = car->getComponent<CarComponent>();
             // get car position and size
             glm::vec4 carPosition = car->getLocalToWorldMatrix() * glm::vec4(car->localTransform.position, 1.0);
-            int carWidth = carComponent->width;
-            int carDepth = carComponent->depth;
+            // shift fuel object forward the model loads the texture shifted forward
+            carPosition.z -= 2;
             // For each entity in the world
             // collide car with collision
             for (auto entity : world->getEntities())
@@ -66,10 +71,10 @@ namespace our
                     {
                         // get obstacle object position and size
                         glm::vec4 fuelPosition = glm::vec4(entity->localTransform.position, 1.0);
-                        // shift fuel object left because it rotates, so that it collides with the second cup of coffee
-                        fuelPosition.x -= 2.5;
+                        // shift fuel object left the model loads the texture shifted right
+                        fuelPosition.x -= 1;
                         // check if car collides with fuel
-                        if (two_d_collides(carPosition, carWidth,  carDepth, fuelPosition, fuel->width,fuel->depth))
+                        if (two_d_collides(carPosition, carComponent->width,  carComponent->depth, fuelPosition, fuel->width,fuel->depth))
                         {
                             // if car collides with fuel, add addedValue to car's health
                             carComponent->health += fuel->addedValue;
@@ -79,6 +84,10 @@ namespace our
                                 carComponent->health = 100;
                             }
                             health = carComponent->health;
+
+                            // play effect sound
+                            soundSystem.playSound("fuel");
+
                             // mark the fuel for removal
                             world->markForRemoval(entity);
                         }
@@ -87,8 +96,10 @@ namespace our
                     {
                         // get obstacle object position and size
                         glm::vec4 obstaclePosition = glm::vec4(entity->localTransform.position, 1.0);
+                        // shift obstacle object left the model loads the texture shifted right
+                        obstaclePosition.x -= 2;
                         // check if car collides with obstacle
-                        if (two_d_collides(carPosition, carWidth, carDepth, obstaclePosition, obstacle->width,obstacle->depth))
+                        if (two_d_collides(carPosition, carComponent->width, carComponent->depth, obstaclePosition, obstacle->width,obstacle->depth))
                         {
                             // if car collides with obstacle, subtract subtractedValue from car's health
                             carComponent->health -= obstacle->subtractedValue;
@@ -98,9 +109,12 @@ namespace our
                                 carComponent->health = 0;
                                 //load gameOver menu
                                 gameOver = true;
-
                             }
                             health = carComponent->health;
+
+                            // play effect sound
+                            soundSystem.playSound("obstacle");
+
                             // mark obstacle for removal
                             world->markForRemoval(entity);
                         }
@@ -116,7 +130,6 @@ namespace our
                         {
                             // if car collides with goal, mark goal for removal
                             world->markForRemoval(entity);
-                            std::cout << "Goal "<<std::endl;
                             // if reached the end of the level "goal" and it was marked for removal, return to menu
                             won = true;
                         }

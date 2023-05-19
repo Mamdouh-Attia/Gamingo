@@ -19,6 +19,8 @@
 #include "states/game-over-state.hpp"
 #include "states/level-win-state.hpp"
 
+#pragma comment(lib, "irrKlang.lib");
+
 int main(int argc, char** argv) {
     
     flags::args args(argc, argv); // Parse the command line arguments

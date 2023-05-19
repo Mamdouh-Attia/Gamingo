@@ -32,23 +32,18 @@
             "grass": "assets/textures/grass_ground_d.jpg",
             "wood": "assets/textures/wood.jpg",
             "glass": "assets/textures/glass-panels.png",
-            "monkey": "assets/textures/monkey.png",
-            "batteryTex": "assets/textures/battery.png",
             "roadTex": "assets/textures/roadTex.jpg",
             "carSkin": "assets/textures/toktok.png",
-            "fuelTex": "assets/textures/fuelTex.jpg",
+            "fuelTex": "assets/textures/coffee.png",
             "barrierTex": "assets/textures/barrierTex.JPG",
             "houseTex": "assets/textures/houseTex.jpeg"
           },
           "meshes": {
-            "cube": "assets/models/cube.obj",
-            "monkey": "assets/models/monkey.obj",
             "plane": "assets/models/plane.obj",
             "sphere": "assets/models/sphere.obj",
-            "battery": "assets/models/Battery.obj",
             "road": "assets/models/road.obj",
             "car": "assets/models/toktok.obj",
-            "fuel": "assets/models/fuel.obj",
+            "fuel": "assets/models/coffee.obj",
             "barrier": "assets/models/barrier.obj",
             "house": "assets/models/house.obj"
           },
@@ -276,15 +271,11 @@
                   },
                   {
                     "type": "Car",
-                    "width": 3,
+                    "width": 1.5,
                     "depth": 5
                   },
                   {
                     "type": "Collision"
-                  },
-                  {
-                    "type": "health",
-                    "health": 100
                   }
                 ]
               }
@@ -305,7 +296,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 25,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -339,7 +330,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 25,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -361,7 +352,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 25,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -383,7 +374,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 25,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -395,12 +386,12 @@
             "name": "fuel:1",
             "rotation": [0, 0, 0],
             "position": [1, -3, -40],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -423,23 +414,23 @@
                   "quadratic": 0.032
                 }
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           {
             "name": "fuel:2",
             "rotation": [0, 0, 0],
             "position": [-5, -3, -60],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -450,23 +441,23 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           {
             "name": "fuel:3",
             "rotation": [0, 0, 0],
             "position": [0, -3, -105],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -477,11 +468,11 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           {
@@ -513,7 +504,7 @@
           },
           {
             "name": "goal house",
-            "position": [0, -2, -250],
+            "position": [0, -3, -250],
             "rotation": [0, 90, 0],
             "scale": [2, 2, 4],
             "components": [
@@ -562,7 +553,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 25,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -584,7 +575,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 25,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -606,7 +597,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 25,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -628,7 +619,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 25,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -641,12 +632,12 @@
             "name": "fuel:4",
             "rotation": [0, 0, 0],
             "position": [1, -3, -140],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -657,23 +648,23 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           {
             "name": "fuel:5",
             "rotation": [0, 0, 0],
             "position": [-5, -3, -160],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -684,23 +675,23 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           {
             "name": "fuel:6",
             "rotation": [0, 0, 0],
             "position": [0, -3, -205],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -711,11 +702,11 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           //add more fuels and obstacles till z = -500
@@ -723,12 +714,12 @@
             "name": "fuel:7",
             "rotation": [0, 0, 0],
             "position": [3, -3, -230],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -739,11 +730,11 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           }
         ]
@@ -753,8 +744,8 @@
       "name": "lvl2",
       "scene": {
         "renderer": {
-          "sky": "assets/textures/night-sky.jpg",
-          "postprocess": "assets/shaders/postprocess/night.frag"
+          "sky": "assets/textures/sky5.jpg",
+          "postprocess": "assets/shaders/postprocess/grayscale.frag"
         },
         "assets": {
           "shaders": {
@@ -775,20 +766,17 @@
             "monkey": "assets/textures/monkey.png",
             "batteryTex": "assets/textures/battery.png",
             "roadTex": "assets/textures/roadTex.jpg",
-            "carSkin": "assets/textures/car0.BMP",
-            "fuelTex": "assets/textures/fuelTex.jpg",
+            "carSkin": "assets/textures/moon.jpg",
+            "fuelTex": "assets/textures/coffee.png",
             "barrierTex": "assets/textures/barrierTex.JPG",
             "houseTex": "assets/textures/houseTex.jpeg"
           },
           "meshes": {
-            "cube": "assets/models/cube.obj",
-            "monkey": "assets/models/monkey.obj",
             "plane": "assets/models/plane.obj",
             "sphere": "assets/models/sphere.obj",
-            "battery": "assets/models/Battery.obj",
             "road": "assets/models/road.obj",
-            "car": "assets/models/car.obj",
-            "fuel": "assets/models/fuel.obj",
+            "car": "assets/models/oldCar2.obj",
+            "fuel": "assets/models/coffee.obj",
             "barrier": "assets/models/barrier.obj",
             "house": "assets/models/house.obj"
           },
@@ -1006,8 +994,8 @@
               {
                 "name": "car",
                 "position": [0, -2, -4],
-                "rotation": [10, 0, 0],
-                "scale": [1, 1, 0.8],
+                "rotation": [180, 0, 180],
+                "scale": [0.03, 0.03, 0.03],
                 "components": [
                   {
                     "type": "Mesh Renderer",
@@ -1016,15 +1004,11 @@
                   },
                   {
                     "type": "Car",
-                    "width": 3,
-                    "depth": 5
+                    "width": 2.5,
+                    "depth": 4
                   },
                   {
                     "type": "Collision"
-                  },
-                  {
-                    "type": "health",
-                    "health": 100
                   }
                 ]
               }
@@ -1044,7 +1028,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 45,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1066,7 +1050,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 45,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1088,7 +1072,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 45,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1110,7 +1094,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 45,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1119,59 +1103,59 @@
             ]
           },
           {
-              "name": "obstacle:5",
-              "position": [5, -3, -105],
-              "rotation": [0, 90, 0],
-              "scale": [0.3, 0.3, 0.25],
-              "components": [
-                {
-                  "type": "Mesh Renderer",
-                  "mesh": "barrier",
-                  "material": "barrierMaterial"
-                },
-                {
-                  "type": "Obstacle",
-                  "subtractedValue": 45,
-                  "width": 5,
-                  "depth": 0
-                },
-                {
-                  "type": "Collision"
-                }
-              ]
-            },
-            {
-              "name": "obstacle:6",
-              "position": [1, -3, -115],
-              "rotation": [0, 90, 0],
-              "scale": [0.3, 0.3, 0.25],
-              "components": [
-                {
-                  "type": "Mesh Renderer",
-                  "mesh": "barrier",
-                  "material": "barrierMaterial"
-                },
-                {
-                  "type": "Obstacle",
-                  "subtractedValue": 45,
-                  "width": 5,
-                  "depth": 0
-                },
-                {
-                  "type": "Collision"
-                }
-              ]
-            },
+            "name": "obstacle:5",
+            "position": [5, -3, -105],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 45,
+                "width": 6,
+                "depth": 0
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "obstacle:6",
+            "position": [1, -3, -115],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 45,
+                "width": 6,
+                "depth": 0
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
           {
             "name": "fuel:1",
             "rotation": [0, 0, 0],
             "position": [1, -3, -40],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -1183,9 +1167,9 @@
                 "type": "Collision"
               },
               {
-                 "type": "Movement",
-                 "linearVelocity": [0, 0, 0],
-                 "angularVelocity": [0, 540, 0]
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
               }
             ]
           },
@@ -1193,12 +1177,12 @@
             "name": "fuel:2",
             "rotation": [0, 0, 0],
             "position": [-5, -3, -60],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -1209,23 +1193,23 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           {
             "name": "fuel:3",
             "rotation": [0, 0, 0],
             "position": [0, -3, -105],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -1236,40 +1220,40 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           {
-              "name": "fuel:4",
-              "rotation": [0, 0, 0],
-              "position": [9, -3, -115],
-              "scale": [0.4, 0.4, 0.4],
-              "components": [
-                {
-                  "type": "Fuel",
-                  "addedValue": 10,
-                  "width": 7.5,
-                  "depth": 0
-                },
-                {
-                  "type": "Mesh Renderer",
-                  "mesh": "fuel",
-                  "material": "fuelMaterial"
-                },
-                {
-                  "type": "Collision"
-                },
-               {
-                  "type": "Movement",
-                  "linearVelocity": [0, 0, 0],
-                  "angularVelocity": [0, 540, 0]
-               }
-              ]
-            },
+            "name": "fuel:4",
+            "rotation": [0, 0, 0],
+            "position": [9, -3, -115],
+            "scale": [5, 5, 5],
+            "components": [
+              {
+                "type": "Fuel",
+                "addedValue": 10,
+                "width": 3,
+                "depth": 0
+              },
+              {
+                "type": "Mesh Renderer",
+                "mesh": "fuel",
+                "material": "fuelMaterial"
+              },
+              {
+                "type": "Collision"
+              },
+              {
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
+              }
+            ]
+          },
           {
             "name": "road",
             "position": [4, -4, 5],
@@ -1299,7 +1283,7 @@
           },
           {
             "name": "goal house",
-            "position": [0, -2, -250],
+            "position": [0, -3, -250],
             "rotation": [0, 90, 0],
             "scale": [2, 2, 4],
             "components": [
@@ -1348,7 +1332,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 45,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1370,7 +1354,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 45,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1392,7 +1376,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 45,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1414,7 +1398,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 45,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1427,12 +1411,12 @@
             "name": "fuel:4",
             "rotation": [0, 0, 0],
             "position": [1, -3, -140],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -1443,23 +1427,23 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           {
             "name": "fuel:5",
             "rotation": [0, 0, 0],
             "position": [-5, -3, -160],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -1470,23 +1454,23 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           {
             "name": "fuel:6",
             "rotation": [0, 0, 0],
             "position": [0, -3, -205],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -1497,11 +1481,11 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           //add more fuels and obstacles till z = -500
@@ -1509,12 +1493,12 @@
             "name": "fuel:7",
             "rotation": [0, 0, 0],
             "position": [3, -3, -230],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -1525,11 +1509,11 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           }
         ]
@@ -1539,8 +1523,8 @@
       "name": "lvl3",
       "scene": {
         "renderer": {
-          "sky": "assets/textures/sky5.jpg",
-          "postprocess": "assets/shaders/postprocess/grayscale.frag"
+          "sky": "assets/textures/night-sky.jpg",
+          "postprocess": "assets/shaders/postprocess/night.frag"
         },
         "assets": {
           "shaders": {
@@ -1561,20 +1545,17 @@
             "monkey": "assets/textures/monkey.png",
             "batteryTex": "assets/textures/battery.png",
             "roadTex": "assets/textures/roadTex.jpg",
-            "carSkin": "assets/textures/oldCar.jpg",
-            "fuelTex": "assets/textures/fuelTex.jpg",
+            "carSkin": "assets/textures/car0.BMP",
+            "fuelTex": "assets/textures/coffee.png",
             "barrierTex": "assets/textures/barrierTex.JPG",
             "houseTex": "assets/textures/houseTex.jpeg"
           },
           "meshes": {
-            "cube": "assets/models/cube.obj",
-            "monkey": "assets/models/monkey.obj",
             "plane": "assets/models/plane.obj",
             "sphere": "assets/models/sphere.obj",
-            "battery": "assets/models/Battery.obj",
             "road": "assets/models/road.obj",
-            "car": "assets/models/oldCar.obj",
-            "fuel": "assets/models/fuel.obj",
+            "car": "assets/models/car.obj",
+            "fuel": "assets/models/coffee.obj",
             "barrier": "assets/models/barrier.obj",
             "house": "assets/models/house.obj"
           },
@@ -1792,8 +1773,8 @@
               {
                 "name": "car",
                 "position": [0, -2, -4],
-                "rotation": [0, 0, 0],
-                "scale": [0.7, 0.7, 0.7],
+                "rotation": [10, 0, 0],
+                "scale": [1, 1, 0.8],
                 "components": [
                   {
                     "type": "Mesh Renderer",
@@ -1802,15 +1783,11 @@
                   },
                   {
                     "type": "Car",
-                    "width": 3,
+                    "width": 1.5,
                     "depth": 5
                   },
                   {
                     "type": "Collision"
-                  },
-                  {
-                    "type": "health",
-                    "health": 100
                   }
                 ]
               }
@@ -1830,7 +1807,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 65,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1852,7 +1829,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 65,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1874,7 +1851,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 65,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1896,7 +1873,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 65,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -1905,59 +1882,59 @@
             ]
           },
           {
-              "name": "obstacle:5",
-              "position": [-2, -3, -105],
-              "rotation": [0, 90, 0],
-              "scale": [0.3, 0.3, 0.25],
-              "components": [
-                {
-                  "type": "Mesh Renderer",
-                  "mesh": "barrier",
-                  "material": "barrierMaterial"
-                },
-                {
-                  "type": "Obstacle",
-                  "subtractedValue": 65,
-                  "width": 5,
-                  "depth": 0
-                },
-                {
-                  "type": "Collision"
-                }
-              ]
-            },
-            {
-              "name": "obstacle:6",
-              "position": [5, -3, -115],
-              "rotation": [0, 90, 0],
-              "scale": [0.3, 0.3, 0.25],
-              "components": [
-                {
-                  "type": "Mesh Renderer",
-                  "mesh": "barrier",
-                  "material": "barrierMaterial"
-                },
-                {
-                  "type": "Obstacle",
-                  "subtractedValue": 65,
-                  "width": 5,
-                  "depth": 0
-                },
-                {
-                  "type": "Collision"
-                }
-              ]
-            },
+            "name": "obstacle:5",
+            "position": [-2, -3, -105],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 65,
+                "width": 6,
+                "depth": 0
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
+          {
+            "name": "obstacle:6",
+            "position": [5, -3, -115],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 65,
+                "width": 6,
+                "depth": 0
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+          },
           {
             "name": "fuel:1",
             "rotation": [0, 0, 0],
             "position": [-5, -3, -60],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -1969,9 +1946,9 @@
                 "type": "Collision"
               },
               {
-                 "type": "Movement",
-                 "linearVelocity": [0, 0, 0],
-                 "angularVelocity": [0, 540, 0]
+                "type": "Movement",
+                "linearVelocity": [0, 0, 0],
+                "angularVelocity": [0, 540, 0]
               }
             ]
           },
@@ -1979,12 +1956,12 @@
             "name": "fuel:2",
             "rotation": [0, 0, 0],
             "position": [-3, -3, -70],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -1995,11 +1972,11 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           },
           {
@@ -2031,7 +2008,7 @@
           },
           {
             "name": "goal house",
-            "position": [0, -2, -250],
+            "position": [0, -3, -250],
             "rotation": [0, 90, 0],
             "scale": [2, 2, 4],
             "components": [
@@ -2080,7 +2057,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 65,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -2102,7 +2079,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 65,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -2124,7 +2101,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 65,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -2146,7 +2123,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 65,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -2156,28 +2133,28 @@
             //add fuels
           },
           {
-              "name": "obstacle:9",
-              "position": [0, -3, -180],
-              "rotation": [0, 90, 0],
-              "scale": [0.3, 0.3, 0.25],
-              "components": [
-                {
-                  "type": "Mesh Renderer",
-                  "mesh": "barrier",
-                  "material": "barrierMaterial"
-                },
-                {
-                  "type": "Obstacle",
-                  "subtractedValue": 65,
-                  "width": 5,
-                  "depth": 0
-                },
-                {
-                  "type": "Collision"
-                }
-              ]
-              //add fuels
-            },
+            "name": "obstacle:9",
+            "position": [0, -3, -180],
+            "rotation": [0, 90, 0],
+            "scale": [0.3, 0.3, 0.25],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "barrier",
+                "material": "barrierMaterial"
+              },
+              {
+                "type": "Obstacle",
+                "subtractedValue": 65,
+                "width": 6,
+                "depth": 0
+              },
+              {
+                "type": "Collision"
+              }
+            ]
+            //add fuels
+          },
           {
             "name": "obstacle:10",
             "position": [-8, -3, -180],
@@ -2192,7 +2169,7 @@
               {
                 "type": "Obstacle",
                 "subtractedValue": 65,
-                "width": 5,
+                "width": 6,
                 "depth": 0
               },
               {
@@ -2205,12 +2182,12 @@
             "name": "fuel:4",
             "rotation": [0, 0, 0],
             "position": [-2, -3, -185],
-            "scale": [0.4, 0.4, 0.4],
+            "scale": [5, 5, 5],
             "components": [
               {
                 "type": "Fuel",
                 "addedValue": 10,
-                "width": 7.5,
+                "width": 3,
                 "depth": 0
               },
               {
@@ -2221,11 +2198,11 @@
               {
                 "type": "Collision"
               },
-             {
+              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
-             }
+              }
             ]
           }
         ]

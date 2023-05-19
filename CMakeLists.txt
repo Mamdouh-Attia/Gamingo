@@ -101,6 +101,7 @@ set(COMMON_SOURCES
 # Define the directories in which to search for the included headers
 include_directories(
         source/common
+        vendor/irrKlang/include
         vendor/glfw/include
         vendor/glad/include
         vendor/glm
@@ -125,10 +126,22 @@ set(STATES_SOURCES
         source/states/material-test-state.hpp
         source/states/entity-test-state.hpp
         source/states/renderer-test-state.hpp
-        source/common/components/fuel.cpp source/common/components/fuel.hpp source/common/components/obstacle.cpp source/common/components/obstacle.hpp source/common/components/collision.hpp source/common/systems/collision-system.hpp source/common/components/car.cpp source/common/components/collision.cpp)
+        source/common/components/fuel.cpp source/common/components/fuel.hpp source/common/components/obstacle.cpp source/common/components/obstacle.hpp source/common/components/collision.hpp source/common/systems/collision-system.hpp source/common/components/car.cpp source/common/components/collision.cpp source/common/systems/sound.hpp)
 
 # For each example, we add an executable target
 # Each target compiles one example source file and the common & vendor source files
 # Then we link GLFW with each target
 add_executable(GAME_APPLICATION source/main.cpp ${STATES_SOURCES} ${COMMON_SOURCES} ${VENDOR_SOURCES})
 target_link_libraries(GAME_APPLICATION glfw)
+
+target_link_libraries(GAME_APPLICATION ${PROJECT_SOURCE_DIR}/vendor/irrKlang/lib/Win32-visualStudio/irrKlang.lib)
+
+# Copy DLL files to the binary directory
+add_custom_command(TARGET GAME_APPLICATION POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${PROJECT_SOURCE_DIR}/vendor/irrKlang/dlls/win32-visualStudio/irrKlang.dll
+        ${PROJECT_SOURCE_DIR}/vendor/irrKlang/dlls/win32-visualStudio/ikpMP3.dll
+        ${PROJECT_SOURCE_DIR}/vendor/irrKlang/dlls/win32-visualStudio/ikpFlac.dll
+        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/
+        COMMENT "Copying DLL files to the binary directory"
+        )
