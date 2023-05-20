@@ -18,6 +18,8 @@ namespace our
     bool won = false;
     int health = 100;
     bool gameOver = false;
+    bool firstTimeWin = false;
+    bool firstTimeGameOver = false;
     // This class handles collision in every entity that has collision component
     class CollisionSystem
     {

@@ -24,7 +24,8 @@ class LevelWinstate: public our::State {
     float time;
     // An array of the button that we can interact with
     std::array<Button, 2> buttons;
-
+    // An object from SoundSystem to play effects
+    our::SoundSystem soundSystem;
     void onInitialize() override {
         // First, we create a material for the menu's background
         menuMaterial = new our::TexturedMaterial();
@@ -76,10 +77,18 @@ class LevelWinstate: public our::State {
         //      We store [this] in the capture list since we will use it in the action.
         // - The argument list () which is the arguments that the lambda should receive when it is called.
         //      We leave it empty since button actions receive no input.
-        // - The body {} which contains the code to be executed. 
+        // - The body {} which contains the code to be executed.
+
+        // Initialize sound system
+        soundSystem = our::SoundSystem();
+
     }
 
     void onDraw(double deltaTime) override {
+        if(our::firstTimeWin) {
+            our::firstTimeWin = false;
+            soundSystem.playSound("level-up");
+        }
         // Get a reference to the keyboard object
         auto& keyboard = getApp()->getKeyboard();
 
@@ -126,5 +135,7 @@ class LevelWinstate: public our::State {
         delete menuMaterial;
         delete highlightMaterial->shader;
         delete highlightMaterial;
+        // clear sound system
+        soundSystem.clear();
     }
 };

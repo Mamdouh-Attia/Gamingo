@@ -129,7 +129,7 @@ class Playstate : public our::State
         // Delete all marked entities after update
         world.deleteMarkedEntities();
 
-        // And finally we use the renderer system to draw the scene
+        // And finally we use the ren   derer system to draw the scene
         renderer.render(&world);
 
         // Get a reference to the keyboard object
@@ -150,12 +150,14 @@ class Playstate : public our::State
             level = (level+1) % 3;
             //load the next level
             loadNextLevel();
+            our::firstTimeWin = true;
         }
         // if the car reached 0 health, return to menu
         if (our::gameOver)
         {
             getApp()->changeState("game-over");
             our::gameOver = false;
+            our::firstTimeGameOver = true;
         }
     }
 
