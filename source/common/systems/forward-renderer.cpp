@@ -2,7 +2,6 @@
 #include "../mesh/mesh-utils.hpp"
 #include "../texture/texture-utils.hpp"
 
-
 namespace our {
 
     void ForwardRenderer::initialize(glm::ivec2 windowSize, const nlohmann::json& config){
@@ -137,6 +136,7 @@ namespace our {
             if(!camera) camera = entity->getComponent<CameraComponent>();
             // If this entity has a mesh renderer component
             if(auto meshRenderer = entity->getComponent<MeshRendererComponent>(); meshRenderer){
+
                 // We construct a command from it
                 RenderCommand command;
                 command.localToWorld = meshRenderer->getOwner()->getLocalToWorldMatrix();
@@ -225,44 +225,71 @@ namespace our {
         //TODO: (Req 9) Draw all the opaque commands
         // Don't forget to set the "transform" uniform to be equal the model-view-projection matrix for each render command
         for(RenderCommand opaqueCommand: this->opaqueCommands) {
+
+
             opaqueCommand.material->setup();
-            opaqueCommand.material->shader->set("transform", VP * opaqueCommand.localToWorld);
+            //set the camera position
+            if (dynamic_cast<our::LightMaterial *>(opaqueCommand.material)) {
+                opaqueCommand.material->shader->set("camera_position", cameraForward);
+                //set the M matrix for the shader
+                opaqueCommand.material->shader->set("M", opaqueCommand.localToWorld);
+                //set the M_IT matrix for the shader
+                opaqueCommand.material->shader->set("M_IT", glm::transpose(glm::inverse(opaqueCommand.localToWorld)));
+                //set the VP matrix for the shader
+                opaqueCommand.material->shader->set("VP", VP);
+                opaqueCommand.material->shader->set("light_count", numLights);
+            }else {
+                opaqueCommand.material->shader->set("transform", VP * opaqueCommand.localToWorld);
+            }
             const int MAX_LIGHT_COUNT = 16;
 
-            opaqueCommand.material->shader->set("light_count", numLights);
+
 
             int light_index = 0;
             for(LightComponent* light : lights) {
                 if(!light->enabled) continue;
-                light->position = light->getOwner()->getWorldTranslation();
-                light->direction = light->getOwner()->getLocalToWorldMatrix() * glm::vec4(0.0, -1.0, 0.0, 0);
+                //light->position = light->getOwner()->getWorldTranslation();
+                //light->direction = light->getOwner()->getLocalToWorldMatrix() * glm::vec4(0.0, -1.0, 0.0, 0);
                 // std::cout<< "Light direction: " << light->direction.x << " " << light->direction.y << " " << light->direction.z << std::endl;
                 // std::cout<<"Light position: "<<light->position.x<<" "<<light->position.y<<" "<<light->position.z<<std::endl;
 
                 std::string prefix = "lights[" + std::to_string(light_index) + "].";
 
                 opaqueCommand.material->shader->set(prefix + "type", static_cast<int>(light->typeLight));
+                auto lightPosition = glm::vec3((light)->getOwner()->getLocalToWorldMatrix() *
+                                  glm::vec4((light)->getOwner()->localTransform.position, 1.0));
+                auto lightDirection = glm::normalize(glm::vec3((light)->getOwner()->getLocalToWorldMatrix() *
+                                                glm::vec4(light->direction, 0.0)));
+//                lightDirection = light->direction;
+
                 switch(light->typeLight) {
                     case LightType::DIRECTIONAL:
-                        opaqueCommand.material->shader->set(prefix + "direction", light->direction);
-                        opaqueCommand.material->shader->set(prefix + "diffuse", light->diffuse);
-                        opaqueCommand.material->shader->set(prefix + "specular", light->specular);
+                        opaqueCommand.material->shader->set(prefix + "direction", lightDirection);
+//                        opaqueCommand.material->shader->set(prefix + "diffuse", light->diffuse);
+//                        opaqueCommand.material->shader->set(prefix + "specular", light->specular);
+                        opaqueCommand.material->shader->set(prefix + "color" , light->color);
                         break;
                     case LightType::POINT:
-                        opaqueCommand.material->shader->set(prefix + "position", light->position);
-                        opaqueCommand.material->shader->set(prefix + "diffuse", light->diffuse);
-                        opaqueCommand.material->shader->set(prefix + "specular", light->specular);
+
+                        opaqueCommand.material->shader->set(prefix + "position", lightPosition);
+//                        opaqueCommand.material->shader->set(prefix + "diffuse", light->diffuse);
+//                        opaqueCommand.material->shader->set(prefix + "specular", light->specular);
                         opaqueCommand.material->shader->set(prefix + "attenuation", glm::vec3(light->attenuation.quadratic,
                                                                                               light->attenuation.linear, light->attenuation.constant));
+                        opaqueCommand.material->shader->set(prefix + "color" , light->color);
                         break;
                     case LightType::SPOT:
-                        opaqueCommand.material->shader->set(prefix + "position", light->position);
-                        opaqueCommand.material->shader->set(prefix + "direction", light->direction);
-                        opaqueCommand.material->shader->set(prefix + "diffuse", light->diffuse);
-                        opaqueCommand.material->shader->set(prefix + "specular", light->specular);
+                        opaqueCommand.material->shader->set(prefix + "position", lightPosition);
+                        //opaqueCommand.material->shader->set(prefix + "position", light->position);
+                        opaqueCommand.material->shader->set(prefix + "direction", lightDirection);
+                        //opaqueCommand.material->shader->set(prefix + "diffuse", light->diffuse);
+                        //opaqueCommand.material->shader->set(prefix + "specular", light->specular);
                         opaqueCommand.material->shader->set(prefix + "attenuation", glm::vec3(light->attenuation.quadratic,
                                                                                               light->attenuation.linear, light->attenuation.constant));
+
                         opaqueCommand.material->shader->set(prefix + "cone_angles", glm::vec2(light->spot_angle.inner, light->spot_angle.outer));
+
+                        opaqueCommand.material->shader->set(prefix + "color" , light->color);
                         break;
                     case LightType::SKY:
                         break;

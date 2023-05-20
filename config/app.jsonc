@@ -4,7 +4,7 @@
     "title": "Drive me home",
     "size": {
       "width": 1280,
-      "height": 720
+      "height": 640
     },
     "fullscreen": true
   },
@@ -25,6 +25,10 @@
             "textured": {
               "vs": "assets/shaders/textured.vert",
               "fs": "assets/shaders/textured.frag"
+            },
+            "light": {
+              "vs": "assets/shaders/light.vert",
+              "fs": "assets/shaders/light.frag"
             }
           },
           "textures": {
@@ -36,7 +40,26 @@
             "carSkin": "assets/textures/toktok.png",
             "fuelTex": "assets/textures/coffee.png",
             "barrierTex": "assets/textures/barrierTex.JPG",
-            "houseTex": "assets/textures/houseTex.jpeg"
+            "houseTex": "assets/textures/houseTex.jpeg",
+            "albedo": "assets/textures/albedo.jpg",
+            "roughness": "assets/textures/roughness.jpg",
+            "emissive": "assets/textures/emissive.jpg",
+            "specular": "assets/textures/specular.jpg",
+            "ambient_occlusion": "assets/textures/white.png",
+            "road_albedo": "assets/textures/white.png",
+            "road_roughness": "assets/textures/road/black.jpg",
+            "road_emissive": "assets/textures/black.jpg",
+            "road_specular": "assets/textures/white.png",
+            "StreetLight": "assets/textures/white.png",
+            "white": "assets/textures/white.png",
+            "black": "assets/textures/black.jpg",
+            "gray": "assets/textures/gray.png",
+            "road_ambient_occlusion": "assets/textures/road/ambient.jpg",
+            // "moon_albedo" : "assets/textures/moon/albedo.jpg",
+            "moon_roughness" : "assets/textures/moon/roughness.jpg",
+            "moon_emissive" : "assets/textures/moon/emissive.jpg",
+            "moon_specular" : "assets/textures/moon/specular.jpg",
+            "moon_ambient_occlusion" : "assets/textures/moon/ao.jpg"
           },
           "meshes": {
             "plane": "assets/models/plane.obj",
@@ -195,8 +218,8 @@
               "sampler": "default"
             },
             "roadMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -207,11 +230,16 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "roadTex",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "roadTex",
+              "specular": "black",
+              "roughness": "gray",
+              "emissive": "black",
+              "ambient_occlusion": "road_ambient_occlusion"
             },
             "moon": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -222,7 +250,12 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "moon",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "moon",
+              "roughness": "moon_roughness",
+              "emissive": "moon_emissive",
+              "specular": "moon_specular",
+              "ambient_occlusion": "moon_ambient_occlusion"
             },
             "houseMaterial": {
               "type": "textured",
@@ -237,6 +270,21 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "houseTex",
+              "sampler": "default"
+            },
+            "StreetLight": {
+              "type": "textured",
+              "shader": "textured",
+              "pipelineState": {
+                "faceCulling": {
+                  "enabled": false
+                },
+                "depthTesting": {
+                  "enabled": true
+                }
+              },
+              "tint": [1, 1, 1, 1],
+              "texture": "StreetLight",
               "sampler": "default"
             }
           }
@@ -259,6 +307,46 @@
             ],
             "children": [
               {
+                "position": [-54, 10, -5],
+                "components": [
+                  {
+                    "type": "Light",
+                    "typeLight": "directional",
+                    "enabled": true,
+                    "direction": [1, 0, 0],
+                    "color": [50, 0, 50]
+                  }
+                ]
+              },
+              {
+                "position": [0, 30, -40],
+                "rotation": [0, 45, 0],
+                "scale": [5, 5, 5],
+                "components": [
+                  {
+                    "type": "Mesh Renderer",
+                    "mesh": "sphere",
+                    "material": "moon"
+                  },
+                  {
+                    "type": "Movement",
+                    "angularVelocity": [0, 30, 0]
+                  },
+                  {
+                    // define point on pepsi man.
+                    "type": "Light",
+                    "typeLight": "point",
+                    "enabled": true,
+                    "direction": [
+                      // directional not matter in point light
+                      0.0, 0.0, 0.0
+                    ],
+                    "color": [50000, 50000, 60000],
+                    "attenuation": [1.0, 0.0, 0.0]
+                  }
+                ]
+              },
+              {
                 "name": "car",
                 "position": [0, -2, -4],
                 "rotation": [10, 0, 0],
@@ -276,6 +364,46 @@
                   },
                   {
                     "type": "Collision"
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "spot light",
+                    "position": [
+                      0, // +x is for right
+                      0, // +y is for up
+                      0 // -z for forward (depth)
+                    ],
+                    "components": [
+                      {
+                        "type": "Light",
+                        "typeLight": "spot", // 2 for spot
+                        "direction": [0, 0.5, -1],
+                        "color": [30, 24, 12],
+                        "attenuation": [1, 0.00095, 0.001],
+                        "cone_angles": [0.5, 1.2]
+                      }
+                    ]
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "spot light",
+                    "position": [
+                      0, // +x is for right
+                      0, // +y is for up
+                      0 // -z for forward (depth)
+                    ],
+                    "components": [
+                      {
+                        "type": "Light",
+                        "typeLight": "spot", // 2 for spot
+                        "direction": [0, 0.5, -1],
+                        "color": [30, 24, 12],
+                        "attenuation": [1, 0.00095, 0.001],
+                        "cone_angles": [0.5, 1.2]
+                      }
+                    ]
                   }
                 ]
               }
@@ -301,18 +429,6 @@
               },
               {
                 "type": "Collision"
-              },
-              {
-                "type": "Light",
-                "typeLight": "point",
-                "enabled": true,
-                "diffuse": [1, 1, 1],
-                "specular": [1, 1, 1],
-                "attenuation": {
-                  "constant": 1,
-                  "linear": 0.09,
-                  "quadratic": 0.032
-                }
               }
             ]
           },
@@ -403,18 +519,6 @@
                 "type": "Collision"
               },
               {
-                "type": "Light",
-                "typeLight": "point",
-                "enabled": true,
-                "diffuse": [1, 1, 1],
-                "specular": [1, 1, 1],
-                "attenuation": {
-                  "constant": 1,
-                  "linear": 0.09,
-                  "quadratic": 0.032
-                }
-              },
-              {
                 "type": "Movement",
                 "linearVelocity": [0, 0, 0],
                 "angularVelocity": [0, 540, 0]
@@ -490,7 +594,7 @@
           },
           //add another road after previous road as if they were one road
           {
-            "name": "road",
+            "name": "road2",
             "position": [4, -4, -300],
             "rotation": [0, 90, 0],
             "scale": [10, 1, 7],
@@ -522,23 +626,6 @@
               }
             ]
           },
-          {
-            "position": [0, 10, 0],
-            "rotation": [45, 90, 0],
-            "scale": [5, 5, 5],
-            "components": [
-              {
-                "type": "Mesh Renderer",
-                "mesh": "sphere",
-                "material": "moon"
-              },
-              {
-                "type": "Movement",
-                "angularVelocity": [0, 90, 0]
-              }
-            ]
-          },
-          //place more 20 random obstacles here and fuels till z = -500
           {
             "name": "obstacle:5",
             "position": [2, -3, -130],
@@ -756,6 +843,10 @@
             "textured": {
               "vs": "assets/shaders/textured.vert",
               "fs": "assets/shaders/textured.frag"
+            },
+            "light": {
+              "vs": "assets/shaders/light.vert",
+              "fs": "assets/shaders/light.frag"
             }
           },
           "textures": {
@@ -769,7 +860,21 @@
             "carSkin": "assets/textures/moon.jpg",
             "fuelTex": "assets/textures/coffee.png",
             "barrierTex": "assets/textures/barrierTex.JPG",
-            "houseTex": "assets/textures/houseTex.jpeg"
+            "houseTex": "assets/textures/houseTex.jpeg",
+            "albedo": "assets/textures/albedo.jpg",
+            "roughness": "assets/textures/roughness.jpg",
+            "emissive": "assets/textures/emissive.jpg",
+            "specular": "assets/textures/specular.jpg",
+            "ambient_occlusion": "assets/textures/white.png",
+            "road_albedo": "assets/textures/white.png",
+            "road_roughness": "assets/textures/road/black.jpg",
+            "road_emissive": "assets/textures/black.jpg",
+            "road_specular": "assets/textures/white.png",
+            "StreetLight": "assets/textures/white.png",
+            "white": "assets/textures/white.png",
+            "black": "assets/textures/black.jpg",
+            "gray": "assets/textures/gray.png",
+            "road_ambient_occlusion": "assets/textures/road/ambient.jpg"
           },
           "meshes": {
             "plane": "assets/models/plane.obj",
@@ -897,8 +1002,8 @@
               "sampler": "default"
             },
             "fuelMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -928,8 +1033,8 @@
               "sampler": "default"
             },
             "roadMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -940,11 +1045,16 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "roadTex",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "roadTex",
+              "specular": "black",
+              "roughness": "gray",
+              "emissive": "black",
+              "ambient_occlusion": "road_ambient_occlusion"
             },
             "moon": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -955,7 +1065,12 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "moon",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "moon",
+              "roughness": "gray",
+              "emissive": "black",
+              "specular": "gray",
+              "ambient_occlusion": "ambient_occlusion"
             },
             "houseMaterial": {
               "type": "textured",
@@ -992,6 +1107,34 @@
             ],
             "children": [
               {
+                "position": [0, 30, -40],
+                "rotation": [0, 45, 0],
+                "scale": [5, 5, 5],
+                "components": [
+                  {
+                    "type": "Mesh Renderer",
+                    "mesh": "sphere",
+                    "material": "moon"
+                  },
+                  {
+                    "type": "Movement",
+                    "angularVelocity": [0, 30, 0]
+                  },
+                  {
+                    // define point on pepsi man.
+                    "type": "Light",
+                    "typeLight": "point",
+                    "enabled": true,
+                    "direction": [
+                      // directional not matter in point light
+                      0.0, 0.0, 0.0
+                    ],
+                    "color": [50000, 50000, 60000],
+                    "attenuation": [1.0, 0.0, 0.0]
+                  }
+                ]
+              },
+              {
                 "name": "car",
                 "position": [0, -2, -4],
                 "rotation": [180, 0, 180],
@@ -1009,6 +1152,46 @@
                   },
                   {
                     "type": "Collision"
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "spot light",
+                    "position": [
+                      0, // +x is for right
+                      0, // +y is for up
+                      0 // -z for forward (depth)
+                    ],
+                    "components": [
+                      {
+                        "type": "Light",
+                        "typeLight": "spot", // 2 for spot
+                        "direction": [0, 0.5, -1],
+                        "color": [30, 24, 12],
+                        "attenuation": [1, 0.00095, 0.001],
+                        "cone_angles": [0.5, 1.2]
+                      }
+                    ]
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "spot light",
+                    "position": [
+                      0, // +x is for right
+                      0, // +y is for up
+                      0 // -z for forward (depth)
+                    ],
+                    "components": [
+                      {
+                        "type": "Light",
+                        "typeLight": "spot", // 2 for spot
+                        "direction": [0, 0.5, -1],
+                        "color": [30, 24, 12],
+                        "attenuation": [1, 0.00095, 0.001],
+                        "cone_angles": [0.5, 1.2]
+                      }
+                    ]
                   }
                 ]
               }
@@ -1033,6 +1216,13 @@
               },
               {
                 "type": "Collision"
+              },
+              {
+                "type": "Light",
+                "typeLight": "point",
+                "enabled": true,
+                "color": [100, 100, 100],
+                "attenuation": [0.12, 1, 1]
               }
             ]
           },
@@ -1055,6 +1245,13 @@
               },
               {
                 "type": "Collision"
+              },
+              {
+                "type": "Light",
+                "typeLight": "point",
+                "enabled": true,
+                "color": [100, 100, 100],
+                "attenuation": [0.12, 1, 1]
               }
             ]
           },
@@ -1077,6 +1274,13 @@
               },
               {
                 "type": "Collision"
+              },
+              {
+                "type": "Light",
+                "typeLight": "point",
+                "enabled": true,
+                "color": [100, 100, 100],
+                "attenuation": [0.12, 1, 1]
               }
             ]
           },
@@ -1535,6 +1739,9 @@
             "textured": {
               "vs": "assets/shaders/textured.vert",
               "fs": "assets/shaders/textured.frag"
+            },"light": {
+              "vs": "assets/shaders/light.vert",
+              "fs": "assets/shaders/light.frag"
             }
           },
           "textures": {
@@ -1548,7 +1755,21 @@
             "carSkin": "assets/textures/car0.BMP",
             "fuelTex": "assets/textures/coffee.png",
             "barrierTex": "assets/textures/barrierTex.JPG",
-            "houseTex": "assets/textures/houseTex.jpeg"
+            "houseTex": "assets/textures/houseTex.jpeg",
+            "albedo": "assets/textures/albedo.jpg",
+            "roughness": "assets/textures/roughness.jpg",
+            "emissive": "assets/textures/emissive.jpg",
+            "specular": "assets/textures/specular.jpg",
+            "ambient_occlusion": "assets/textures/white.png",
+            "road_albedo": "assets/textures/white.png",
+            "road_roughness": "assets/textures/road/black.jpg",
+            "road_emissive": "assets/textures/black.jpg",
+            "road_specular": "assets/textures/white.png",
+            "StreetLight": "assets/textures/white.png",
+            "white": "assets/textures/white.png",
+            "black": "assets/textures/black.jpg",
+            "gray": "assets/textures/gray.png",
+            "road_ambient_occlusion": "assets/textures/road/ambient.jpg"
           },
           "meshes": {
             "plane": "assets/models/plane.obj",
@@ -1707,8 +1928,8 @@
               "sampler": "default"
             },
             "roadMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -1719,11 +1940,16 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "roadTex",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "roadTex",
+              "specular": "black",
+              "roughness": "gray",
+              "emissive": "black",
+              "ambient_occlusion": "road_ambient_occlusion"
             },
             "moon": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -1734,7 +1960,12 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "moon",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "moon",
+              "roughness": "gray",
+              "emissive": "black",
+              "specular": "gray",
+              "ambient_occlusion": "ambient_occlusion"
             },
             "houseMaterial": {
               "type": "textured",
@@ -1765,11 +1996,51 @@
               },
               {
                 "type": "Movement",
-                "linearVelocity": [0, 0, -25],
+                "linearVelocity": [0, 0, -15],
                 "angularVelocity": [0, 0, 0]
               }
             ],
             "children": [
+              {
+                "position": [-54, 10, -5],
+                "components": [
+                  {
+                    "type": "Light",
+                    "typeLight": "directional",
+                    "enabled": true,
+                    "direction": [1, 0, 0],
+                    "color": [50, 0, 50]
+                  }
+                ]
+              },
+              {
+                "position": [0, 30, -40],
+                "rotation": [0, 45, 0],
+                "scale": [5, 5, 5],
+                "components": [
+                  {
+                    "type": "Mesh Renderer",
+                    "mesh": "sphere",
+                    "material": "moon"
+                  },
+                  {
+                    "type": "Movement",
+                    "angularVelocity": [0, 30, 0]
+                  },
+                  {
+                    // define point on pepsi man.
+                    "type": "Light",
+                    "typeLight": "point",
+                    "enabled": true,
+                    "direction": [
+                      // directional not matter in point light
+                      0.0, 0.0, 0.0
+                    ],
+                    "color": [50000, 50000, 60000],
+                    "attenuation": [1.0, 0.0, 0.0]
+                  }
+                ]
+              },
               {
                 "name": "car",
                 "position": [0, -2, -4],
@@ -1788,6 +2059,46 @@
                   },
                   {
                     "type": "Collision"
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "spot light",
+                    "position": [
+                      0, // +x is for right
+                      0, // +y is for up
+                      0 // -z for forward (depth)
+                    ],
+                    "components": [
+                      {
+                        "type": "Light",
+                        "typeLight": "spot", // 2 for spot
+                        "direction": [0, 0.5, -1],
+                        "color": [30, 24, 12],
+                        "attenuation": [1, 0.00095, 0.001],
+                        "cone_angles": [0.5, 1.2]
+                      }
+                    ]
+                  }
+                ],
+                "children": [
+                  {
+                    "name": "spot light",
+                    "position": [
+                      0, // +x is for right
+                      0, // +y is for up
+                      0 // -z for forward (depth)
+                    ],
+                    "components": [
+                      {
+                        "type": "Light",
+                        "typeLight": "spot", // 2 for spot
+                        "direction": [0, 0.5, -1],
+                        "color": [30, 24, 12],
+                        "attenuation": [1, 0.00095, 0.001],
+                        "cone_angles": [0.5, 1.2]
+                      }
+                    ]
                   }
                 ]
               }

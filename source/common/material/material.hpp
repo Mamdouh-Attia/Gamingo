@@ -62,7 +62,6 @@ namespace our {
         Texture2D*  roughness_map;
         Texture2D*  emissive_map;
 
-
         void setup() const override;
         void deserialize(const nlohmann::json& data) override;
     };
