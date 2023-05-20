@@ -14,13 +14,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eeba81cc-8454-47f5-acc6-b676caa7834e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/collision-system.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/states/game-over-state.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/states/game-over-state.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/states/level-win-state.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/states/level-win-state.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/states/play-state.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/states/play-state.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +96,9 @@
       <workItem from="1684441930770" duration="1586000" />
       <workItem from="1684444346030" duration="5232000" />
       <workItem from="1684449770328" duration="10475000" />
-      <workItem from="1684586887362" duration="2271000" />
+      <workItem from="1684586887362" duration="3803000" />
+      <workItem from="1684606319797" duration="210000" />
+      <workItem from="1684619984227" duration="1348000" />
     </task>
     <servers />
   </component>
