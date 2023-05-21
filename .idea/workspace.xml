@@ -13,9 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b97e7fa-a770-446e-836a-2536665fcceb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/textures/pink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/red.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/effects/car.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/effects/car.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
@@ -107,6 +106,7 @@
       <workItem from="1684606319797" duration="210000" />
       <workItem from="1684619984227" duration="1348000" />
       <workItem from="1684658458602" duration="10252000" />
+      <workItem from="1684681985323" duration="7277000" />
     </task>
     <servers />
   </component>

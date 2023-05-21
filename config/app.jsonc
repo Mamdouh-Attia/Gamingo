@@ -38,7 +38,7 @@
             "glass": "assets/textures/glass-panels.png",
             "roadTex": "assets/textures/roadTex.jpg",
             "carSkin": "assets/textures/toktok.png",
-            "fuelTex": "assets/textures/coffee.png",
+            "fuelTex": "assets/textures/fuelTex.jpg",
             "barrierTex": "assets/textures/barrierTex.JPG",
             "houseTex": "assets/textures/houseTex.jpeg",
             "albedo": "assets/textures/albedo.jpg",
@@ -209,7 +209,7 @@
               "texture": "fuelTex",
               "sampler": "default",
               "albedo": "fuelTex",
-              "emissive": "black",
+              "emissive": "fuelTex",
               "specular": "fuelTex",
               "roughness": "gray",
               "ambient_occlusion": "ambient_occlusion"
@@ -333,11 +333,10 @@
                     "typeLight": "point",
                     "enabled": true,
                     "direction": [
-                      // directional not matter in point light
+                      // direction does not matter in point light
                       0.0, 0.0, 0.0
                     ],
                     "color": [50000, 50000, 80000],
-                    // "color": [50000, 50000, 50000],
                     "attenuation": [1.0, 0.0, 0.0]
                   }
                 ]
@@ -374,8 +373,9 @@
                       {
                         "type": "Light",
                         "typeLight": "spot", // 2 for spot
+                        "enabled": true,
                         "direction": [0, 0.5, -1],
-                        "color": [30, 24, 12],
+                        "color": [15, 12, 6],
                         "attenuation": [1, 0.00095, 0.001],
                         "cone_angles": [0.5, 1.2]
                       }
@@ -851,7 +851,7 @@
             "batteryTex": "assets/textures/battery.png",
             "roadTex": "assets/textures/roadTex.jpg",
             "carSkin": "assets/textures/moon.jpg",
-            "fuelTex": "assets/textures/coffee.png",
+            "fuelTex": "assets/textures/fuelTex.jpg",
             "barrierTex": "assets/textures/barrierTex.JPG",
             "houseTex": "assets/textures/houseTex.jpeg",
             "albedo": "assets/textures/albedo.jpg",
@@ -1015,7 +1015,7 @@
               "texture": "fuelTex",
               "sampler": "default",
               "albedo": "fuelTex",
-              "emissive": "black",
+              "emissive": "fuelTex",
               "specular": "fuelTex",
               "roughness": "gray",
               "ambient_occlusion": "ambient_occlusion"
@@ -1131,7 +1131,6 @@
                     "angularVelocity": [0, 30, 0]
                   },
                   {
-                    // define point on pepsi man.
                     "type": "Light",
                     "typeLight": "point",
                     "enabled": true,
@@ -1177,7 +1176,7 @@
                         "type": "Light",
                         "typeLight": "spot", // 2 for spot
                         "direction": [0, 0.5, 1],
-                        "color": [30, 24, 12],
+                        "color": [7.5, 6, 3],
                         "attenuation": [1, 0.00095, 0.001],
                         "cone_angles": [0.5, 1.2]
                       }
@@ -1723,7 +1722,7 @@
             "batteryTex": "assets/textures/battery.png",
             "roadTex": "assets/textures/roadTex.jpg",
             "carSkin": "assets/textures/car0.BMP",
-            "fuelTex": "assets/textures/coffee.png",
+            "fuelTex": "assets/textures/fuelTex.jpg",
             "barrierTex": "assets/textures/barrierTex.JPG",
             "houseTex": "assets/textures/houseTex.jpeg",
             "albedo": "assets/textures/albedo.jpg",
@@ -1887,7 +1886,7 @@
               "texture": "fuelTex",
               "sampler": "default",
               "albedo": "fuelTex",
-              "emissive": "black",
+              "emissive": "fuelTex",
               "specular": "fuelTex",
               "roughness": "gray",
               "ambient_occlusion": "ambient_occlusion"
@@ -2007,7 +2006,6 @@
                     "angularVelocity": [0, 30, 0]
                   },
                   {
-                    // define point on pepsi man.
                     "type": "Light",
                     "typeLight": "point",
                     "enabled": true,
@@ -2053,7 +2051,7 @@
                         "type": "Light",
                         "typeLight": "spot", // 2 for spot
                         "direction": [0, 0.5, -1],
-                        "color": [30, 24, 12],
+                        "color": [7.5, 6, 3],
                         "attenuation": [1, 0.00095, 0.001],
                         "cone_angles": [0.5, 1.2]
                       }
