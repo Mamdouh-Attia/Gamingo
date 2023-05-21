@@ -1,9 +1,8 @@
-# Drive Me Home 🚗💨
+# Drive Me Home 🚗
 
 Exciting game that takes you through 3 adrenaline-rushing levels, each more challenging than the last. Crafted in C++ using OpenGL, your objective is to navigate your vehicle past a series of obstacles, collecting health objects along the way. But beware! The penalty of obstacles changes according to the level, and your health depletes with every collision. Run out of health, and it's game over!
 
 ![Drive Me Home Screenshot](./documentation/screenshots/1-menu.png)
-![Drive Me Home Screenshot](./documentation/screenshots/2-level-1.png)
 
 ## Gameplay 🎮
 
@@ -13,8 +12,10 @@ You start the game with 100 health points. Each level increases the difficulty a
 
 - **A**: Move left
 - **D**: Move right
-- **Shift**: Increase the speed of the
+- **Shift**: Increase the speed of crafting
 - **Scroll**: Change camera view
+
+![Drive Me Home Screenshot](./documentation/screenshots/2-level-1.png)
 
 ## Demo 🎥
 
@@ -44,6 +45,5 @@ The game uses the following libraries:
 - irrKlang
 - stb
 - tinyobjloader v1.0.6
-- tinygltf v2.4.0
 
 ## Have Fun! 🚀
