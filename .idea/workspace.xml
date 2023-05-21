@@ -13,35 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b97e7fa-a770-446e-836a-2536665fcceb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/shaders/light.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/shaders/light.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/albedo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/ambient_occlusion.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/black.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/emissive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/gray.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/moon/ao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/moon/emissive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/moon/roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/moon/specular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/road/albedo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/road/ambient.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/road/emissive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/road/roughness.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/road/specular.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/roughness.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/specular.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/white.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.jsonc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/light.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/light.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/components/light.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/components/light.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/material/material.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/material/material.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/material/material.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/material/material.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
