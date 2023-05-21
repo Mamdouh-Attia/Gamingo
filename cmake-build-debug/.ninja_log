@@ -47,3 +47,11 @@
 6810	7370	7061648052835191	vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj	68de132e1ce367be
 6691	7502	7061648053977604	vendor/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj	c547bbe578d2a415
 2801	4919	7062926923901640	../bin/GAME_APPLICATION.exe	7512afa2df4a2732
+290	14327	7063285773484064	CMakeFiles/GAME_APPLICATION.dir/source/common/systems/forward-renderer.cpp.obj	6394eb996f5480ce
+279	14332	7063285772398164	CMakeFiles/GAME_APPLICATION.dir/source/common/components/mesh-renderer.cpp.obj	4caea29dff50af23
+300	14336	7063285773587763	CMakeFiles/GAME_APPLICATION.dir/source/common/components/light.cpp.obj	bfdd49c65565611c
+166	14340	7063285773752925	CMakeFiles/GAME_APPLICATION.dir/source/common/material/material.cpp.obj	674776275c66fabd
+189	14344	7063285773792458	CMakeFiles/GAME_APPLICATION.dir/source/common/ecs/entity.cpp.obj	d68956af0a1fedff
+22	14376	7063285774584304	CMakeFiles/GAME_APPLICATION.dir/source/common/asset-loader.cpp.obj	f830dcdd898b59dc
+221	14665	7063285777533895	CMakeFiles/GAME_APPLICATION.dir/source/main.cpp.obj	df831cc5b59d2bd5
+14665	27432	7063285865756549	../bin/GAME_APPLICATION.exe	7512afa2df4a2732

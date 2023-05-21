@@ -105,7 +105,7 @@ namespace our
             this->albedo_map->bind();
             // bind the sampler to unit 1
             this->sampler->bind(0);
-            shader->set("material.diffuse", 0);
+            shader->set("material.albedo", 0);
         }
         if(specular_map != nullptr)
         {
