@@ -13,8 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b97e7fa-a770-446e-836a-2536665fcceb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/textures/pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/red.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GAME_APPLICATION.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.jsonc" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.jsonc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/source/common/systems/forward-renderer.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +83,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eeba81cc-8454-47f5-acc6-b676caa7834e" name="Changes" comment="" />
+      <changelist id="4b97e7fa-a770-446e-836a-2536665fcceb" name="Changes" comment="" />
       <created>1678994595244</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -100,6 +106,7 @@
       <workItem from="1684586887362" duration="3803000" />
       <workItem from="1684606319797" duration="210000" />
       <workItem from="1684619984227" duration="1348000" />
+      <workItem from="1684658458602" duration="10252000" />
     </task>
     <servers />
   </component>

@@ -264,7 +264,8 @@ namespace our {
 
                 switch(light->typeLight) {
                     case LightType::DIRECTIONAL:
-                        opaqueCommand.material->shader->set(prefix + "direction", lightDirection);
+                        //opaqueCommand.material->shader->set(prefix + "position", lightPosition);
+                        opaqueCommand.material->shader->set(prefix + "direction", light->direction);
 //                        opaqueCommand.material->shader->set(prefix + "diffuse", light->diffuse);
 //                        opaqueCommand.material->shader->set(prefix + "specular", light->specular);
                         opaqueCommand.material->shader->set(prefix + "color" , light->color);

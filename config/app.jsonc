@@ -54,12 +54,14 @@
             "white": "assets/textures/white.png",
             "black": "assets/textures/black.jpg",
             "gray": "assets/textures/gray.png",
-            "road_ambient_occlusion": "assets/textures/road/ambient.jpg",
-            "moon_albedo": "assets/textures/moon/albedo.jpg",
-            "moon_roughness": "assets/textures/moon/roughness.jpg",
-            "moon_emissive": "assets/textures/moon/emissive.jpg",
-            "moon_specular": "assets/textures/moon/specular.jpg",
-            "moon_ambient_occlusion": "assets/textures/moon/ao.jpg"
+            "red": "assets/textures/red.png",
+            "pink": "assets/textures/pink.png",
+            "road_ambient_occlusion": "assets/textures/road/ambient.jpg"
+            //             "moon_albedo": "assets/textures/moon/albedo.jpg",
+            //             "moon_roughness": "assets/textures/moon/roughness.jpg",
+            //             "moon_emissive": "assets/textures/moon/emissive.jpg",
+            //             "moon_specular": "assets/textures/moon/specular.jpg",
+            //             "moon_ambient_occlusion": "assets/textures/moon/ao.jpg"
           },
           "meshes": {
             "plane": "assets/models/plane.obj",
@@ -172,8 +174,8 @@
               "sampler": "default"
             },
             "barrierMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -184,11 +186,17 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "barrierTex",
-              "sampler": "default"
+              "sampler": "default",
+
+              "albedo": "barrierTex",
+              "emissive": "black",
+              "specular": "barrierTex",
+              "roughness": "gray",
+              "ambient_occlusion": "ambient_occlusion"
             },
             "fuelMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -199,12 +207,16 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "fuelTex",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "fuelTex",
+              "emissive": "black",
+              "specular": "fuelTex",
+              "roughness": "gray",
+              "ambient_occlusion": "ambient_occlusion"
             },
-
             "carMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -215,7 +227,12 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "carSkin",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "albedo", // carSkin
+              "emissive": "carSkin", // carSkin
+              "specular": "specular", // blue
+              "roughness": "roughness", // carSkin
+              "ambient_occlusion": "ambient_occlusion"
             },
             "roadMaterial": {
               "type": "lighted",
@@ -232,9 +249,9 @@
               "texture": "roadTex",
               "sampler": "default",
               "albedo": "roadTex",
-              "specular": "black",
-              "roughness": "gray",
-              "emissive": "black",
+              "specular": "road_specular",
+              "roughness": "road_roughness",
+              "emissive": "road_emissive",
               "ambient_occlusion": "road_ambient_occlusion"
             },
             "moon": {
@@ -287,14 +304,13 @@
             ],
             "children": [
               {
-                "position": [-54, 10, -5],
                 "components": [
                   {
                     "type": "Light",
                     "typeLight": "directional",
                     "enabled": true,
                     "direction": [1, 0, 0],
-                    "color": [50, 0, 50]
+                    "color": [1.8, 1.8, 1.8]
                   }
                 ]
               },
@@ -313,7 +329,6 @@
                     "angularVelocity": [0, 30, 0]
                   },
                   {
-                    // define point on pepsi man.
                     "type": "Light",
                     "typeLight": "point",
                     "enabled": true,
@@ -322,6 +337,7 @@
                       0.0, 0.0, 0.0
                     ],
                     "color": [50000, 50000, 80000],
+                    // "color": [50000, 50000, 50000],
                     "attenuation": [1.0, 0.0, 0.0]
                   }
                 ]
@@ -964,8 +980,8 @@
               "sampler": "default"
             },
             "barrierMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -976,11 +992,17 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "barrierTex",
-              "sampler": "default"
+              "sampler": "default",
+
+              "albedo": "barrierTex",
+              "emissive": "black",
+              "specular": "barrierTex",
+              "roughness": "gray",
+              "ambient_occlusion": "ambient_occlusion"
             },
             "fuelMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -991,12 +1013,16 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "fuelTex",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "fuelTex",
+              "emissive": "black",
+              "specular": "fuelTex",
+              "roughness": "gray",
+              "ambient_occlusion": "ambient_occlusion"
             },
-
             "carMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -1086,7 +1112,7 @@
                     "typeLight": "directional",
                     "enabled": true,
                     "direction": [1, 0, 0],
-                    "color": [50, 0, 50]
+                    "color": [10, 1.8, 10]
                   }
                 ]
               },
@@ -1826,8 +1852,8 @@
               "sampler": "default"
             },
             "barrierMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -1838,11 +1864,17 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "barrierTex",
-              "sampler": "default"
+              "sampler": "default",
+
+              "albedo": "barrierTex",
+              "emissive": "black",
+              "specular": "barrierTex",
+              "roughness": "gray",
+              "ambient_occlusion": "ambient_occlusion"
             },
             "fuelMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -1853,12 +1885,16 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "fuelTex",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "fuelTex",
+              "emissive": "black",
+              "specular": "fuelTex",
+              "roughness": "gray",
+              "ambient_occlusion": "ambient_occlusion"
             },
-
             "carMaterial": {
-              "type": "textured",
-              "shader": "textured",
+              "type": "lighted",
+              "shader": "light",
               "pipelineState": {
                 "faceCulling": {
                   "enabled": false
@@ -1869,7 +1905,12 @@
               },
               "tint": [1, 1, 1, 1],
               "texture": "carSkin",
-              "sampler": "default"
+              "sampler": "default",
+              "albedo": "albedo", // carSkin
+              "emissive": "carSkin", // carSkin
+              "specular": "specular", // blue
+              "roughness": "roughness", // carSkin
+              "ambient_occlusion": "ambient_occlusion"
             },
             "roadMaterial": {
               "type": "lighted",
@@ -1940,6 +1981,17 @@
               }
             ],
             "children": [
+              {
+                "components": [
+                  {
+                    "type": "Light",
+                    "typeLight": "directional",
+                    "enabled": true,
+                    "direction": [1, 0, 0],
+                    "color": [1.8, 1.8, 1.8]
+                  }
+                ]
+              },
               {
                 "position": [0, 30, -40],
                 "rotation": [0, 45, 0],
