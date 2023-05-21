@@ -12,18 +12,24 @@
 // This state shows how to use the ECS framework and deserialization.
 class Playstate : public our::State
 {
+    // We will need a world to store all the entities
     our::World world;
+    // We will need a renderer to render the world
     our::ForwardRenderer renderer;
+    // We will need a camera controller to control the camera
     our::FreeCameraControllerSystem cameraController;
+    // We will need a movement system to move the entities
     our::MovementSystem movementSystem;
+    // We will need a sound system to play sound effects
     our::SoundSystem soundSystem;
+    // We will need a collision system to detect collisions
     our::CollisionSystem collisionSystem = our::CollisionSystem(soundSystem);
     // defining a variable to store the level number
     int level = 0;
     void onInitialize() override
     {
         soundSystem = our::SoundSystem();
-        // First of all, we get the scene configuration from the app config
+        // First of all, we get the scene configuration from the app config and load the first level
         auto &config = getApp()->getConfig()["levels"][level]["scene"];
 
         // If we have assets in the scene config, we deserialize them
@@ -62,7 +68,7 @@ class Playstate : public our::State
     //function to load the next level
     void loadNextLevel()
     {
-        // First of all, we get the scene configuration from the app config
+        // First of all, we get the scene configuration from the app config and load the next level
         auto &config = getApp()->getConfig()["levels"][level]["scene"];
 
         // If we have assets in the scene config, we deserialize them

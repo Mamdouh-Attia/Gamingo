@@ -54,6 +54,8 @@ namespace our {
         void deserialize(const nlohmann::json& data) override;
     };
 
+    //this is the material for the light class
+    //adds 5 uniforms for the light class (albedo, specular, ambient_occlusion, roughness, emissive) texture maps
     class LightMaterial : public TexturedMaterial {
     public:
         Texture2D*  albedo_map;

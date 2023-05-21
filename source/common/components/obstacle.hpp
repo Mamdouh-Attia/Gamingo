@@ -10,7 +10,9 @@ namespace our {
     // This class handles data storage of obstacle
     class ObstacleComponent : public Component {
     public:
+        // The subtracted value from the car's health when it collides with an obstacle
         int subtractedValue = 10;
+        // The width of the obstacle and its depth
         float width = 0;
         float depth = 0;
 
