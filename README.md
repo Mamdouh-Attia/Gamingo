@@ -1,6 +1,6 @@
 # Drive Me Home 🚗
 
-Exciting game that takes you through 3 adrenaline-rushing levels, each more challenging than the last. Crafted in C++ using OpenGL, your objective is to navigate your vehicle past a series of obstacles, collecting health objects along the way. But beware! The penalty of obstacles changes according to the level, and your health depletes with every collision. Run out of health, and it's game over!
+Exciting game that takes you through 3 adrenaline-rushing levels, the present, the past, and the future, each more challenging than the last. Crafted in C++ using OpenGL, your objective is to navigate your vehicle past a series of obstacles, collecting health objects along the way. But beware! The penalty of obstacles changes according to the level, and your health depletes with every collision. Run out of health, and it's game over!
 
 ![Drive Me Home Screenshot](./documentation/screenshots/1-menu.png)
 
