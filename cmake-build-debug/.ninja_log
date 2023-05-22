@@ -73,3 +73,14 @@
 8513	15669	7063949735753863	../bin/GAME_APPLICATION.exe	7512afa2df4a2732
 126	6608	7064074603791637	CMakeFiles/GAME_APPLICATION.dir/source/common/systems/forward-renderer.cpp.obj	6394eb996f5480ce
 6608	16460	7064074671465951	../bin/GAME_APPLICATION.exe	7512afa2df4a2732
+214	12889	7064170501885108	CMakeFiles/GAME_APPLICATION.dir/source/common/components/collision.cpp.obj	617b64da8c07af80
+205	14911	7064170521878453	CMakeFiles/GAME_APPLICATION.dir/source/common/components/car.cpp.obj	ae3c2368172cb14
+312	15138	7064170524509575	CMakeFiles/GAME_APPLICATION.dir/source/common/components/goal.cpp.obj	332eef1384a936ff
+140	15412	7064170528794884	CMakeFiles/GAME_APPLICATION.dir/source/common/components/obstacle.cpp.obj	47a0874d0b93f6ba
+288	15643	7064170528894905	CMakeFiles/GAME_APPLICATION.dir/source/common/material/material.cpp.obj	674776275c66fabd
+317	15811	7064170530996556	CMakeFiles/GAME_APPLICATION.dir/source/common/systems/forward-renderer.cpp.obj	6394eb996f5480ce
+296	15813	7064170531016631	CMakeFiles/GAME_APPLICATION.dir/source/common/ecs/entity.cpp.obj	d68956af0a1fedff
+307	15814	7064170531036604	CMakeFiles/GAME_APPLICATION.dir/source/common/components/mesh-renderer.cpp.obj	4caea29dff50af23
+247	16073	7064170534003225	CMakeFiles/GAME_APPLICATION.dir/source/common/asset-loader.cpp.obj	f830dcdd898b59dc
+302	19016	7064170564825480	CMakeFiles/GAME_APPLICATION.dir/source/main.cpp.obj	df831cc5b59d2bd5
+19016	31910	7064170654971200	../bin/GAME_APPLICATION.exe	7512afa2df4a2732
