@@ -28,8 +28,8 @@ Watch the gameplay demo on YouTube!
 Follow these steps to run the game:
 
 1. Clone the repository.
-2. Install Visual Studio Compiler with verison new.
-3. Install any IDE and CMake.
+2. Install Visual Studio Compiler (with verison >= 2019).
+3. Install Cmake and any IDE compatible with it.
 4. Build the project from the IDE.
 5. Run the project.
 
